@@ -1,0 +1,488 @@
+{
+  "schemaVersion": "1.0.0",
+  "contentVersion": 1,
+  "editorialRevision": 1,
+  "locale": "fa-IR",
+  "status": "approved",
+  "source": {
+    "type": "authored_for_project",
+    "recordedAt": "2026-11-06",
+    "editorialChanges": [
+      "محتوای مرحلهٔ دوم با همان لحن کوتاه و روش موقعیت، انتخاب و بازخورد مرحلهٔ اول تألیف شد.",
+      "هیچ تصویر، صدا یا نوع تعامل تازه‌ای لازم ندارد."
+    ]
+  },
+  "stage": {
+    "id": "prompt",
+    "number": 2,
+    "title": "درخواست بهتر (Prompt)",
+    "subtitle": "روشن بگو چی می‌خوای؛ نه جادویی!",
+    "lessonActivityIds": [
+      "stage02-activity01",
+      "stage02-activity02",
+      "stage02-activity03",
+      "stage02-activity04",
+      "stage02-activity05",
+      "stage02-activity06"
+    ],
+    "examActivityIds": [
+      "stage02-activity07"
+    ],
+    "dailyActivityIds": [
+      "stage02-activity01",
+      "stage02-activity03",
+      "stage02-activity06"
+    ],
+    "completionPolicy": "ALL_LESSONS_CORRECT_AND_EXAM_ALL_CORRECT"
+  },
+  "editorialGuidance": {
+    "difficultyBasis": "انتخاب درخواست روشن با هدف، مخاطب، قالب و محدودیت‌های سازگار؛ بدون افشای تعداد پاسخ‌های درست.",
+    "characterId": "pico",
+    "characterAsset": "pico_fullbody",
+    "feedbackTiming": {
+      "LESSON": "AFTER_SUBMISSION",
+      "EXAM": "AFTER_RUN",
+      "DAILY": "AFTER_SUBMISSION"
+    },
+    "revealRequiredSelectionCount": false,
+    "showCorrectnessMarkers": false,
+    "audioPlaybackRequired": false,
+    "scoringPolicy": {
+      "basePoints": 50,
+      "wrongSubmissionPenalty": 10,
+      "minimumPoints": 0,
+      "scope": "PERSISTENT_PER_ACTIVITY",
+      "awardPolicy": "ON_CORRECT_COMPLETION_ONCE",
+      "examPenaltyTiming": "AFTER_RUN",
+      "repeatResetsPenalties": false
+    },
+    "characterStates": [
+      "CONFUSED",
+      "CONFIDENT",
+      "EMBARRASSED"
+    ],
+    "characterAssets": {
+      "CONFUSED": "pico_hero",
+      "CONFIDENT": "pico_confident",
+      "EMBARRASSED": "pico_embarrassed"
+    }
+  },
+  "assets": [],
+  "activities": [
+    {
+      "id": "stage02-activity01",
+      "chapterId": "prompt",
+      "order": 1,
+      "role": "LESSON",
+      "title": "«یه چیز خوب بنویس» یعنی چی؟",
+      "interactionType": "COMPARE_RESPONSES",
+      "selection": {
+        "min": 1,
+        "max": 1,
+        "instruction": "جواب مناسب رو انتخاب کن."
+      },
+      "situation": "باشگاه کتاب مدرسه تازه راه افتاده. یه متن کوتاه می‌خوای که باشگاه رو معرفی کنه و بچه‌ها رو به اولین جلسه دعوت کنه.",
+      "contentBlocks": [],
+      "character": {
+        "id": "pico",
+        "dialogue": "گفتی یه چیز خفن؛ منم داستان اژدها نوشتم! باشگاه کتاب بدون اژدها که نمی‌شه!",
+        "mood": "CONFUSED"
+      },
+      "prompt": "کدوم درخواست بهتر می‌گه چی می‌خوای؟",
+      "choices": [
+        {
+          "id": "a",
+          "label": "الف",
+          "text": "یه متن جذاب دربارهٔ کتاب و حال‌وهوای باشگاهمون بنویس.",
+          "feedback": "موضوع رو گفته؛ ولی معرفی باشگاه و دعوت به جلسه روشن نیست."
+        },
+        {
+          "id": "b",
+          "label": "ب",
+          "text": "یه متن کوتاه برای معرفی باشگاه کتاب مدرسه بنویس و بچه‌ها رو به اولین جلسه دعوت کن.",
+          "feedback": "نوع متن و هدفش روشنه: معرفی باشگاه و دعوت بچه‌ها."
+        }
+      ],
+      "answer": {
+        "strategy": "EXACT_SET",
+        "correctChoiceIds": [
+          "b"
+        ]
+      },
+      "feedback": {
+        "general": "اول بگو چی می‌خوای؛ «خوب» و «خفن» به‌تنهایی آدرس نیستن."
+      },
+      "hint": null,
+      "scoring": {
+        "basePoints": 50,
+        "wrongSubmissionPenalty": 10,
+        "minimumPoints": 0
+      }
+    },
+    {
+      "id": "stage02-activity02",
+      "chapterId": "prompt",
+      "order": 2,
+      "role": "LESSON",
+      "title": "داری برای کی توضیح می‌دی؟",
+      "interactionType": "SINGLE_CHOICE",
+      "selection": {
+        "min": 1,
+        "max": 1,
+        "instruction": "جواب مناسب رو انتخاب کن."
+      },
+      "situation": "می‌خوای باتری رو برای بچه‌های ۱۲ساله توضیح بدی؛ صمیمی و بدون اصطلاح‌های سخت.",
+      "contentBlocks": [],
+      "character": {
+        "id": "pico",
+        "dialogue": "باتری رو فوق‌تخصصی توضیح دادم! هرچی کلمه‌ها سخت‌تر، باتری قوی‌تر!",
+        "mood": "CONFIDENT"
+      },
+      "prompt": "کدوم درخواست به این مخاطب بیشتر می‌خوره؟",
+      "choices": [
+        {
+          "id": "a",
+          "label": "الف",
+          "text": "باتری رو دقیق توضیح بده و اسم قطعه‌هاش رو هم بیار.",
+          "feedback": "دقت خوبه؛ ولی سن مخاطب و ساده‌بودن متن هنوز معلوم نیست."
+        },
+        {
+          "id": "b",
+          "label": "ب",
+          "text": "برای یه کارشناس، باتری رو کامل و با مثال توضیح بده.",
+          "feedback": "مخاطب این متن کارشناس نیست."
+        },
+        {
+          "id": "c",
+          "label": "ج",
+          "text": "برای بچه‌های ۱۲ساله، صمیمی و با کلمه‌های ساده بگو باتری چطور کار می‌کنه.",
+          "feedback": "هم مخاطب رو گفته، هم لحن و سادگی رو."
+        },
+        {
+          "id": "d",
+          "label": "د",
+          "text": "خیلی قشنگ توضیح بده باتری چطور کار می‌کنه.",
+          "feedback": "«قشنگ» نمی‌گه برای کی و چقدر ساده."
+        }
+      ],
+      "answer": {
+        "strategy": "EXACT_SET",
+        "correctChoiceIds": [
+          "c"
+        ]
+      },
+      "feedback": {
+        "general": "وقتی مخاطب و لحن رو بگی، ابزار کمتر حدس می‌زنه."
+      },
+      "hint": null,
+      "scoring": {
+        "basePoints": 50,
+        "wrongSubmissionPenalty": 10,
+        "minimumPoints": 0
+      }
+    },
+    {
+      "id": "stage02-activity03",
+      "chapterId": "prompt",
+      "order": 3,
+      "role": "LESSON",
+      "title": "ایده خوبه؛ ولی با چی؟",
+      "interactionType": "MULTIPLE_CHOICE",
+      "selection": {
+        "min": 1,
+        "max": 4,
+        "instruction": "گزینه‌های مناسب رو انتخاب کن."
+      },
+      "situation": "برای ۸ نفر یه چالش کتاب‌خوانی ۲۰دقیقه‌ای می‌خوای. فقط وسایل همین کلاس رو دارین و قرار نیست چیزی بخرین.",
+      "contentBlocks": [],
+      "character": {
+        "id": "pico",
+        "dialogue": "برای کتاب‌خوانی، سالن و مه‌ساز پیشنهاد دادم! کتاب باید ورود باشکوه داشته باشه!",
+        "mood": "CONFIDENT"
+      },
+      "prompt": "کدوم جمله‌ها درخواست رو روشن‌تر می‌کنن؟",
+      "choices": [
+        {
+          "id": "a",
+          "label": "الف",
+          "text": "فعالیت رو برای ۸ نفر و توی ۲۰ دقیقه بچین.",
+          "feedback": "تعداد نفرات و وقت رو روشن کرده."
+        },
+        {
+          "id": "b",
+          "label": "ب",
+          "text": "از وسایل همین کلاس استفاده کن؛ چیزی نمی‌خریم.",
+          "feedback": "محدودیت وسایل و خرید رو مشخص کرده."
+        },
+        {
+          "id": "c",
+          "label": "ج",
+          "text": "وقت و هزینه‌ش رو هرقدر صلاح می‌دونی خودت انتخاب کن.",
+          "feedback": "وقت و بودجه از قبل معلومه؛ نباید آزادشون بذاریم."
+        },
+        {
+          "id": "d",
+          "label": "د",
+          "text": "مراحل بازی رو کوتاه و به‌ترتیب اجرا بنویس.",
+          "feedback": "ترتیب و شکل توضیح رو روشن کرده؛ اجرای بازی راحت‌تر می‌شه."
+        }
+      ],
+      "answer": {
+        "strategy": "EXACT_SET",
+        "correctChoiceIds": [
+          "a",
+          "b",
+          "d"
+        ]
+      },
+      "feedback": {
+        "general": "وقت، وسایل و ترتیب کار رو بگو؛ ابزار از جیب ما خبر نداره!"
+      },
+      "hint": null,
+      "scoring": {
+        "basePoints": 50,
+        "wrongSubmissionPenalty": 10,
+        "minimumPoints": 0
+      }
+    },
+    {
+      "id": "stage02-activity04",
+      "chapterId": "prompt",
+      "order": 4,
+      "role": "LESSON",
+      "title": "یه خروجی که بشه ازش استفاده کرد",
+      "interactionType": "COMPARE_RESPONSES",
+      "selection": {
+        "min": 1,
+        "max": 1,
+        "instruction": "جواب مناسب رو انتخاب کن."
+      },
+      "situation": "آخر جلسه باید کلاس رو جمع کنین. فهرست کوتاهی می‌خوای که هر کار و مسئولش توی یه خط باشه.",
+      "contentBlocks": [],
+      "character": {
+        "id": "pico",
+        "dialogue": "فهرست جمع‌کردن کلاس رو سه‌جلدی نوشتم! جلد اول: کودکی‌های جارو.",
+        "mood": "CONFUSED"
+      },
+      "prompt": "کدوم درخواست خروجی مرتب‌تری می‌ده؟",
+      "choices": [
+        {
+          "id": "a",
+          "label": "الف",
+          "text": "کارهای جمع‌کردن کلاس رو با اسم مسئول هر کار توی یه متن کوتاه توضیح بده.",
+          "feedback": "کار و مسئول رو می‌گه، ولی قالب فهرست رو مشخص نکرده."
+        },
+        {
+          "id": "b",
+          "label": "ب",
+          "text": "سه کار برای جمع‌کردن کلاس بده؛ هرکدوم توی یه خط با قالب «کار — مسئول».",
+          "feedback": "قالب هر خط معلومه؛ راحت می‌شه فهرست رو دنبال کرد."
+        }
+      ],
+      "answer": {
+        "strategy": "EXACT_SET",
+        "correctChoiceIds": [
+          "b"
+        ]
+      },
+      "feedback": {
+        "general": "فهرست می‌خوای؟ قالبش رو هم بگو تا رمان تحویل نگیری!"
+      },
+      "hint": null,
+      "scoring": {
+        "basePoints": 50,
+        "wrongSubmissionPenalty": 10,
+        "minimumPoints": 0
+      }
+    },
+    {
+      "id": "stage02-activity05",
+      "chapterId": "prompt",
+      "order": 5,
+      "role": "LESSON",
+      "title": "نقش بده، قدرت جادویی نه!",
+      "interactionType": "SINGLE_CHOICE",
+      "selection": {
+        "min": 1,
+        "max": 1,
+        "instruction": "جواب مناسب رو انتخاب کن."
+      },
+      "situation": "از یه دستیار متنی ایدهٔ پوستر معرفی باشگاه می‌خوای؛ فعلاً فقط ایده و تیتر، نه فایل تصویر.",
+      "contentBlocks": [],
+      "character": {
+        "id": "pico",
+        "dialogue": "گفتی نابغه‌ای؛ همون ایدهٔ پوستر رو محکم‌تر نوشتم! الان دیگه قطعاً شاهکاره!",
+        "mood": "CONFIDENT"
+      },
+      "prompt": "کدوم درخواست، نقش رو به کار واقعی وصل کرده؟",
+      "choices": [
+        {
+          "id": "a",
+          "label": "الف",
+          "text": "مثل یه طراح پوستر مدرسه، سه ایده برای معرفی باشگاه با تیتر کوتاه پیشنهاد بده.",
+          "feedback": "نقش به کار مشخص وصله؛ ایده و تیتر می‌خوایم."
+        },
+        {
+          "id": "b",
+          "label": "ب",
+          "text": "تو یه طراح حرفه‌ای هستی؛ پس ایده‌هات قطعاً بی‌نقصن.",
+          "feedback": "نقش دادن، جواب رو بی‌نقص و تضمینی نمی‌کنه."
+        },
+        {
+          "id": "c",
+          "label": "ج",
+          "text": "خودت یه نقش انتخاب کن و یه چیز خیلی خاص بده.",
+          "feedback": "هنوز معلوم نیست چه خروجی‌ای برای چه کاری می‌خوای."
+        },
+        {
+          "id": "d",
+          "label": "د",
+          "text": "اسم چند طراح معروف رو بگو؛ بعد یه ایدهٔ خوب بده.",
+          "feedback": "اسم‌ها جای توضیح نوع کار و خروجی رو نمی‌گیرن."
+        }
+      ],
+      "answer": {
+        "strategy": "EXACT_SET",
+        "correctChoiceIds": [
+          "a"
+        ]
+      },
+      "feedback": {
+        "general": "نقش به جواب جهت می‌ده؛ چوب جادو نیست!"
+      },
+      "hint": null,
+      "scoring": {
+        "basePoints": 50,
+        "wrongSubmissionPenalty": 10,
+        "minimumPoints": 0
+      }
+    },
+    {
+      "id": "stage02-activity06",
+      "chapterId": "prompt",
+      "order": 6,
+      "role": "LESSON",
+      "title": "درخواستت با خودش دعوا نکنه!",
+      "interactionType": "MULTIPLE_CHOICE",
+      "selection": {
+        "min": 1,
+        "max": 4,
+        "instruction": "گزینه‌های مناسب رو انتخاب کن."
+      },
+      "situation": "برای گروه کلاس یه دعوت‌نامهٔ صمیمی می‌خوای؛ حداکثر ۴۰ کلمه. ساعت و مکان هنوز قطعی نیست و نباید از خودش بسازه.",
+      "contentBlocks": [],
+      "character": {
+        "id": "pico",
+        "dialogue": "دعوت‌نامه رو مفصل نوشتم، اسمش رو گذاشتم «کوتاه»! هر دو خواسته انجام شد!",
+        "mood": "EMBARRASSED"
+      },
+      "prompt": "کدوم جمله‌ها با خواسته‌ت جور درمیان؟",
+      "choices": [
+        {
+          "id": "a",
+          "label": "الف",
+          "text": "رسمی و مفصل بنویس؛ جزئیات نامشخص رو هم خودت حدس بزن.",
+          "feedback": "هم لحن عوض شده، هم جزئیات ساختگی اضافه می‌شه."
+        },
+        {
+          "id": "b",
+          "label": "ب",
+          "text": "یه دعوت‌نامهٔ صمیمی برای گروه کلاس بنویس.",
+          "feedback": "نوع متن، مخاطب و لحن با خواسته‌مون جورن."
+        },
+        {
+          "id": "c",
+          "label": "ج",
+          "text": "حداکثر ۴۰ کلمه باشه؛ ساعت و مکان نامشخص رو حدس نزن.",
+          "feedback": "هم سقف طول رو گفته، هم جلوی حدس بی‌جا رو گرفته."
+        },
+        {
+          "id": "d",
+          "label": "د",
+          "text": "همهٔ جزئیات رو مفصل بگو؛ حتی اگه متن خیلی بلند شد.",
+          "feedback": "این دستور با سقف ۴۰ کلمه جور درنمیاد."
+        }
+      ],
+      "answer": {
+        "strategy": "EXACT_SET",
+        "correctChoiceIds": [
+          "b",
+          "c"
+        ]
+      },
+      "feedback": {
+        "general": "دستورهای روشن وقتی کمک می‌کنن که همدیگه رو نقض نکنن."
+      },
+      "hint": null,
+      "scoring": {
+        "basePoints": 50,
+        "wrongSubmissionPenalty": 10,
+        "minimumPoints": 0
+      }
+    },
+    {
+      "id": "stage02-activity07",
+      "chapterId": "prompt",
+      "order": 7,
+      "role": "EXAM",
+      "title": "چالش آخر: درخواستِ کارراه‌انداز",
+      "interactionType": "MULTIPLE_CHOICE",
+      "selection": {
+        "min": 1,
+        "max": 4,
+        "instruction": "گزینه‌های مناسب رو انتخاب کن."
+      },
+      "situation": "برای کارگاه نقاشی مدرسه متن معرفی می‌خوای: مخاطب ۱۳ تا ۱۵ساله، لحن صمیمی، کل خروجی حداکثر ۵۰ کلمه و فقط شامل تیتر و متن. زمان و مکان هنوز مشخص نیست.",
+      "contentBlocks": [],
+      "character": {
+        "id": "pico",
+        "dialogue": "معرفی کارگاه رو مفصل نوشتم؛ ساعت و مکان هم خودم گذاشتم! کامل یعنی این!",
+        "mood": "CONFIDENT"
+      },
+      "prompt": "کدوم درخواست‌ها به این کار می‌خورن؟",
+      "choices": [
+        {
+          "id": "a",
+          "label": "الف",
+          "text": "برای نوجوان‌ها یه تیتر و متن صمیمی تا ۵۰ کلمه برای کارگاه نقاشی بنویس؛ زمان و مکان رو خودت انتخاب کن.",
+          "feedback": "بخش آخر اطلاعات نامشخص رو از خودش می‌سازه."
+        },
+        {
+          "id": "b",
+          "label": "ب",
+          "text": "برای ۱۳ تا ۱۵ساله‌ها، معرفی صمیمی کارگاه نقاشی رو فقط با تیتر و متن بنویس؛ کلش تا ۵۰ کلمه. زمان و مکان رو حدس نزن.",
+          "feedback": "هدف، مخاطب، لحن، قالب و محدودیت‌ها روشن و سازگارن."
+        },
+        {
+          "id": "c",
+          "label": "ج",
+          "text": "مثل یه متخصص هنری، معرفی رسمی و مفصل کارگاه رو بنویس؛ جواب هم قطعاً بی‌نقص باشه.",
+          "feedback": "لحن و طول مناسب نیست؛ نقش هم تضمین بی‌نقصی نیست."
+        },
+        {
+          "id": "d",
+          "label": "د",
+          "text": "یه تیتر و متن برای معرفی کارگاه نقاشی به ۱۳ تا ۱۵ساله‌ها بده؛ صمیمی و در مجموع تا ۵۰ کلمه، بدون زمان و مکان ساختگی.",
+          "feedback": "خواسته‌ها رو نگه داشته و چیزی از خودش اضافه نمی‌کنه."
+        }
+      ],
+      "answer": {
+        "strategy": "EXACT_SET",
+        "correctChoiceIds": [
+          "b",
+          "d"
+        ]
+      },
+      "feedback": {
+        "general": "درخواست خوب، کار و شکل جواب رو روشن می‌کنه؛ نه اینکه بگه «خودت بفهم»!"
+      },
+      "hint": null,
+      "scoring": {
+        "basePoints": 50,
+        "wrongSubmissionPenalty": 10,
+        "minimumPoints": 0
+      }
+    }
+  ],
+  "pendingDecisions": []
+}

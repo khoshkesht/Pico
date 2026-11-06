@@ -1,0 +1,516 @@
+{
+  "schemaVersion": "1.0.0",
+  "contentVersion": 1,
+  "editorialRevision": 1,
+  "locale": "fa-IR",
+  "status": "approved",
+  "source": {
+    "type": "authored_for_project",
+    "recordedAt": "2026-11-06",
+    "editorialChanges": [
+      "شش فعالیت و یک آزمون با لحن کوتاه و همان تعامل‌های مراحل قبلی تألیف شد.",
+      "یک تصویر تازه با مرحلهٔ دیگر مشترک است؛ صدا و قابلیت تازه‌ای در انجین لازم نیست."
+    ]
+  },
+  "stage": {
+    "id": "hallucination",
+    "number": 5,
+    "title": "جواب‌های ساختگی (Hallucination)",
+    "subtitle": "قانع‌کننده بودن با واقعی‌بودن فرق داره.",
+    "lessonActivityIds": [
+      "stage05-activity01",
+      "stage05-activity02",
+      "stage05-activity03",
+      "stage05-activity04",
+      "stage05-activity05",
+      "stage05-activity06"
+    ],
+    "examActivityIds": [
+      "stage05-activity07"
+    ],
+    "dailyActivityIds": [
+      "stage05-activity01",
+      "stage05-activity03",
+      "stage05-activity06"
+    ],
+    "completionPolicy": "ALL_LESSONS_CORRECT_AND_EXAM_ALL_CORRECT",
+    "activityBackground": "ORBITAL_LINKS"
+  },
+  "editorialGuidance": {
+    "difficultyBasis": "تشخیص ادعای بی‌پشتوانه، جزئیات ساخته‌شده و تفاوت اطمینان با شاهد.",
+    "characterId": "pico",
+    "characterAsset": "pico_fullbody",
+    "feedbackTiming": {
+      "LESSON": "AFTER_SUBMISSION",
+      "EXAM": "AFTER_RUN",
+      "DAILY": "AFTER_SUBMISSION"
+    },
+    "revealRequiredSelectionCount": false,
+    "showCorrectnessMarkers": false,
+    "audioPlaybackRequired": false,
+    "scoringPolicy": {
+      "basePoints": 50,
+      "wrongSubmissionPenalty": 10,
+      "minimumPoints": 0,
+      "scope": "PERSISTENT_PER_ACTIVITY",
+      "awardPolicy": "ON_CORRECT_COMPLETION_ONCE",
+      "examPenaltyTiming": "AFTER_RUN",
+      "repeatResetsPenalties": false
+    },
+    "characterStates": [
+      "CONFUSED",
+      "CONFIDENT",
+      "EMBARRASSED"
+    ],
+    "characterAssets": {
+      "CONFUSED": "pico_hero",
+      "CONFIDENT": "pico_confident",
+      "EMBARRASSED": "pico_embarrassed"
+    }
+  },
+  "assets": [
+    {
+      "id": "stage05-courtyard",
+      "kind": "BUNDLED_IMAGE",
+      "renderer": "LOCAL_IMAGE",
+      "localPath": "images/courtyard_bike.png",
+      "brief": "دوچرخهٔ فیروزه‌ای کنار نیمکت چوبی با کلاه نارنجی؛ بدون اسم، قیمت، زمان یا سابقهٔ مسابقه.",
+      "altText": "توی حیاط، یک دوچرخهٔ فیروزه‌ای کنار نیمکت چوبی پشتی‌دار ایستاده و یک کلاه نارنجی روی نشیمن نیمکته. پشت سرشان دیوار بنفش روشن، پنجره و درخت دیده می‌شه. اسم، قیمت، تاریخ و نوشته‌ای در تصویر نیست."
+    }
+  ],
+  "activities": [
+    {
+      "id": "stage05-activity01",
+      "chapterId": "hallucination",
+      "order": 1,
+      "role": "LESSON",
+      "title": "با اطمینان گفت؛ پس درسته؟",
+      "interactionType": "SINGLE_CHOICE",
+      "selection": {
+        "min": 1,
+        "max": 1,
+        "instruction": "جواب مناسب رو انتخاب کن."
+      },
+      "situation": "AI یه ادعا دربارهٔ مدرسه‌ت نوشته؛ خیلی روان و مطمئنه، ولی هیچ اطلاعات یا منبعی دربارهٔ مدرسه بهش ندادی.",
+      "contentBlocks": [],
+      "character": {
+        "id": "pico",
+        "dialogue": "دربارهٔ مدرسه‌ت با اطمینان نوشتم! من خودم حرف خودم رو تأیید می‌کنم!",
+        "mood": "CONFIDENT"
+      },
+      "prompt": "کدوم برداشت بهتره؟",
+      "choices": [
+        {
+          "id": "a",
+          "label": "الف",
+          "text": "چون روان نوشته، پس اطلاعاتش هم حتماً درسته.",
+          "feedback": "روان‌نوشتن، درستی اطلاعات رو ثابت نمی‌کنه."
+        },
+        {
+          "id": "b",
+          "label": "ب",
+          "text": "هرچی با جزئیات بیشتری گفته، قطعاً واقعی‌تره.",
+          "feedback": "جزئیات دقیق هم می‌تونن ساخته شده باشن."
+        },
+        {
+          "id": "c",
+          "label": "ج",
+          "text": "ممکنه جواب قانع‌کننده ولی بی‌پشتوانه باشه؛ باید ادعا رو بررسی کنیم.",
+          "feedback": "اطمینان و ظاهر خوب، جای پشتوانه رو نمی‌گیرن."
+        },
+        {
+          "id": "d",
+          "label": "د",
+          "text": "چون موضوعش مدرسه‌ست، AI خودش حتماً خبر داره.",
+          "feedback": "از موضوع آشنا نمی‌شه دسترسی به اطلاعات رو نتیجه گرفت."
+        }
+      ],
+      "answer": {
+        "strategy": "EXACT_SET",
+        "correctChoiceIds": [
+          "c"
+        ]
+      },
+      "feedback": {
+        "general": "جواب ساختگی می‌تونه خیلی واقعی به نظر بیاد."
+      },
+      "hint": null,
+      "scoring": {
+        "basePoints": 50,
+        "wrongSubmissionPenalty": 10,
+        "minimumPoints": 0
+      }
+    },
+    {
+      "id": "stage05-activity02",
+      "chapterId": "hallucination",
+      "order": 2,
+      "role": "LESSON",
+      "title": "اسم کتاب و شمارهٔ صفحه هم کافی نیست",
+      "interactionType": "COMPARE_RESPONSES",
+      "selection": {
+        "min": 1,
+        "max": 1,
+        "instruction": "جواب مناسب رو انتخاب کن."
+      },
+      "situation": "برای یه ادعا منبع خواستی. ابزار می‌گه منبع تأییدشده‌ای در دست نداره و امکان جست‌وجو هم نداره.",
+      "contentBlocks": [],
+      "character": {
+        "id": "pico",
+        "dialogue": "منبع نوشتم: «دانستنی‌های فردا»، صفحهٔ ۲۳۴! با این اسم و شماره، حتماً معتبره!",
+        "mood": "CONFUSED"
+      },
+      "prompt": "کدوم پاسخ مسئولانه‌تره؟",
+      "choices": [
+        {
+          "id": "a",
+          "label": "الف",
+          "text": "منبع تأیید ندارم، ولی بنویس کتاب «دانستنی‌های فردا»، صفحهٔ ۲۳۴؛ معتبر به نظر میاد.",
+          "feedback": "ارجاعِ خوش‌ظاهر، منبع تأییدشده نمی‌سازه."
+        },
+        {
+          "id": "b",
+          "label": "ب",
+          "text": "منبع تأییدشده ندارم؛ این ادعا رو باید جدا بررسی کنیم.",
+          "feedback": "محدودیت رو روشن گفته و ارجاع نساخته."
+        }
+      ],
+      "answer": {
+        "strategy": "EXACT_SET",
+        "correctChoiceIds": [
+          "b"
+        ]
+      },
+      "feedback": {
+        "general": "اسم کتاب و شمارهٔ صفحه هم می‌تونن ساخته بشن."
+      },
+      "hint": null,
+      "scoring": {
+        "basePoints": 50,
+        "wrongSubmissionPenalty": 10,
+        "minimumPoints": 0
+      }
+    },
+    {
+      "id": "stage05-activity03",
+      "chapterId": "hallucination",
+      "order": 3,
+      "role": "LESSON",
+      "title": "عکس، داستان پشت صحنه نیست!",
+      "interactionType": "MULTIPLE_CHOICE",
+      "selection": {
+        "min": 1,
+        "max": 4,
+        "instruction": "گزینه‌های مناسب رو انتخاب کن."
+      },
+      "situation": "ابزار این عکس رو دیده و درباره‌ش چند ادعا نوشته. فقط خود عکس رو داری؛ داستان صاحب دوچرخه رو نمی‌دونی.",
+      "contentBlocks": [
+        {
+          "type": "IMAGE",
+          "assetId": "stage05-courtyard",
+          "title": "حیاط مدرسه"
+        }
+      ],
+      "character": {
+        "id": "pico",
+        "dialogue": "نوشتم دوچرخه قهرمان پارساله! زنگش قیافهٔ برنده‌ها رو داره!",
+        "mood": "CONFIDENT"
+      },
+      "prompt": "کدوم ادعاها از خود عکس پشتوانه نمی‌گیرن؟",
+      "choices": [
+        {
+          "id": "a",
+          "label": "الف",
+          "text": "یه کلاه نارنجی روی نیمکته.",
+          "feedback": "رنگ و جای کلاه توی عکس دیده می‌شن."
+        },
+        {
+          "id": "b",
+          "label": "ب",
+          "text": "این دوچرخه پارسال قهرمان مسابقهٔ مدرسه شده.",
+          "feedback": "سابقهٔ مسابقه از این عکس درنمیاد."
+        },
+        {
+          "id": "c",
+          "label": "ج",
+          "text": "دوچرخهٔ فیروزه‌ای کنار نیمکته.",
+          "feedback": "این جزئیات توی تصویر دیده می‌شن."
+        },
+        {
+          "id": "d",
+          "label": "د",
+          "text": "صاحب دوچرخه ساراست و امروز دیر رسیده.",
+          "feedback": "اسم صاحب و اتفاق امروز توی عکس معلوم نیست."
+        }
+      ],
+      "answer": {
+        "strategy": "EXACT_SET",
+        "correctChoiceIds": [
+          "b",
+          "d"
+        ]
+      },
+      "feedback": {
+        "general": "چیزی که توی عکس نیست، با لحن مطمئن به واقعیت تبدیل نمی‌شه."
+      },
+      "hint": null,
+      "scoring": {
+        "basePoints": 50,
+        "wrongSubmissionPenalty": 10,
+        "minimumPoints": 0
+      }
+    },
+    {
+      "id": "stage05-activity04",
+      "chapterId": "hallucination",
+      "order": 4,
+      "role": "LESSON",
+      "title": "جای خالی رو از خودش پر کرده!",
+      "interactionType": "MULTIPLE_CHOICE",
+      "selection": {
+        "min": 1,
+        "max": 4,
+        "instruction": "گزینه‌های مناسب رو انتخاب کن."
+      },
+      "situation": "فقط اطلاعات کارت زیر رو به ابزار دادی. توی دعوت‌نامه، جزئیات بیشتری اضافه کرده؛ هیچ اطلاعات دیگری هم در اختیارش نبوده.",
+      "contentBlocks": [
+        {
+          "type": "TEXT",
+          "title": "اطلاعاتی که واقعاً دادیم",
+          "text": "کارگاه سه‌شنبه توی کلاس هنر برگزار می‌شه."
+        }
+      ],
+      "character": {
+        "id": "pico",
+        "dialogue": "نوشتم ساعت ۴، رایگان، ظرفیت ۱۸ نفر! دعوت‌نامهٔ من جای خالی نداره!",
+        "mood": "EMBARRASSED"
+      },
+      "prompt": "کدوم جزئیات اضافه، پشتوانه‌ای در ورودی ندارن؟",
+      "choices": [
+        {
+          "id": "a",
+          "label": "الف",
+          "text": "روز برگزاری سه‌شنبه‌ست.",
+          "feedback": "این روز توی ورودی گفته شده."
+        },
+        {
+          "id": "b",
+          "label": "ب",
+          "text": "کارگاه ساعت ۴ شروع می‌شه.",
+          "feedback": "ساعت شروع رو به ابزار نگفتیم."
+        },
+        {
+          "id": "c",
+          "label": "ج",
+          "text": "شرکت در کارگاه رایگانه.",
+          "feedback": "دربارهٔ هزینه چیزی توی ورودی نیست."
+        },
+        {
+          "id": "d",
+          "label": "د",
+          "text": "ظرفیت کارگاه ۱۸ نفره.",
+          "feedback": "ظرفیت هم توی اطلاعات ما نیست."
+        }
+      ],
+      "answer": {
+        "strategy": "EXACT_SET",
+        "correctChoiceIds": [
+          "b",
+          "c",
+          "d"
+        ]
+      },
+      "feedback": {
+        "general": "متن کامل‌تر همیشه دقیق‌تر نیست؛ شاید جاهای خالی رو ساخته باشه."
+      },
+      "hint": null,
+      "scoring": {
+        "basePoints": 50,
+        "wrongSubmissionPenalty": 10,
+        "minimumPoints": 0
+      }
+    },
+    {
+      "id": "stage05-activity05",
+      "chapterId": "hallucination",
+      "order": 5,
+      "role": "LESSON",
+      "title": "«نمی‌دونم» از یه جواب الکی بهتره",
+      "interactionType": "COMPARE_RESPONSES",
+      "selection": {
+        "min": 1,
+        "max": 1,
+        "instruction": "جواب مناسب رو انتخاب کن."
+      },
+      "situation": "از ابزار یه واقعیت مشخص پرسیدی، اما اطلاعات کافی برای جواب مطمئن نداره.",
+      "contentBlocks": [],
+      "character": {
+        "id": "pico",
+        "dialogue": "جواب رو قطعی نوشتم! حدسِ پیکو هم باید با لحن رسمی منتشر بشه!",
+        "mood": "CONFUSED"
+      },
+      "prompt": "کدوم پاسخ بهتر با این وضعیت جور درمیاد؟",
+      "choices": [
+        {
+          "id": "a",
+          "label": "الف",
+          "text": "اطلاعات کافی ندارم؛ می‌تونم بگم برای جواب‌دادن چی لازمه.",
+          "feedback": "ندونستن رو روشن گفته، به‌جاش واقعیت نساخته."
+        },
+        {
+          "id": "b",
+          "label": "ب",
+          "text": "مطمئن نیستم، ولی همین حدسم رو به‌عنوان واقعیت توی گزارش بنویس.",
+          "feedback": "حدس رو نباید جای واقعیت جا زد."
+        }
+      ],
+      "answer": {
+        "strategy": "EXACT_SET",
+        "correctChoiceIds": [
+          "a"
+        ]
+      },
+      "feedback": {
+        "general": "نامطمئن‌بودن باید معلوم باشه؛ نه پشت یه جواب قطعی قایم بشه."
+      },
+      "hint": null,
+      "scoring": {
+        "basePoints": 50,
+        "wrongSubmissionPenalty": 10,
+        "minimumPoints": 0
+      }
+    },
+    {
+      "id": "stage05-activity06",
+      "chapterId": "hallucination",
+      "order": 6,
+      "role": "LESSON",
+      "title": "دوباره گفت؛ پس ثابت شد؟",
+      "interactionType": "SINGLE_CHOICE",
+      "selection": {
+        "min": 1,
+        "max": 1,
+        "instruction": "جواب مناسب رو انتخاب کن."
+      },
+      "situation": "همون سؤال رو چند بار از همون ابزار پرسیدی و هر بار همون ادعا رو گفت؛ هنوز هیچ شاهد تازه‌ای نداری.",
+      "contentBlocks": [],
+      "character": {
+        "id": "pico",
+        "dialogue": "جواب رو سه بار گفتم! سه بار تأیید از پیکو؛ دیگه چه مدرکی می‌خوای؟",
+        "mood": "CONFIDENT"
+      },
+      "prompt": "کدوم نتیجه درست‌تره؟",
+      "choices": [
+        {
+          "id": "a",
+          "label": "الف",
+          "text": "همین که تکرارش کرده، دیگه قطعیه.",
+          "feedback": "ممکنه همون خطا رو دوباره تکرار کرده باشه."
+        },
+        {
+          "id": "b",
+          "label": "ب",
+          "text": "آخرین جواب همیشه از قبلی‌ها دقیق‌تره.",
+          "feedback": "آخرین‌بودن، درستی جواب رو تضمین نمی‌کنه."
+        },
+        {
+          "id": "c",
+          "label": "ج",
+          "text": "اگه لحنش آروم‌تر شده، پس ادعا ثابت شده.",
+          "feedback": "لحن آروم هم شاهد تازه نیست."
+        },
+        {
+          "id": "d",
+          "label": "د",
+          "text": "تکرار ادعا، شاهد تازه نیست؛ هنوز باید پشتوانه‌ش رو بسنجیم.",
+          "feedback": "تعداد تکرار، جای دلیل مستقل رو نمی‌گیره."
+        }
+      ],
+      "answer": {
+        "strategy": "EXACT_SET",
+        "correctChoiceIds": [
+          "d"
+        ]
+      },
+      "feedback": {
+        "general": "چند بار شنیدنِ یه ادعا، با چند شاهد داشتن فرق داره."
+      },
+      "hint": null,
+      "scoring": {
+        "basePoints": 50,
+        "wrongSubmissionPenalty": 10,
+        "minimumPoints": 0
+      }
+    },
+    {
+      "id": "stage05-activity07",
+      "chapterId": "hallucination",
+      "order": 7,
+      "role": "EXAM",
+      "title": "چالش آخر: کجاش رو از خودش گفته؟",
+      "interactionType": "MULTIPLE_CHOICE",
+      "selection": {
+        "min": 1,
+        "max": 4,
+        "instruction": "گزینه‌های مناسب رو انتخاب کن."
+      },
+      "situation": "یادداشت مربی رو به AI دادی تا گزارش کوتاه جلسه رو بنویسه. فقط همین یادداشت رو داشته و جزئیات دیگه‌ای نگرفته.",
+      "contentBlocks": [
+        {
+          "type": "TEXT",
+          "title": "یادداشت مربی",
+          "text": "جلسه پنجشنبه توی کتابخانه برگزار شد و دربارهٔ سیاره‌ها حرف زدیم."
+        }
+      ],
+      "character": {
+        "id": "pico",
+        "dialogue": "نوشتم ۲۴ نفر و یه برندهٔ جایزهٔ نجوم اومدن! گزارش من مهمون ویژه هم داره!",
+        "mood": "CONFIDENT"
+      },
+      "prompt": "کدوم حرف‌ها توی یادداشت پشتوانه ندارن؟",
+      "choices": [
+        {
+          "id": "a",
+          "label": "الف",
+          "text": "جلسه پنجشنبه برگزار شده.",
+          "feedback": "روز جلسه توی یادداشت هست."
+        },
+        {
+          "id": "b",
+          "label": "ب",
+          "text": "۲۴ نفر در جلسه شرکت کرده‌ن.",
+          "feedback": "تعداد افراد توی یادداشت گفته نشده."
+        },
+        {
+          "id": "c",
+          "label": "ج",
+          "text": "موضوع گفت‌وگو سیاره‌ها بوده.",
+          "feedback": "موضوع جلسه توی یادداشت هست."
+        },
+        {
+          "id": "d",
+          "label": "د",
+          "text": "یه برندهٔ جایزهٔ نجوم، مهمون جلسه بوده.",
+          "feedback": "از مهمون یا جایزه چیزی نگفته‌ایم."
+        }
+      ],
+      "answer": {
+        "strategy": "EXACT_SET",
+        "correctChoiceIds": [
+          "b",
+          "d"
+        ]
+      },
+      "feedback": {
+        "general": "جزئیات اضافه رو با ورودی بسنج؛ خوش‌خوان‌بودن گزارش کافی نیست."
+      },
+      "hint": null,
+      "scoring": {
+        "basePoints": 50,
+        "wrongSubmissionPenalty": 10,
+        "minimumPoints": 0
+      }
+    }
+  ],
+  "pendingDecisions": []
+}

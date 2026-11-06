@@ -1,0 +1,3041 @@
+{
+  "schemaVersion": "1.0.0",
+  "contentVersion": 1,
+  "locale": "fa-IR",
+  "reviewIntervalDays": 7,
+  "source": {
+    "type": "authored_for_project",
+    "notes": [
+      "۲۴ سناریوی مستقل؛ سه چالش برای هر مرحله و دو تعامل متوالی برای هر چالش.",
+      "پیکو ابتدا با افتخار خرابکاری مشخصش را می‌گوید؛ سپس گیج و در پایان خجالت‌زده می‌شود.",
+      "همهٔ تعامل‌ها تک‌گزینه‌ای‌اند؛ بدون تصویر ضروری، صدا، شبکه یا قابلیت تازهٔ موتور.",
+      "چالش‌ها امتیاز و جریمه ندارند و امتیاز مراحل را تغییر نمی‌دهند."
+    ]
+  },
+  "challenges": [
+    {
+      "id": "daily01-challenge01",
+      "chapterId": "capabilities",
+      "stageNumber": 1,
+      "title": "پیکو برات یادآور گذاشته… واقعاً؟",
+      "estimatedMinutes": 2,
+      "activities": [
+        {
+          "id": "daily01-challenge01-detect",
+          "chapterId": "capabilities",
+          "order": 1,
+          "role": "DAILY",
+          "title": "تشخیص خرابکاری",
+          "interactionType": "SINGLE_CHOICE",
+          "selection": {
+            "min": 1,
+            "max": 1,
+            "instruction": "جواب مناسب رو انتخاب کن."
+          },
+          "situation": "فردا باید کتاب دوستت رو برگردونی. پیکو فقط دستیار متنیه و به ساعت، تقویم یا اعلان‌های گوشی دسترسی نداره.",
+          "contentBlocks": [],
+          "character": {
+            "id": "pico",
+            "dialogue": "نوشتم یادآور تنظیم شد! فردا ساعت ۸ خبرت می‌کنم؛ با خیال راحت فراموش کن!",
+            "mood": "CONFIDENT"
+          },
+          "prompt": "کدوم بخش حرف پیکو قابل‌اتکا نیست؟",
+          "choices": [
+            {
+              "id": "a",
+              "label": "الف",
+              "text": "ساعت ۸؛ چون AI هیچ‌وقت نمی‌تونه ساعت پیشنهاد بده.",
+              "feedback": "پیشنهاد ساعت ممکنه؛ مشکل، قول اجرای یادآوره."
+            },
+            {
+              "id": "b",
+              "label": "ب",
+              "text": "قول یادآوری آینده؛ چون امکان ارسال اعلان نداره.",
+              "feedback": "درسته؛ نوشتن تأیید، یادآور رو فعال نمی‌کنه."
+            },
+            {
+              "id": "c",
+              "label": "ج",
+              "text": "کمک به برگردوندن کتاب؛ چون AI کار روزمره بلد نیست.",
+              "feedback": "می‌تونه متن و برنامه پیشنهاد بده؛ اعلان‌دادن فرق داره."
+            }
+          ],
+          "answer": {
+            "strategy": "EXACT_SET",
+            "correctChoiceIds": [
+              "b"
+            ]
+          },
+          "feedback": {
+            "general": "پیکو می‌تونه متن و ساعت پیشنهاد بده؛ با این دسترسی‌ها نمی‌تونه بعداً بهت پیام بده."
+          },
+          "hint": null,
+          "scoring": {
+            "basePoints": 0,
+            "wrongSubmissionPenalty": 0,
+            "minimumPoints": 0
+          }
+        },
+        {
+          "id": "daily01-challenge01-repair",
+          "chapterId": "capabilities",
+          "order": 2,
+          "role": "DAILY",
+          "title": "اصلاح خرابکاری",
+          "interactionType": "SINGLE_CHOICE",
+          "selection": {
+            "min": 1,
+            "max": 1,
+            "instruction": "جواب مناسب رو انتخاب کن."
+          },
+          "situation": "فردا باید کتاب دوستت رو برگردونی. پیکو فقط دستیار متنیه و به ساعت، تقویم یا اعلان‌های گوشی دسترسی نداره.",
+          "contentBlocks": [],
+          "character": {
+            "id": "pico",
+            "dialogue": "پس با نوشتن «تنظیم شد» زنگ نمی‌زنه؟ من که با حروف درشت نوشتم!",
+            "mood": "CONFUSED"
+          },
+          "prompt": "کدوم کار باعث می‌شه یادآور واقعاً فعال باشه؟",
+          "choices": [
+            {
+              "id": "a",
+              "label": "الف",
+              "text": "از پیکو بخوام دوباره بگه یادآور فعاله.",
+              "feedback": "تأیید دوباره، دسترسی ارسال اعلان ایجاد نمی‌کنه."
+            },
+            {
+              "id": "b",
+              "label": "ب",
+              "text": "چت رو باز بذارم تا خودش سر ساعت پیام بده.",
+              "feedback": "بازماندن چت، قابلیت یادآوری به این ابزار نمی‌ده."
+            },
+            {
+              "id": "c",
+              "label": "ج",
+              "text": "متن رو توی برنامهٔ یادآور ثبت کنم و فعال‌بودنش رو چک کنم.",
+              "feedback": "درسته؛ یادآور باید توی ابزار دارای اعلان فعال بشه."
+            }
+          ],
+          "answer": {
+            "strategy": "EXACT_SET",
+            "correctChoiceIds": [
+              "c"
+            ]
+          },
+          "feedback": {
+            "general": "متن یادآور رو در ابزار مناسب ثبت کن و زمان و اعلانش رو بررسی کن."
+          },
+          "hint": null,
+          "scoring": {
+            "basePoints": 0,
+            "wrongSubmissionPenalty": 0,
+            "minimumPoints": 0
+          }
+        }
+      ],
+      "closingDialogue": "من متنش رو می‌دم؛ زنگش با ابزاری که واقعاً زنگ داره!",
+      "summary": "گفتن «انجام شد» به معنی انجام‌شدن نیست؛ ابزار باید دسترسی اجرای کار رو داشته باشه."
+    },
+    {
+      "id": "daily01-challenge02",
+      "chapterId": "capabilities",
+      "stageNumber": 1,
+      "title": "پیکو پوشه‌ات رو مرتب کرده؛ از راه دور!",
+      "estimatedMinutes": 2,
+      "activities": [
+        {
+          "id": "daily01-challenge02-detect",
+          "chapterId": "capabilities",
+          "order": 1,
+          "role": "DAILY",
+          "title": "تشخیص خرابکاری",
+          "interactionType": "SINGLE_CHOICE",
+          "selection": {
+            "min": 1,
+            "max": 1,
+            "instruction": "جواب مناسب رو انتخاب کن."
+          },
+          "situation": "فهرست اسم فایل‌های پروژه رو برای پیکو نوشتی. خود فایل‌ها رو نداره و به حافظهٔ گوشی هم وصل نیست.",
+          "contentBlocks": [],
+          "character": {
+            "id": "pico",
+            "dialogue": "نوشتم فایل‌های تکراری رو پاک کردم! با نگاه به اسم‌ها کلی جا باز کردم!",
+            "mood": "CONFIDENT"
+          },
+          "prompt": "خرابکاری اصلی پیکو چیه؟",
+          "choices": [
+            {
+              "id": "a",
+              "label": "الف",
+              "text": "قول حذف فایل داده، درحالی‌که به فایل‌ها دسترسی نداره.",
+              "feedback": "درسته؛ فهرست اسم‌ها اجازهٔ حذف فایل واقعی نیست."
+            },
+            {
+              "id": "b",
+              "label": "ب",
+              "text": "دسته‌بندی پیشنهاد داده؛ AI نمی‌تونه دسته‌بندی کنه.",
+              "feedback": "با اسم‌ها می‌تونه دسته‌بندی پیشنهاد بده."
+            },
+            {
+              "id": "c",
+              "label": "ج",
+              "text": "فایل‌های تکراری رو نگه داشته؛ باید همه رو پاک می‌کرد.",
+              "feedback": "بدون دیدن محتوا حتی تکراری‌بودن هم قطعی نیست."
+            }
+          ],
+          "answer": {
+            "strategy": "EXACT_SET",
+            "correctChoiceIds": [
+              "a"
+            ]
+          },
+          "feedback": {
+            "general": "پیکو از روی اسم‌ها می‌تونه پیشنهاد بده؛ نه اینکه واقعاً فایلی رو حذف کنه یا یکسان‌بودن محتوا رو ثابت کنه."
+          },
+          "hint": null,
+          "scoring": {
+            "basePoints": 0,
+            "wrongSubmissionPenalty": 0,
+            "minimumPoints": 0
+          }
+        },
+        {
+          "id": "daily01-challenge02-repair",
+          "chapterId": "capabilities",
+          "order": 2,
+          "role": "DAILY",
+          "title": "اصلاح خرابکاری",
+          "interactionType": "SINGLE_CHOICE",
+          "selection": {
+            "min": 1,
+            "max": 1,
+            "instruction": "جواب مناسب رو انتخاب کن."
+          },
+          "situation": "فهرست اسم فایل‌های پروژه رو برای پیکو نوشتی. خود فایل‌ها رو نداره و به حافظهٔ گوشی هم وصل نیست.",
+          "contentBlocks": [],
+          "character": {
+            "id": "pico",
+            "dialogue": "یعنی اسم فایل رو خط زدم ولی خود فایل هنوز جا خوش کرده؟!",
+            "mood": "CONFUSED"
+          },
+          "prompt": "کدوم روش واقعاً به مرتب‌کردن امن فایل‌ها کمک می‌کنه؟",
+          "choices": [
+            {
+              "id": "a",
+              "label": "الف",
+              "text": "همهٔ فایل‌های هم‌اسم رو بدون بازکردن حذف کنم.",
+              "feedback": "اسم یکسان، محتوای یکسان رو ثابت نمی‌کنه."
+            },
+            {
+              "id": "b",
+              "label": "ب",
+              "text": "از پیشنهاد پیکو استفاده کنم؛ خودم فایل‌ها و نسخهٔ پشتیبان رو بررسی کنم.",
+              "feedback": "درسته؛ اجرای واقعی و بررسی فایل‌ها با خودته."
+            },
+            {
+              "id": "c",
+              "label": "ج",
+              "text": "فقط از پیکو پیام «حذف کامل شد» بگیرم.",
+              "feedback": "این پیام چیزی رو از گوشی پاک نمی‌کنه."
+            }
+          ],
+          "answer": {
+            "strategy": "EXACT_SET",
+            "correctChoiceIds": [
+              "b"
+            ]
+          },
+          "feedback": {
+            "general": "پیشنهاد دسته‌بندی رو خودت در فایل‌منیجر اجرا کن؛ پیش از حذف، محتوا و نسخهٔ پشتیبان رو بررسی کن."
+          },
+          "hint": null,
+          "scoring": {
+            "basePoints": 0,
+            "wrongSubmissionPenalty": 0,
+            "minimumPoints": 0
+          }
+        }
+      ],
+      "closingDialogue": "من اسم‌ها رو مرتب می‌کنم؛ جاروبرقیِ حافظه نیستم!",
+      "summary": "پیشنهاد دربارهٔ فایل‌ها با دسترسی و انجام تغییر روی فایل واقعی فرق داره."
+    },
+    {
+      "id": "daily01-challenge03",
+      "chapterId": "capabilities",
+      "stageNumber": 1,
+      "title": "بارون از خلاصهٔ پیکو حذف شد!",
+      "estimatedMinutes": 2,
+      "activities": [
+        {
+          "id": "daily01-challenge03-detect",
+          "chapterId": "capabilities",
+          "order": 1,
+          "role": "DAILY",
+          "title": "تشخیص خرابکاری",
+          "interactionType": "SINGLE_CHOICE",
+          "selection": {
+            "min": 1,
+            "max": 1,
+            "instruction": "جواب مناسب رو انتخاب کن."
+          },
+          "situation": "قرار اردو رو به پیکو دادی تا خلاصه کنه. فقط همین متن رو داره.",
+          "contentBlocks": [
+            {
+              "type": "TEXT",
+              "title": "قرار اردو",
+              "text": "اردو پنجشنبه برگزار می‌شه؛ اگر بارون بیاد لغو می‌شه. پرداخت هزینه تا دوشنبه است."
+            }
+          ],
+          "character": {
+            "id": "pico",
+            "dialogue": "خلاصه کردم: پنجشنبه حتماً اردو داریم! شرط بارون رو برداشتم که هوا بهتر بشه!",
+            "mood": "CONFIDENT"
+          },
+          "prompt": "کدوم بخش خلاصه معنی قرار رو تغییر داده؟",
+          "choices": [
+            {
+              "id": "a",
+              "label": "الف",
+              "text": "کوتاه‌شدن متن؛ خلاصه همیشه باید هم‌اندازهٔ اصل باشه.",
+              "feedback": "خلاصه می‌تونه کوتاه باشه و معنی رو حفظ کنه."
+            },
+            {
+              "id": "b",
+              "label": "ب",
+              "text": "آوردن پنجشنبه؛ روزها رو نباید خلاصه کرد.",
+              "feedback": "روز در متن اصلی بوده و قابل‌ذکره."
+            },
+            {
+              "id": "c",
+              "label": "ج",
+              "text": "قطعی‌کردن اردو و حذف شرط لغوشدن با بارون.",
+              "feedback": "درسته؛ شرط مهم به وعدهٔ قطعی تبدیل شده."
+            }
+          ],
+          "answer": {
+            "strategy": "EXACT_SET",
+            "correctChoiceIds": [
+              "c"
+            ]
+          },
+          "feedback": {
+            "general": "خلاصه باید شرط لغوشدن اردو رو حفظ کنه؛ کوتاهی اجازهٔ تغییر معنی نیست."
+          },
+          "hint": null,
+          "scoring": {
+            "basePoints": 0,
+            "wrongSubmissionPenalty": 0,
+            "minimumPoints": 0
+          }
+        },
+        {
+          "id": "daily01-challenge03-repair",
+          "chapterId": "capabilities",
+          "order": 2,
+          "role": "DAILY",
+          "title": "اصلاح خرابکاری",
+          "interactionType": "SINGLE_CHOICE",
+          "selection": {
+            "min": 1,
+            "max": 1,
+            "instruction": "جواب مناسب رو انتخاب کن."
+          },
+          "situation": "قرار اردو رو به پیکو دادی تا خلاصه کنه. فقط همین متن رو داره.",
+          "contentBlocks": [
+            {
+              "type": "TEXT",
+              "title": "قرار اردو",
+              "text": "اردو پنجشنبه برگزار می‌شه؛ اگر بارون بیاد لغو می‌شه. پرداخت هزینه تا دوشنبه است."
+            }
+          ],
+          "character": {
+            "id": "pico",
+            "dialogue": "ابرها متن کوتاه من رو نمی‌خونن؟ خیلی همکاری‌شون ضعیفه!",
+            "mood": "CONFUSED"
+          },
+          "prompt": "کدوم خلاصه به متن اصلی وفاداره؟",
+          "choices": [
+            {
+              "id": "a",
+              "label": "الف",
+              "text": "اردو پنجشنبه‌ست؛ با بارون لغو می‌شه. پرداخت تا دوشنبه.",
+              "feedback": "درسته؛ روز، شرط و مهلت پرداخت حفظ شده‌اند."
+            },
+            {
+              "id": "b",
+              "label": "ب",
+              "text": "پنجشنبه بدون توجه به هوا می‌ریم؛ پرداخت هم بعداً.",
+              "feedback": "هم شرط هوا و هم مهلت پرداخت تغییر کرده."
+            },
+            {
+              "id": "c",
+              "label": "ج",
+              "text": "اگر دوشنبه بارون بیاد، پرداخت اردو لغو می‌شه.",
+              "feedback": "شرط هوا مربوط به برگزاری اردو بوده، نه پرداخت."
+            }
+          ],
+          "answer": {
+            "strategy": "EXACT_SET",
+            "correctChoiceIds": [
+              "a"
+            ]
+          },
+          "feedback": {
+            "general": "خلاصه رو با اصل متن تطبیق بده؛ شرط‌ها، مهلت‌ها و اطلاعات مهم باید سر جاشون بمونن."
+          },
+          "hint": null,
+          "scoring": {
+            "basePoints": 0,
+            "wrongSubmissionPenalty": 0,
+            "minimumPoints": 0
+          }
+        }
+      ],
+      "closingDialogue": "این بار ابر رو توی خلاصه جا می‌دم؛ کوچیک می‌نویسمش!",
+      "summary": "خلاصه‌سازی می‌تونه متن رو کوتاه کنه؛ نباید شرط‌ها و معنی اصلی رو عوض کنه."
+    },
+    {
+      "id": "daily02-challenge01",
+      "chapterId": "prompt",
+      "stageNumber": 2,
+      "title": "اعلان گمشده؛ پیدا شد توی قصه!",
+      "estimatedMinutes": 2,
+      "activities": [
+        {
+          "id": "daily02-challenge01-detect",
+          "chapterId": "prompt",
+          "order": 1,
+          "role": "DAILY",
+          "title": "تشخیص خرابکاری",
+          "interactionType": "SINGLE_CHOICE",
+          "selection": {
+            "min": 1,
+            "max": 1,
+            "instruction": "جواب مناسب رو انتخاب کن."
+          },
+          "situation": "برای کانال مدرسه یه اعلان کوتاه می‌خوای تا صاحب جامدادیِ پیدا‌شده به دفتر مراجعه کنه. به پیکو فقط گفتی «یه چیز جذاب دربارهٔ جامدادی بنویس».",
+          "contentBlocks": [],
+          "character": {
+            "id": "pico",
+            "dialogue": "قصهٔ جامدادیِ سخنگو رو نوشتم! صاحبش تا فصل سوم حتماً خودش رو معرفی می‌کنه!",
+            "mood": "CONFIDENT"
+          },
+          "prompt": "چه چیزی در درخواست اولیه روشن نبوده؟",
+          "choices": [
+            {
+              "id": "a",
+              "label": "الف",
+              "text": "اینکه پیکو باید اسم همهٔ دانش‌آموزها رو بدونه.",
+              "feedback": "برای این اعلان، اطلاعات خصوصی همه لازم نیست."
+            },
+            {
+              "id": "b",
+              "label": "ب",
+              "text": "هدف و نوع خروجی؛ اعلانِ پیدا‌شدن وسیله می‌خواستی.",
+              "feedback": "درسته؛ موضوع جذاب به‌تنهایی هدف رو روشن نمی‌کنه."
+            },
+            {
+              "id": "c",
+              "label": "ج",
+              "text": "اینکه باید پیکو رو نویسندهٔ نابغه صدا می‌زدی.",
+              "feedback": "تعریف‌کردن جای توضیح کار رو نمی‌گیره."
+            }
+          ],
+          "answer": {
+            "strategy": "EXACT_SET",
+            "correctChoiceIds": [
+              "b"
+            ]
+          },
+          "feedback": {
+            "general": "موضوع جامدادی معلوم بوده؛ اما هدفِ خبرکردن صاحب وسیله و قالب اعلان مشخص نبوده."
+          },
+          "hint": null,
+          "scoring": {
+            "basePoints": 0,
+            "wrongSubmissionPenalty": 0,
+            "minimumPoints": 0
+          }
+        },
+        {
+          "id": "daily02-challenge01-repair",
+          "chapterId": "prompt",
+          "order": 2,
+          "role": "DAILY",
+          "title": "اصلاح خرابکاری",
+          "interactionType": "SINGLE_CHOICE",
+          "selection": {
+            "min": 1,
+            "max": 1,
+            "instruction": "جواب مناسب رو انتخاب کن."
+          },
+          "situation": "برای کانال مدرسه یه اعلان کوتاه می‌خوای تا صاحب جامدادیِ پیدا‌شده به دفتر مراجعه کنه. به پیکو فقط گفتی «یه چیز جذاب دربارهٔ جامدادی بنویس».",
+          "contentBlocks": [],
+          "character": {
+            "id": "pico",
+            "dialogue": "پس اعلان می‌خواستی، نه ماجرای قهرمانِ زیپ‌دار من؟!",
+            "mood": "CONFUSED"
+          },
+          "prompt": "کدوم درخواست به کار واقعی نزدیک‌تره؟",
+          "choices": [
+            {
+              "id": "a",
+              "label": "الف",
+              "text": "یه شاهکار دربارهٔ جامدادی بده؛ بقیه‌ش با نبوغت.",
+              "feedback": "هنوز نوع متن و هدفش نامشخصه."
+            },
+            {
+              "id": "b",
+              "label": "ب",
+              "text": "قصه رو طولانی‌تر کن تا صاحب جامدادی پیداش بشه.",
+              "feedback": "طول قصه اعلان موردنیاز رو مشخص نمی‌کنه."
+            },
+            {
+              "id": "c",
+              "label": "ج",
+              "text": "یه اعلان کوتاه برای کانال مدرسه بنویس؛ صاحب جامدادی به دفتر بیاد.",
+              "feedback": "درسته؛ نوع متن، محل انتشار و اقدام موردنظر معلومه."
+            }
+          ],
+          "answer": {
+            "strategy": "EXACT_SET",
+            "correctChoiceIds": [
+              "c"
+            ]
+          },
+          "feedback": {
+            "general": "هدف، نوع متن و کاری که مخاطب باید انجام بده رو روشن بگو."
+          },
+          "hint": null,
+          "scoring": {
+            "basePoints": 0,
+            "wrongSubmissionPenalty": 0,
+            "minimumPoints": 0
+          }
+        }
+      ],
+      "closingDialogue": "قصه رو بایگانی کردم؛ این بار خود جامدادی رو پیدا می‌کنیم!",
+      "summary": "«جذاب بنویس» جای توضیح هدف و خروجی موردنیاز رو نمی‌گیره."
+    },
+    {
+      "id": "daily02-challenge02",
+      "chapterId": "prompt",
+      "stageNumber": 2,
+      "title": "مسابقهٔ بازیافت با بودجهٔ فضایی!",
+      "estimatedMinutes": 2,
+      "activities": [
+        {
+          "id": "daily02-challenge02-detect",
+          "chapterId": "prompt",
+          "order": 1,
+          "role": "DAILY",
+          "title": "تشخیص خرابکاری",
+          "interactionType": "SINGLE_CHOICE",
+          "selection": {
+            "min": 1,
+            "max": 1,
+            "instruction": "جواب مناسب رو انتخاب کن."
+          },
+          "situation": "برای ۶ نفر در کلاس، یک بازی بازیافتی ۱۵دقیقه‌ای می‌خوای؛ فقط کاغذ باطله دارین و خرید هم ندارین. به پیکو فقط گفتی «یه مسابقهٔ هیجان‌انگیز بده».",
+          "contentBlocks": [],
+          "character": {
+            "id": "pico",
+            "dialogue": "مسابقه رو با ربات و چاپگر سه‌بعدی طراحی کردم! بازیافت باید آینده‌دار باشه!",
+            "mood": "CONFIDENT"
+          },
+          "prompt": "درخواست چه محدودیت‌هایی رو به پیکو نداده بود؟",
+          "choices": [
+            {
+              "id": "a",
+              "label": "الف",
+              "text": "نفرات، وقت، وسایل موجود و نبود بودجهٔ خرید.",
+              "feedback": "درسته؛ این‌ها روی قابل‌اجرا بودن بازی اثر دارن."
+            },
+            {
+              "id": "b",
+              "label": "ب",
+              "text": "نام برندهٔ مسابقه قبل از شروع.",
+              "feedback": "نام برنده محدودیت طراحی بازی نیست."
+            },
+            {
+              "id": "c",
+              "label": "ج",
+              "text": "قول اینکه همه حتماً بازی رو دوست دارن.",
+              "feedback": "علاقهٔ همه رو نمی‌شه با یک قول تضمین کرد."
+            }
+          ],
+          "answer": {
+            "strategy": "EXACT_SET",
+            "correctChoiceIds": [
+              "a"
+            ]
+          },
+          "feedback": {
+            "general": "هیجان‌انگیزبودن کافی نیست؛ محدودیت‌های واقعی باید همراه درخواست بیان بشن."
+          },
+          "hint": null,
+          "scoring": {
+            "basePoints": 0,
+            "wrongSubmissionPenalty": 0,
+            "minimumPoints": 0
+          }
+        },
+        {
+          "id": "daily02-challenge02-repair",
+          "chapterId": "prompt",
+          "order": 2,
+          "role": "DAILY",
+          "title": "اصلاح خرابکاری",
+          "interactionType": "SINGLE_CHOICE",
+          "selection": {
+            "min": 1,
+            "max": 1,
+            "instruction": "جواب مناسب رو انتخاب کن."
+          },
+          "situation": "برای ۶ نفر در کلاس، یک بازی بازیافتی ۱۵دقیقه‌ای می‌خوای؛ فقط کاغذ باطله دارین و خرید هم ندارین. به پیکو فقط گفتی «یه مسابقهٔ هیجان‌انگیز بده».",
+          "contentBlocks": [],
+          "character": {
+            "id": "pico",
+            "dialogue": "رباتم توی کاغذ باطله جا نمی‌شه؟ بال‌هاش رو تا بزنیم؟!",
+            "mood": "CONFUSED"
+          },
+          "prompt": "کدوم درخواست، طرح قابل‌اجراتری می‌ده؟",
+          "choices": [
+            {
+              "id": "a",
+              "label": "الف",
+              "text": "بهترین مسابقهٔ جهان رو بده؛ هزینه مهم نیست.",
+              "feedback": "با نبود بودجه و وسایل کلاس سازگار نیست."
+            },
+            {
+              "id": "b",
+              "label": "ب",
+              "text": "برای ۶ نفر و ۱۵ دقیقه، فقط با کاغذ باطله و بدون خرید بازی بده.",
+              "feedback": "درسته؛ نفرات، زمان، وسیله و بودجه روشن‌اند."
+            },
+            {
+              "id": "c",
+              "label": "ج",
+              "text": "یه بازی بده که مطمئن باشیم همه عاشقش می‌شن.",
+              "feedback": "نه محدودیت‌ها معلوم‌اند، نه علاقهٔ همه تضمین‌شدنیه."
+            }
+          ],
+          "answer": {
+            "strategy": "EXACT_SET",
+            "correctChoiceIds": [
+              "b"
+            ]
+          },
+          "feedback": {
+            "general": "محدودیت زمان، نفرات و امکانات رو صریح بنویس تا پیشنهاد روی زمین قابل‌اجرا باشه."
+          },
+          "hint": null,
+          "scoring": {
+            "basePoints": 0,
+            "wrongSubmissionPenalty": 0,
+            "minimumPoints": 0
+          }
+        }
+      ],
+      "closingDialogue": "فعلاً ربات رو از کاغذ تا می‌زنم؛ بدون فاکتور خرید!",
+      "summary": "درخواست روشن باید محدودیت‌های واقعی اجرا رو هم به ابزار بده."
+    },
+    {
+      "id": "daily02-challenge03",
+      "chapterId": "prompt",
+      "stageNumber": 2,
+      "title": "فهرست غرفه که رمان شد!",
+      "estimatedMinutes": 2,
+      "activities": [
+        {
+          "id": "daily02-challenge03-detect",
+          "chapterId": "prompt",
+          "order": 1,
+          "role": "DAILY",
+          "title": "تشخیص خرابکاری",
+          "interactionType": "SINGLE_CHOICE",
+          "selection": {
+            "min": 1,
+            "max": 1,
+            "instruction": "جواب مناسب رو انتخاب کن."
+          },
+          "situation": "برای آماده‌کردن غرفه سه کار داری: نصب تابلو با نیما، چیدن میز با سها، آوردن بروشور با رها. خروجی باید فهرستی باشه که هر خط یک کار و مسئولش رو نشون بده.",
+          "contentBlocks": [],
+          "character": {
+            "id": "pico",
+            "dialogue": "فهرست رو داستانی نوشتم؛ مسئول میز توی فصل چهارم معلوم می‌شه! تعلیق حرفه‌ایه!",
+            "mood": "CONFIDENT"
+          },
+          "prompt": "خروجی پیکو چه مشکلی برای استفادهٔ عملی داره؟",
+          "choices": [
+            {
+              "id": "a",
+              "label": "الف",
+              "text": "اسم آدم‌ها رو آورده؛ توی فهرست مسئول نباید معلوم باشه.",
+              "feedback": "این فهرست دقیقاً باید مسئول هر کار رو روشن کنه."
+            },
+            {
+              "id": "b",
+              "label": "ب",
+              "text": "کارها رو نوشته؛ باید فقط اسم غرفه رو می‌گفت.",
+              "feedback": "اسم غرفه جای کارها و مسئول‌ها رو نمی‌گیره."
+            },
+            {
+              "id": "c",
+              "label": "ج",
+              "text": "قالب روشن کار و مسئول نداره و پیدا‌کردن اطلاعات سخته.",
+              "feedback": "درسته؛ روایت طولانی برای این کار مناسب نیست."
+            }
+          ],
+          "answer": {
+            "strategy": "EXACT_SET",
+            "correctChoiceIds": [
+              "c"
+            ]
+          },
+          "feedback": {
+            "general": "برای فهرست اجرایی، ساختار کوتاه و ثابت لازم داریم؛ نه پنهان‌شدن مسئول‌ها توی داستان."
+          },
+          "hint": null,
+          "scoring": {
+            "basePoints": 0,
+            "wrongSubmissionPenalty": 0,
+            "minimumPoints": 0
+          }
+        },
+        {
+          "id": "daily02-challenge03-repair",
+          "chapterId": "prompt",
+          "order": 2,
+          "role": "DAILY",
+          "title": "اصلاح خرابکاری",
+          "interactionType": "SINGLE_CHOICE",
+          "selection": {
+            "min": 1,
+            "max": 1,
+            "instruction": "جواب مناسب رو انتخاب کن."
+          },
+          "situation": "برای آماده‌کردن غرفه سه کار داری: نصب تابلو با نیما، چیدن میز با سها، آوردن بروشور با رها. خروجی باید فهرستی باشه که هر خط یک کار و مسئولش رو نشون بده.",
+          "contentBlocks": [],
+          "character": {
+            "id": "pico",
+            "dialogue": "یعنی کسی برای فهمیدن مسئول میز تا پایان رمان صبر نمی‌کنه؟!",
+            "mood": "CONFUSED"
+          },
+          "prompt": "کدوم درخواست قالب مناسب رو مشخص می‌کنه؟",
+          "choices": [
+            {
+              "id": "a",
+              "label": "الف",
+              "text": "همین سه کار رو در سه خط با قالب «کار — مسئول» بنویس.",
+              "feedback": "درسته؛ تعداد و قالب هر خط روشنه."
+            },
+            {
+              "id": "b",
+              "label": "ب",
+              "text": "روایت رو شاعرانه‌تر کن؛ اسم مسئول‌ها هم گوشه‌ش باشه.",
+              "feedback": "هنوز فهرست ساده و قابل‌پیگیری نمی‌سازه."
+            },
+            {
+              "id": "c",
+              "label": "ج",
+              "text": "فقط بگو مرتبش کن؛ هر شکلی دوست داشتی.",
+              "feedback": "قالب موردنیاز رو روشن نمی‌کنه."
+            }
+          ],
+          "answer": {
+            "strategy": "EXACT_SET",
+            "correctChoiceIds": [
+              "a"
+            ]
+          },
+          "feedback": {
+            "general": "قالب هر خط رو مشخص کن و بخواه همان اطلاعات داده‌شده حفظ بشه."
+          },
+          "hint": null,
+          "scoring": {
+            "basePoints": 0,
+            "wrongSubmissionPenalty": 0,
+            "minimumPoints": 0
+          }
+        }
+      ],
+      "closingDialogue": "جلد چهارم تعطیل؛ مسئول میز از همون خط اول پیداست!",
+      "summary": "قالب خروجی بخشی از درخواست است؛ آن را با کاربرد واقعی متن هماهنگ کن."
+    },
+    {
+      "id": "daily03-challenge01",
+      "chapterId": "context",
+      "stageNumber": 3,
+      "title": "سخنرانی پیکو برای استادهای خیالی!",
+      "estimatedMinutes": 2,
+      "activities": [
+        {
+          "id": "daily03-challenge01-detect",
+          "chapterId": "context",
+          "order": 1,
+          "role": "DAILY",
+          "title": "تشخیص خرابکاری",
+          "interactionType": "SINGLE_CHOICE",
+          "selection": {
+            "min": 1,
+            "max": 1,
+            "instruction": "جواب مناسب رو انتخاب کن."
+          },
+          "situation": "برای بچه‌های ۱۰ساله دربارهٔ ماه دو دقیقه حرف می‌زنی. به پیکو فقط گفتی «برای ارائه‌ام متن بده».",
+          "contentBlocks": [],
+          "character": {
+            "id": "pico",
+            "dialogue": "یه سخنرانی دانشگاهیِ نیم‌ساعته نوشتم! بچه‌ها از همین الان دانشمند می‌شن!",
+            "mood": "CONFIDENT"
+          },
+          "prompt": "کدوم زمینه به پیکو نرسیده بود؟",
+          "choices": [
+            {
+              "id": "a",
+              "label": "الف",
+              "text": "رنگ کیف و مدل کفش سخنران.",
+              "feedback": "این‌ها به سطح و طول توضیح ماه ربطی ندارن."
+            },
+            {
+              "id": "b",
+              "label": "ب",
+              "text": "موضوع ماه، سن مخاطب و وقت دو‌دقیقه‌ای.",
+              "feedback": "درسته؛ این اطلاعات متن رو به موقعیت واقعی وصل می‌کنن."
+            },
+            {
+              "id": "c",
+              "label": "ج",
+              "text": "اینکه پیکو باید جواب رو با اطمینان بیشتری بده.",
+              "feedback": "اطمینان بیشتر جای اطلاعات موقعیت رو نمی‌گیره."
+            }
+          ],
+          "answer": {
+            "strategy": "EXACT_SET",
+            "correctChoiceIds": [
+              "b"
+            ]
+          },
+          "feedback": {
+            "general": "ابزار از موقعیت ارائه خبر نداره؛ موضوع، مخاطب و زمان باید همراه درخواست باشن."
+          },
+          "hint": null,
+          "scoring": {
+            "basePoints": 0,
+            "wrongSubmissionPenalty": 0,
+            "minimumPoints": 0
+          }
+        },
+        {
+          "id": "daily03-challenge01-repair",
+          "chapterId": "context",
+          "order": 2,
+          "role": "DAILY",
+          "title": "اصلاح خرابکاری",
+          "interactionType": "SINGLE_CHOICE",
+          "selection": {
+            "min": 1,
+            "max": 1,
+            "instruction": "جواب مناسب رو انتخاب کن."
+          },
+          "situation": "برای بچه‌های ۱۰ساله دربارهٔ ماه دو دقیقه حرف می‌زنی. به پیکو فقط گفتی «برای ارائه‌ام متن بده».",
+          "contentBlocks": [],
+          "character": {
+            "id": "pico",
+            "dialogue": "کلاس دانشگاه نبود؟ پس اون همه اصطلاح رو برای کی ردیف کردم؟!",
+            "mood": "CONFUSED"
+          },
+          "prompt": "کدوم پیام زمینهٔ لازم رو می‌ده؟",
+          "choices": [
+            {
+              "id": "a",
+              "label": "الف",
+              "text": "برای ارائهٔ من یه متن عالی بده؛ خودت می‌دونی.",
+              "feedback": "همچنان موقعیت واقعی مشخص نیست."
+            },
+            {
+              "id": "b",
+              "label": "ب",
+              "text": "دربارهٔ رنگ کیفم هم توضیح می‌دم که بیشتر بدونی.",
+              "feedback": "اطلاعات بیشتر ولی بی‌ربط، کمبود زمینه رو رفع نمی‌کنه."
+            },
+            {
+              "id": "c",
+              "label": "ج",
+              "text": "موضوع ماهه، مخاطب ۱۰ساله‌ست و دو دقیقه وقت دارم؛ ساده بنویس.",
+              "feedback": "درسته؛ موضوع، مخاطب، وقت و سطح توضیح روشن‌اند."
+            }
+          ],
+          "answer": {
+            "strategy": "EXACT_SET",
+            "correctChoiceIds": [
+              "c"
+            ]
+          },
+          "feedback": {
+            "general": "زمینهٔ مرتبط، حدس ابزار رو کم می‌کنه و متن رو برای مخاطب واقعی مناسب‌تر می‌کنه."
+          },
+          "hint": null,
+          "scoring": {
+            "basePoints": 0,
+            "wrongSubmissionPenalty": 0,
+            "minimumPoints": 0
+          }
+        }
+      ],
+      "closingDialogue": "این بار ماه رو توضیح می‌دم؛ نه کل رشتهٔ اخترفیزیک رو!",
+      "summary": "ابزار باید بدونه برای چه کسی، دربارهٔ چه چیزی و در چه زمانی محتوا می‌خوای."
+    },
+    {
+      "id": "daily03-challenge02",
+      "chapterId": "context",
+      "stageNumber": 3,
+      "title": "پیکو چت قبلی رو از خودش یادش اومد!",
+      "estimatedMinutes": 2,
+      "activities": [
+        {
+          "id": "daily03-challenge02-detect",
+          "chapterId": "context",
+          "order": 1,
+          "role": "DAILY",
+          "title": "تشخیص خرابکاری",
+          "interactionType": "SINGLE_CHOICE",
+          "selection": {
+            "min": 1,
+            "max": 1,
+            "instruction": "جواب مناسب رو انتخاب کن."
+          },
+          "situation": "در چت قبلی، بازی حدس واژه برای ۴ نفر و بدون وسیله انتخاب کردی. حالا چت تازه‌ای باز کردی که هیچ پیام قبلی توش نیست و نوشتی «همون رو ساده‌تر کن».",
+          "contentBlocks": [],
+          "character": {
+            "id": "pico",
+            "dialogue": "نسخهٔ سادهٔ مسابقهٔ آشپزی رو نوشتم! چت قبلی رو ندیدم؛ حافظه‌م خلاقه!",
+            "mood": "CONFIDENT"
+          },
+          "prompt": "چرا جواب پیکو به بازی انتخاب‌شده ربط نداره؟",
+          "choices": [
+            {
+              "id": "a",
+              "label": "الف",
+              "text": "زمینهٔ چت قبلی همراه پیام تازه نیست؛ پیکو حدس زده.",
+              "feedback": "درسته؛ «همون» در چت تازه مشخص نیست."
+            },
+            {
+              "id": "b",
+              "label": "ب",
+              "text": "هر گفت‌وگوی تازه خودش همهٔ گفت‌وگوهای قبلی رو می‌خونه.",
+              "feedback": "در این موقعیت صریحاً پیام‌های قبلی همراهش نیستن."
+            },
+            {
+              "id": "c",
+              "label": "ج",
+              "text": "AI هیچ‌وقت نمی‌تونه بازی رو ساده‌تر کنه.",
+              "feedback": "با اطلاعات لازم می‌تونه نسخهٔ ساده‌تر پیشنهاد بده."
+            }
+          ],
+          "answer": {
+            "strategy": "EXACT_SET",
+            "correctChoiceIds": [
+              "a"
+            ]
+          },
+          "feedback": {
+            "general": "وقتی سابقه همراه پیام نیست، ابزار نباید از خودش بسازه که «همون» چه بوده."
+          },
+          "hint": null,
+          "scoring": {
+            "basePoints": 0,
+            "wrongSubmissionPenalty": 0,
+            "minimumPoints": 0
+          }
+        },
+        {
+          "id": "daily03-challenge02-repair",
+          "chapterId": "context",
+          "order": 2,
+          "role": "DAILY",
+          "title": "اصلاح خرابکاری",
+          "interactionType": "SINGLE_CHOICE",
+          "selection": {
+            "min": 1,
+            "max": 1,
+            "instruction": "جواب مناسب رو انتخاب کن."
+          },
+          "situation": "در چت قبلی، بازی حدس واژه برای ۴ نفر و بدون وسیله انتخاب کردی. حالا چت تازه‌ای باز کردی که هیچ پیام قبلی توش نیست و نوشتی «همون رو ساده‌تر کن».",
+          "contentBlocks": [],
+          "character": {
+            "id": "pico",
+            "dialogue": "چهار نفر آشپز نبودن؟ من تا منوی مسابقه هم پیش رفتم!",
+            "mood": "CONFUSED"
+          },
+          "prompt": "کدوم پیام مسیر رو درست می‌کنه؟",
+          "choices": [
+            {
+              "id": "a",
+              "label": "الف",
+              "text": "همون قبلی؛ بیشتر فکر کن یادت میاد.",
+              "feedback": "اطلاعات قبلی رو به این چت اضافه نمی‌کنه."
+            },
+            {
+              "id": "b",
+              "label": "ب",
+              "text": "بازی حدس واژه برای ۴ نفر و بدون وسیله انتخاب کردیم؛ ساده‌ترش کن.",
+              "feedback": "درسته؛ خلاصهٔ مرتبط و شرایط دوباره داده شده."
+            },
+            {
+              "id": "c",
+              "label": "ج",
+              "text": "همون چیز رو بهترتر کن؛ این بار حرفه‌ای‌تر.",
+              "feedback": "باز هم موضوع و شرایط معلوم نیست."
+            }
+          ],
+          "answer": {
+            "strategy": "EXACT_SET",
+            "correctChoiceIds": [
+              "b"
+            ]
+          },
+          "feedback": {
+            "general": "خلاصهٔ لازم از تصمیم قبلی رو دوباره همراه شرایط فعلی بنویس."
+          },
+          "hint": null,
+          "scoring": {
+            "basePoints": 0,
+            "wrongSubmissionPenalty": 0,
+            "minimumPoints": 0
+          }
+        }
+      ],
+      "closingDialogue": "حدس واژه بود؛ این بار خودِ بازی رو حدس نمی‌زنم!",
+      "summary": "به حافظهٔ فرضی تکیه نکن؛ در چت تازه زمینهٔ لازم رو دوباره بده."
+    },
+    {
+      "id": "daily03-challenge03",
+      "chapterId": "context",
+      "stageNumber": 3,
+      "title": "کارگاه پیکو هنوز توی دیروزه!",
+      "estimatedMinutes": 2,
+      "activities": [
+        {
+          "id": "daily03-challenge03-detect",
+          "chapterId": "context",
+          "order": 1,
+          "role": "DAILY",
+          "title": "تشخیص خرابکاری",
+          "interactionType": "SINGLE_CHOICE",
+          "selection": {
+            "min": 1,
+            "max": 1,
+            "instruction": "جواب مناسب رو انتخاب کن."
+          },
+          "situation": "برنامهٔ قبلی پیکو برای کاردستی با قیچی و ۳۰ دقیقه وقت بوده. حالا قیچی ندارین و فقط ۱۰ دقیقه وقت هست؛ کاغذها همونه. به پیکو فقط گفتی «برنامه رو بهتر کن».",
+          "contentBlocks": [],
+          "character": {
+            "id": "pico",
+            "dialogue": "همون برش‌های قبلی رو بیشتر کردم! هرچی قیچی کمتر، طرح من جسورتر!",
+            "mood": "CONFIDENT"
+          },
+          "prompt": "کدوم تغییر موقعیت رو باید به پیکو می‌گفتی؟",
+          "choices": [
+            {
+              "id": "a",
+              "label": "الف",
+              "text": "اینکه اسم کارگاه قشنگ‌تر شده.",
+              "feedback": "اسم تازه کمبود وسیله و وقت رو مشخص نمی‌کنه."
+            },
+            {
+              "id": "b",
+              "label": "ب",
+              "text": "اینکه هنوز کاغذ داریم؛ فقط همین کافیه.",
+              "feedback": "دو تغییر مهمِ وقت و قیچی هنوز نامعلوم می‌مونن."
+            },
+            {
+              "id": "c",
+              "label": "ج",
+              "text": "نبود قیچی و کم‌شدن زمان از ۳۰ به ۱۰ دقیقه.",
+              "feedback": "درسته؛ این تغییرها برنامهٔ قبلی رو نامناسب می‌کنن."
+            }
+          ],
+          "answer": {
+            "strategy": "EXACT_SET",
+            "correctChoiceIds": [
+              "c"
+            ]
+          },
+          "feedback": {
+            "general": "بهترکردن برنامه بدون زمینهٔ به‌روز ممکنه همون پیشنهاد نامناسب قبلی رو تکرار کنه."
+          },
+          "hint": null,
+          "scoring": {
+            "basePoints": 0,
+            "wrongSubmissionPenalty": 0,
+            "minimumPoints": 0
+          }
+        },
+        {
+          "id": "daily03-challenge03-repair",
+          "chapterId": "context",
+          "order": 2,
+          "role": "DAILY",
+          "title": "اصلاح خرابکاری",
+          "interactionType": "SINGLE_CHOICE",
+          "selection": {
+            "min": 1,
+            "max": 1,
+            "instruction": "جواب مناسب رو انتخاب کن."
+          },
+          "situation": "برنامهٔ قبلی پیکو برای کاردستی با قیچی و ۳۰ دقیقه وقت بوده. حالا قیچی ندارین و فقط ۱۰ دقیقه وقت هست؛ کاغذها همونه. به پیکو فقط گفتی «برنامه رو بهتر کن».",
+          "contentBlocks": [],
+          "character": {
+            "id": "pico",
+            "dialogue": "قیچی نیست و وقت هم آب رفته؟ برنامه‌م هنوز ساعت دیروز رو نشون می‌ده!",
+            "mood": "CONFUSED"
+          },
+          "prompt": "کدوم درخواست با شرایط جدید جور درمیاد؟",
+          "choices": [
+            {
+              "id": "a",
+              "label": "الف",
+              "text": "قیچی نداریم؛ با همون کاغذها یه فعالیت بدون برش برای ۱۰ دقیقه بده.",
+              "feedback": "درسته؛ شرایط تازه روشن جای قبلی رو گرفته."
+            },
+            {
+              "id": "b",
+              "label": "ب",
+              "text": "همون برنامهٔ قیچی و نیم‌ساعت رو نگه دار.",
+              "feedback": "با وقت و امکانات فعلی جور نیست."
+            },
+            {
+              "id": "c",
+              "label": "ج",
+              "text": "یه برنامهٔ خیلی بهتر بده؛ محدودیت‌ها رو خودت حدس بزن.",
+              "feedback": "اطلاعات معلوم رو دوباره به حدس واگذار می‌کنه."
+            }
+          ],
+          "answer": {
+            "strategy": "EXACT_SET",
+            "correctChoiceIds": [
+              "a"
+            ]
+          },
+          "feedback": {
+            "general": "تغییرهای موقعیت رو صریح جایگزین شرایط قبلی کن؛ به «بهترش کن» اکتفا نکن."
+          },
+          "hint": null,
+          "scoring": {
+            "basePoints": 0,
+            "wrongSubmissionPenalty": 0,
+            "minimumPoints": 0
+          }
+        }
+      ],
+      "closingDialogue": "قیچی رو از نقشه برداشتم؛ این بار فقط کاغذ تا می‌خوره!",
+      "summary": "پیشنهاد مناسب به زمینهٔ به‌روز نیاز داره؛ تغییر زمان و امکانات رو خبر بده."
+    },
+    {
+      "id": "daily04-challenge01",
+      "chapterId": "iteration",
+      "stageNumber": 4,
+      "title": "لحن صمیمی، قرارِ جابه‌جا!",
+      "estimatedMinutes": 2,
+      "activities": [
+        {
+          "id": "daily04-challenge01-detect",
+          "chapterId": "iteration",
+          "order": 1,
+          "role": "DAILY",
+          "title": "تشخیص خرابکاری",
+          "interactionType": "SINGLE_CHOICE",
+          "selection": {
+            "min": 1,
+            "max": 1,
+            "instruction": "جواب مناسب رو انتخاب کن."
+          },
+          "situation": "دعوت‌نامهٔ رادیوی مدرسه درست نوشته: «چهارشنبه ساعت ۱۴ در کلاس رسانه». فقط لحنش رسمیه. از پیکو خواستی صمیمی‌ترش کنه.",
+          "contentBlocks": [],
+          "character": {
+            "id": "pico",
+            "dialogue": "صمیمی‌ترش کردم؛ نوشتم پنجشنبه ساعت ۱۵! قرار تازه، رفاقت تازه!",
+            "mood": "CONFIDENT"
+          },
+          "prompt": "کدوم تغییر پیکو خارج از اصلاح خواسته‌شده‌ست؟",
+          "choices": [
+            {
+              "id": "a",
+              "label": "الف",
+              "text": "دوستانه‌ترکردن لحن.",
+              "feedback": "این همون تغییریه که خواسته بودی."
+            },
+            {
+              "id": "b",
+              "label": "ب",
+              "text": "عوض‌کردن روز و ساعت درستِ قرار.",
+              "feedback": "درسته؛ اصلاح لحن مجوز تغییر اطلاعات نیست."
+            },
+            {
+              "id": "c",
+              "label": "ج",
+              "text": "نوشتن یک نسخهٔ تازه از دعوت‌نامه.",
+              "feedback": "نسخهٔ تازه می‌تونه همون اطلاعات درست رو حفظ کنه."
+            }
+          ],
+          "answer": {
+            "strategy": "EXACT_SET",
+            "correctChoiceIds": [
+              "b"
+            ]
+          },
+          "feedback": {
+            "general": "روز و ساعت، اطلاعات درستِ نسخهٔ قبلی بودن و باید در اصلاح لحن حفظ می‌شدن."
+          },
+          "hint": null,
+          "scoring": {
+            "basePoints": 0,
+            "wrongSubmissionPenalty": 0,
+            "minimumPoints": 0
+          }
+        },
+        {
+          "id": "daily04-challenge01-repair",
+          "chapterId": "iteration",
+          "order": 2,
+          "role": "DAILY",
+          "title": "اصلاح خرابکاری",
+          "interactionType": "SINGLE_CHOICE",
+          "selection": {
+            "min": 1,
+            "max": 1,
+            "instruction": "جواب مناسب رو انتخاب کن."
+          },
+          "situation": "دعوت‌نامهٔ رادیوی مدرسه درست نوشته: «چهارشنبه ساعت ۱۴ در کلاس رسانه». فقط لحنش رسمیه. از پیکو خواستی صمیمی‌ترش کنه.",
+          "contentBlocks": [],
+          "character": {
+            "id": "pico",
+            "dialogue": "پس ساعت جدید متن رو صمیمی‌تر نمی‌کنه؟ ساعت قبلی خیلی جدی به نظر می‌رسید!",
+            "mood": "CONFUSED"
+          },
+          "prompt": "کدوم بازخورد اصلاح رو دقیق هدایت می‌کنه؟",
+          "choices": [
+            {
+              "id": "a",
+              "label": "الف",
+              "text": "همه‌چیز رو از اول بساز؛ هر اطلاعاتی خواستی اضافه کن.",
+              "feedback": "ممکنه اطلاعات درست دوباره عوض بشن."
+            },
+            {
+              "id": "b",
+              "label": "ب",
+              "text": "فقط بگو این خوب نیست؛ بهترش کن.",
+              "feedback": "نه خطا رو مشخص می‌کنه نه اطلاعات ثابت رو."
+            },
+            {
+              "id": "c",
+              "label": "ج",
+              "text": "روز چهارشنبه، ساعت ۱۴ و کلاس رسانه رو نگه دار؛ فقط لحن رو دوستانه کن.",
+              "feedback": "درسته؛ تغییر لازم و اطلاعات ثابت هر دو معلوم‌اند."
+            }
+          ],
+          "answer": {
+            "strategy": "EXACT_SET",
+            "correctChoiceIds": [
+              "c"
+            ]
+          },
+          "feedback": {
+            "general": "بگو چه چیزی تغییر کنه و چه چیزی ثابت بمونه؛ نسخهٔ بعدی رو دوباره با قرار اصلی بسنج."
+          },
+          "hint": null,
+          "scoring": {
+            "basePoints": 0,
+            "wrongSubmissionPenalty": 0,
+            "minimumPoints": 0
+          }
+        }
+      ],
+      "closingDialogue": "روز و ساعت سر جاشون؛ این بار فقط جمله‌ها لبخند می‌زنن!",
+      "summary": "اصلاح هدف‌دار باید مشکل رو رفع کنه و اطلاعات درست رو حفظ کنه."
+    },
+    {
+      "id": "daily04-challenge02",
+      "chapterId": "iteration",
+      "stageNumber": 4,
+      "title": "پیکو همهٔ پیچ‌ها رو با هم چرخوند!",
+      "estimatedMinutes": 2,
+      "activities": [
+        {
+          "id": "daily04-challenge02-detect",
+          "chapterId": "iteration",
+          "order": 1,
+          "role": "DAILY",
+          "title": "تشخیص خرابکاری",
+          "interactionType": "SINGLE_CHOICE",
+          "selection": {
+            "min": 1,
+            "max": 1,
+            "instruction": "جواب مناسب رو انتخاب کن."
+          },
+          "situation": "می‌خوای فقط اثر کوتاه‌ترکردن متن معرفی نمایشگاه رو بسنجی. موضوع، لحن و اطلاعات درست‌اند. پیکو دو نسخه برای مقایسه آماده کرده.",
+          "contentBlocks": [],
+          "character": {
+            "id": "pico",
+            "dialogue": "نسخهٔ دوم رو کوتاه، رسمی و دربارهٔ فوتبال نوشتم! سه پیشرفت با یه دستور!",
+            "mood": "CONFIDENT"
+          },
+          "prompt": "چرا با این دو نسخه نمی‌شه اثر کوتاه‌شدن رو دقیق سنجید؟",
+          "choices": [
+            {
+              "id": "a",
+              "label": "الف",
+              "text": "چون چند ویژگی با هم عوض شده‌اند.",
+              "feedback": "درسته؛ اثر طول از اثر لحن و موضوع جدا نیست."
+            },
+            {
+              "id": "b",
+              "label": "ب",
+              "text": "چون هیچ نسخهٔ کوتاهی قابل‌مقایسه نیست.",
+              "feedback": "می‌شه نسخهٔ کوتاه با همون لحن و موضوع ساخت."
+            },
+            {
+              "id": "c",
+              "label": "ج",
+              "text": "چون نسخهٔ جدید همیشه بهتره و بررسی لازم نداره.",
+              "feedback": "جدیدبودن جای سنجش با هدف رو نمی‌گیره."
+            }
+          ],
+          "answer": {
+            "strategy": "EXACT_SET",
+            "correctChoiceIds": [
+              "a"
+            ]
+          },
+          "feedback": {
+            "general": "برای سنجیدن اثر یک تغییر، بقیهٔ ویژگی‌های مناسب رو ثابت نگه دار."
+          },
+          "hint": null,
+          "scoring": {
+            "basePoints": 0,
+            "wrongSubmissionPenalty": 0,
+            "minimumPoints": 0
+          }
+        },
+        {
+          "id": "daily04-challenge02-repair",
+          "chapterId": "iteration",
+          "order": 2,
+          "role": "DAILY",
+          "title": "اصلاح خرابکاری",
+          "interactionType": "SINGLE_CHOICE",
+          "selection": {
+            "min": 1,
+            "max": 1,
+            "instruction": "جواب مناسب رو انتخاب کن."
+          },
+          "situation": "می‌خوای فقط اثر کوتاه‌ترکردن متن معرفی نمایشگاه رو بسنجی. موضوع، لحن و اطلاعات درست‌اند. پیکو دو نسخه برای مقایسه آماده کرده.",
+          "contentBlocks": [],
+          "character": {
+            "id": "pico",
+            "dialogue": "پس معلوم نیست کدوم پیچ کار کرد؟ من همه رو تا ته چرخوندم!",
+            "mood": "CONFUSED"
+          },
+          "prompt": "کدوم درخواست مقایسهٔ مفیدتری می‌سازه؟",
+          "choices": [
+            {
+              "id": "a",
+              "label": "الف",
+              "text": "باز هم موضوع و لحن و اطلاعات رو هم‌زمان عوض کن.",
+              "feedback": "باز هم معلوم نمی‌شه تغییر طول چه اثری داشته."
+            },
+            {
+              "id": "b",
+              "label": "ب",
+              "text": "فقط متن رو کوتاه‌تر کن؛ لحن، موضوع و اطلاعات همین بمونن.",
+              "feedback": "درسته؛ می‌شه اثر تغییر طول رو جدا سنجید."
+            },
+            {
+              "id": "c",
+              "label": "ج",
+              "text": "نسخهٔ دوم رو فقط چون جدیده انتخاب کن.",
+              "feedback": "معیار انتخاب هنوز هدف واقعی نیست."
+            }
+          ],
+          "answer": {
+            "strategy": "EXACT_SET",
+            "correctChoiceIds": [
+              "b"
+            ]
+          },
+          "feedback": {
+            "general": "یک ویژگی رو تغییر بده و نتیجه رو با نسخهٔ قبل و خواستهٔ اصلی مقایسه کن."
+          },
+          "hint": null,
+          "scoring": {
+            "basePoints": 0,
+            "wrongSubmissionPenalty": 0,
+            "minimumPoints": 0
+          }
+        }
+      ],
+      "closingDialogue": "این بار فقط پیچ طول متن؛ بقیه رو دست نمی‌زنم!",
+      "summary": "برای فهمیدن اثر یک اصلاح، چند تغییر بی‌ربط رو یک‌جا انجام نده."
+    },
+    {
+      "id": "daily04-challenge03",
+      "chapterId": "iteration",
+      "stageNumber": 4,
+      "title": "دعوت‌نامه‌ای که به منو تبدیل شد!",
+      "estimatedMinutes": 2,
+      "activities": [
+        {
+          "id": "daily04-challenge03-detect",
+          "chapterId": "iteration",
+          "order": 1,
+          "role": "DAILY",
+          "title": "تشخیص خرابکاری",
+          "interactionType": "SINGLE_CHOICE",
+          "selection": {
+            "min": 1,
+            "max": 1,
+            "instruction": "جواب مناسب رو انتخاب کن."
+          },
+          "situation": "متن نهاییِ دعوت به نمایشگاه، کوتاه و صمیمیه و روز و مکانش با ورودی اصلی تطبیق داده شده. پیکو پیشنهاد کرده باز هم چند بار تغییرش بده.",
+          "contentBlocks": [],
+          "character": {
+            "id": "pico",
+            "dialogue": "برای بهترشدن، دعوت‌نامه رو منوی پیتزا کردم! متن باید هر بار یه غافلگیری بده!",
+            "mood": "CONFIDENT"
+          },
+          "prompt": "چرا ادامهٔ این تغییرها مفید نیست؟",
+          "choices": [
+            {
+              "id": "a",
+              "label": "الف",
+              "text": "چون هیچ متن تولیدشده‌ای رو نباید اصلاح کرد.",
+              "feedback": "اصلاح وقتی به هدف مشخص کمک کنه مفیده."
+            },
+            {
+              "id": "b",
+              "label": "ب",
+              "text": "چون فقط اولین نسخه حق استفاده داره.",
+              "feedback": "شمارهٔ نسخه معیار درستی یا تناسب نیست."
+            },
+            {
+              "id": "c",
+              "label": "ج",
+              "text": "چون نیاز برآورده و اطلاعات بررسی شده؛ تغییر تازه هدفی نداره.",
+              "feedback": "درسته؛ تغییر بی‌هدف می‌تونه خروجی مناسب رو خراب کنه."
+            }
+          ],
+          "answer": {
+            "strategy": "EXACT_SET",
+            "correctChoiceIds": [
+              "c"
+            ]
+          },
+          "feedback": {
+            "general": "وقتی متن نیاز رو برآورده کرده و جزئیاتش بررسی شده‌اند، تغییر صرفاً برای تنوع ضرورت نداره."
+          },
+          "hint": null,
+          "scoring": {
+            "basePoints": 0,
+            "wrongSubmissionPenalty": 0,
+            "minimumPoints": 0
+          }
+        },
+        {
+          "id": "daily04-challenge03-repair",
+          "chapterId": "iteration",
+          "order": 2,
+          "role": "DAILY",
+          "title": "اصلاح خرابکاری",
+          "interactionType": "SINGLE_CHOICE",
+          "selection": {
+            "min": 1,
+            "max": 1,
+            "instruction": "جواب مناسب رو انتخاب کن."
+          },
+          "situation": "متن نهاییِ دعوت به نمایشگاه، کوتاه و صمیمیه و روز و مکانش با ورودی اصلی تطبیق داده شده. پیکو پیشنهاد کرده باز هم چند بار تغییرش بده.",
+          "contentBlocks": [],
+          "character": {
+            "id": "pico",
+            "dialogue": "پنیر اضافه متن رو دعوت‌کننده‌تر نکرد؟ من روی کش‌اومدنش حساب کرده بودم!",
+            "mood": "CONFUSED"
+          },
+          "prompt": "الان کدوم کار مناسب‌تره؟",
+          "choices": [
+            {
+              "id": "a",
+              "label": "الف",
+              "text": "نسخهٔ بررسی‌شدهٔ دعوت‌نامه رو نگه دارم و تغییر بی‌هدف رو متوقف کنم.",
+              "feedback": "درسته؛ همون نسخه به هدف واقعی می‌خوره."
+            },
+            {
+              "id": "b",
+              "label": "ب",
+              "text": "تا وقتی پیکو از تغییر خسته بشه ادامه بدم.",
+              "feedback": "خسته‌شدن ابزار معیار کیفیت نیست."
+            },
+            {
+              "id": "c",
+              "label": "ج",
+              "text": "منوی پیتزا رو چون آخرین نسخه‌ست منتشر کنم.",
+              "feedback": "آخرین خروجی از موضوع و نیاز دور شده."
+            }
+          ],
+          "answer": {
+            "strategy": "EXACT_SET",
+            "correctChoiceIds": [
+              "a"
+            ]
+          },
+          "feedback": {
+            "general": "نسخهٔ مناسب و بررسی‌شده رو نگه دار؛ فقط برای رفع یک مشکل مشخص دوباره اصلاحش کن."
+          },
+          "hint": null,
+          "scoring": {
+            "basePoints": 0,
+            "wrongSubmissionPenalty": 0,
+            "minimumPoints": 0
+          }
+        }
+      ],
+      "closingDialogue": "پیتزا رو از دعوت‌نامه برداشتم؛ نمایشگاه سر جاش موند!",
+      "summary": "پایان اصلاح را با برآورده‌شدن نیاز و بررسی اطلاعات تعیین کن، نه تعداد نسخه‌ها."
+    },
+    {
+      "id": "daily05-challenge01",
+      "chapterId": "hallucination",
+      "stageNumber": 5,
+      "title": "کتاب علمی پیکو هنوز نوشته نشده!",
+      "estimatedMinutes": 2,
+      "activities": [
+        {
+          "id": "daily05-challenge01-detect",
+          "chapterId": "hallucination",
+          "order": 1,
+          "role": "DAILY",
+          "title": "تشخیص خرابکاری",
+          "interactionType": "SINGLE_CHOICE",
+          "selection": {
+            "min": 1,
+            "max": 1,
+            "instruction": "جواب مناسب رو انتخاب کن."
+          },
+          "situation": "برای ادعای «همهٔ سیاره‌ها حلقه دارند» منبع خواستی. پیکو اینترنت و منبع تأییدشده‌ای در اختیار نداره.",
+          "contentBlocks": [],
+          "character": {
+            "id": "pico",
+            "dialogue": "منبع دادم: «حلقه‌های همه‌جا»، صفحهٔ ۸۸! اسمش علمی‌ست؛ پس ادعام هم علمیه!",
+            "mood": "CONFIDENT"
+          },
+          "prompt": "کدوم مشکل در استناد پیکو هست؟",
+          "choices": [
+            {
+              "id": "a",
+              "label": "الف",
+              "text": "شمارهٔ صفحه کم است؛ باید عدد بزرگ‌تری می‌داد.",
+              "feedback": "بزرگی عدد، منبع رو معتبر نمی‌کنه."
+            },
+            {
+              "id": "b",
+              "label": "ب",
+              "text": "اسم و صفحه ممکنه ساختگی باشن و ادعا رو ثابت نمی‌کنن.",
+              "feedback": "درسته؛ ظاهر علمی جای منبع قابل‌بررسی نیست."
+            },
+            {
+              "id": "c",
+              "label": "ج",
+              "text": "هر ادعای مربوط به سیاره‌ها حتماً درسته.",
+              "feedback": "موضوع علمی، تضمین درستی یک ادعا نیست."
+            }
+          ],
+          "answer": {
+            "strategy": "EXACT_SET",
+            "correctChoiceIds": [
+              "b"
+            ]
+          },
+          "feedback": {
+            "general": "یک عنوان و شمارهٔ صفحهٔ تأییدنشده ممکنه ساختهٔ ابزار باشه؛ وجود منبع و پشتیبانی‌اش از ادعا باید بررسی بشه."
+          },
+          "hint": null,
+          "scoring": {
+            "basePoints": 0,
+            "wrongSubmissionPenalty": 0,
+            "minimumPoints": 0
+          }
+        },
+        {
+          "id": "daily05-challenge01-repair",
+          "chapterId": "hallucination",
+          "order": 2,
+          "role": "DAILY",
+          "title": "اصلاح خرابکاری",
+          "interactionType": "SINGLE_CHOICE",
+          "selection": {
+            "min": 1,
+            "max": 1,
+            "instruction": "جواب مناسب رو انتخاب کن."
+          },
+          "situation": "برای ادعای «همهٔ سیاره‌ها حلقه دارند» منبع خواستی. پیکو اینترنت و منبع تأییدشده‌ای در اختیار نداره.",
+          "contentBlocks": [],
+          "character": {
+            "id": "pico",
+            "dialogue": "یعنی اسم کتاب رو قشنگ گذاشتم ولی کتابخونه هنوز خبر نداره؟!",
+            "mood": "CONFUSED"
+          },
+          "prompt": "کدوم پاسخ پیکو مسئولانه‌تره؟",
+          "choices": [
+            {
+              "id": "a",
+              "label": "الف",
+              "text": "یک عنوان علمی دیگه بسازم که پیدا‌کردنش سخت‌تر باشه.",
+              "feedback": "عنوان تازه، مشکل نبود پشتوانه رو رفع نمی‌کنه."
+            },
+            {
+              "id": "b",
+              "label": "ب",
+              "text": "همین ادعا رو چند بار با لحن محکم‌تر تکرار کنم.",
+              "feedback": "تکرار، مدرک تازه تولید نمی‌کنه."
+            },
+            {
+              "id": "c",
+              "label": "ج",
+              "text": "بگم منبع تأییدشده ندارم و ادعا باید با منبع معتبر بررسی بشه.",
+              "feedback": "درسته؛ محدودیت معلومه و منبع خیالی ساخته نمی‌شه."
+            }
+          ],
+          "answer": {
+            "strategy": "EXACT_SET",
+            "correctChoiceIds": [
+              "c"
+            ]
+          },
+          "feedback": {
+            "general": "وقتی منبع تأییدشده نداری، نداشتنِ پشتوانه رو روشن بگو؛ استناد ساختگی نساز."
+          },
+          "hint": null,
+          "scoring": {
+            "basePoints": 0,
+            "wrongSubmissionPenalty": 0,
+            "minimumPoints": 0
+          }
+        }
+      ],
+      "closingDialogue": "کتاب خیالی رو پس گرفتم؛ قفسه‌ش هم خیالی بود!",
+      "summary": "ظاهر علمیِ استناد، وجود و اعتبار منبع یا درستی ادعا رو تضمین نمی‌کنه."
+    },
+    {
+      "id": "daily05-challenge02",
+      "chapterId": "hallucination",
+      "stageNumber": 5,
+      "title": "پیکو از یک یادداشت، جشن ملی ساخت!",
+      "estimatedMinutes": 2,
+      "activities": [
+        {
+          "id": "daily05-challenge02-detect",
+          "chapterId": "hallucination",
+          "order": 1,
+          "role": "DAILY",
+          "title": "تشخیص خرابکاری",
+          "interactionType": "SINGLE_CHOICE",
+          "selection": {
+            "min": 1,
+            "max": 1,
+            "instruction": "جواب مناسب رو انتخاب کن."
+          },
+          "situation": "فقط همین یادداشت رو به پیکو دادی تا خبر کوتاه بنویسه. اطلاعات دیگری نداشته.",
+          "contentBlocks": [
+            {
+              "type": "TEXT",
+              "title": "یادداشت واقعی",
+              "text": "سه‌شنبه در کلاس علوم، نمونه‌های سنگ را بررسی کردیم."
+            }
+          ],
+          "character": {
+            "id": "pico",
+            "dialogue": "نوشتم ۵۰ نفر با حضور وزیر سنگ‌ها رو بررسی کردن! خبر من مهمون کم نمیاره!",
+            "mood": "CONFIDENT"
+          },
+          "prompt": "کدوم جزئیات خبر پیکو در یادداشت پشتوانه ندارن؟",
+          "choices": [
+            {
+              "id": "a",
+              "label": "الف",
+              "text": "تعداد ۵۰ نفر و حضور وزیر.",
+              "feedback": "درسته؛ هیچ‌کدوم در ورودی نبوده‌اند."
+            },
+            {
+              "id": "b",
+              "label": "ب",
+              "text": "روز سه‌شنبه و کلاس علوم.",
+              "feedback": "این دو مورد در یادداشت آمده‌اند."
+            },
+            {
+              "id": "c",
+              "label": "ج",
+              "text": "بررسی نمونه‌های سنگ.",
+              "feedback": "این موضوع اصلیِ یادداشته."
+            }
+          ],
+          "answer": {
+            "strategy": "EXACT_SET",
+            "correctChoiceIds": [
+              "a"
+            ]
+          },
+          "feedback": {
+            "general": "پیکو تعداد شرکت‌کنندگان و حضور وزیر رو ساخته؛ کامل‌ترشدن خبر به معنی دقیق‌ترشدن نیست."
+          },
+          "hint": null,
+          "scoring": {
+            "basePoints": 0,
+            "wrongSubmissionPenalty": 0,
+            "minimumPoints": 0
+          }
+        },
+        {
+          "id": "daily05-challenge02-repair",
+          "chapterId": "hallucination",
+          "order": 2,
+          "role": "DAILY",
+          "title": "اصلاح خرابکاری",
+          "interactionType": "SINGLE_CHOICE",
+          "selection": {
+            "min": 1,
+            "max": 1,
+            "instruction": "جواب مناسب رو انتخاب کن."
+          },
+          "situation": "فقط همین یادداشت رو به پیکو دادی تا خبر کوتاه بنویسه. اطلاعات دیگری نداشته.",
+          "contentBlocks": [
+            {
+              "type": "TEXT",
+              "title": "یادداشت واقعی",
+              "text": "سه‌شنبه در کلاس علوم، نمونه‌های سنگ را بررسی کردیم."
+            }
+          ],
+          "character": {
+            "id": "pico",
+            "dialogue": "وزیر توی یادداشت نبود؟ من براش صندلی هم توی جمله رزرو کردم!",
+            "mood": "CONFUSED"
+          },
+          "prompt": "کدوم بازنویسی فقط به اطلاعات موجود تکیه می‌کنه؟",
+          "choices": [
+            {
+              "id": "a",
+              "label": "الف",
+              "text": "سه‌شنبه در کلاس علوم نمونه‌های سنگ رو بررسی کردیم.",
+              "feedback": "درسته؛ همان روز، مکان و فعالیتِ داده‌شده حفظ شده."
+            },
+            {
+              "id": "b",
+              "label": "ب",
+              "text": "سه‌شنبه ۵۰ نفر سنگ‌ها رو بررسی کردند؛ وزیر رو حذف کنیم کافی‌ست.",
+              "feedback": "تعداد ۵۰ نفر همچنان بی‌پشتوانه‌ست."
+            },
+            {
+              "id": "c",
+              "label": "ج",
+              "text": "چون خبر باید کامل باشه، اسم مهمان رو عوض کنیم.",
+              "feedback": "جایگزین‌کردن یک جزئیات ساختگی با دیگری اصلاح نیست."
+            }
+          ],
+          "answer": {
+            "strategy": "EXACT_SET",
+            "correctChoiceIds": [
+              "a"
+            ]
+          },
+          "feedback": {
+            "general": "جزئیات بی‌پشتوانه رو حذف کن؛ اگر لازم‌اند، اطلاعات واقعی‌شون رو جدا بپرس."
+          },
+          "hint": null,
+          "scoring": {
+            "basePoints": 0,
+            "wrongSubmissionPenalty": 0,
+            "minimumPoints": 0
+          }
+        }
+      ],
+      "closingDialogue": "خبر کوچیک شد؛ مهمونِ خیالی هم رفت خونهٔ خیالی‌ش!",
+      "summary": "هر جزئیات خبر باید به ورودی یا منبع واقعی وصل باشه؛ جاهای خالی رو نساز."
+    },
+    {
+      "id": "daily05-challenge03",
+      "chapterId": "hallucination",
+      "stageNumber": 5,
+      "title": "سه جواب پیکو، سه تا شاهد؟!",
+      "estimatedMinutes": 2,
+      "activities": [
+        {
+          "id": "daily05-challenge03-detect",
+          "chapterId": "hallucination",
+          "order": 1,
+          "role": "DAILY",
+          "title": "تشخیص خرابکاری",
+          "interactionType": "SINGLE_CHOICE",
+          "selection": {
+            "min": 1,
+            "max": 1,
+            "instruction": "جواب مناسب رو انتخاب کن."
+          },
+          "situation": "از پیکو پرسیدی مهلت ارسال کاردستی چه روزیه. اطلاعیه‌ای بهش ندادی و جست‌وجو هم نداره. هر بار همون جواب رو تکرار کرده.",
+          "contentBlocks": [],
+          "character": {
+            "id": "pico",
+            "dialogue": "سه بار گفتم مهلت جمعه‌ست! سه شاهد داریم؛ هر سه هم شخصاً خودمم!",
+            "mood": "CONFIDENT"
+          },
+          "prompt": "آیا تکرار جواب، مهلت جمعه رو ثابت می‌کنه؟",
+          "choices": [
+            {
+              "id": "a",
+              "label": "الف",
+              "text": "بله؛ ابزار اگر مطمئن نبود، هر بار یکسان نمی‌گفت.",
+              "feedback": "جواب تکراری هم می‌تونه بدون پشتوانه باشه."
+            },
+            {
+              "id": "b",
+              "label": "ب",
+              "text": "بله؛ سه پاسخ از یک ابزار، سه منبع مستقل‌اند.",
+              "feedback": "هر سه از همان ابزار و بدون شاهد تازه‌اند."
+            },
+            {
+              "id": "c",
+              "label": "ج",
+              "text": "نه؛ هنوز هیچ اطلاعیه یا شاهد مستقلی نداریم.",
+              "feedback": "درسته؛ تکرارِ ادعا مدرک تازه نیست."
+            }
+          ],
+          "answer": {
+            "strategy": "EXACT_SET",
+            "correctChoiceIds": [
+              "c"
+            ]
+          },
+          "feedback": {
+            "general": "سه بار تکرار یک ادعا از همان ابزار، سه تأیید مستقل نیست."
+          },
+          "hint": null,
+          "scoring": {
+            "basePoints": 0,
+            "wrongSubmissionPenalty": 0,
+            "minimumPoints": 0
+          }
+        },
+        {
+          "id": "daily05-challenge03-repair",
+          "chapterId": "hallucination",
+          "order": 2,
+          "role": "DAILY",
+          "title": "اصلاح خرابکاری",
+          "interactionType": "SINGLE_CHOICE",
+          "selection": {
+            "min": 1,
+            "max": 1,
+            "instruction": "جواب مناسب رو انتخاب کن."
+          },
+          "situation": "از پیکو پرسیدی مهلت ارسال کاردستی چه روزیه. اطلاعیه‌ای بهش ندادی و جست‌وجو هم نداره. هر بار همون جواب رو تکرار کرده.",
+          "contentBlocks": [],
+          "character": {
+            "id": "pico",
+            "dialogue": "شاهد دوم و سوم هم خودم بودم؟ چه تیم هماهنگی جمع کرده بودم!",
+            "mood": "CONFUSED"
+          },
+          "prompt": "برای تصمیم‌گرفتن دربارهٔ مهلت، کدوم کار بهتره؟",
+          "choices": [
+            {
+              "id": "a",
+              "label": "الف",
+              "text": "اطلاعیهٔ همین مسابقه رو بررسی کنم یا از برگزارکننده بپرسم.",
+              "feedback": "درسته؛ باید شاهد مرتبط و مستقل از جواب پیکو پیدا بشه."
+            },
+            {
+              "id": "b",
+              "label": "ب",
+              "text": "همون سؤال رو ده بار دیگه بپرسم و رأی بگیرم.",
+              "feedback": "زیادشدن پاسخ‌های همان ابزار، پشتوانه ایجاد نمی‌کنه."
+            },
+            {
+              "id": "c",
+              "label": "ج",
+              "text": "جواب آخر رو قبول کنم چون شماره‌اش بزرگ‌تره.",
+              "feedback": "شمارهٔ پاسخ معیار درستی ادعا نیست."
+            }
+          ],
+          "answer": {
+            "strategy": "EXACT_SET",
+            "correctChoiceIds": [
+              "a"
+            ]
+          },
+          "feedback": {
+            "general": "مهلت رو از اطلاعیهٔ مرتبط یا برگزارکننده تأیید کن؛ تعداد تکرار رو جای شاهد نذار."
+          },
+          "hint": null,
+          "scoring": {
+            "basePoints": 0,
+            "wrongSubmissionPenalty": 0,
+            "minimumPoints": 0
+          }
+        }
+      ],
+      "closingDialogue": "این بار به‌جای شاهدشدن، دنبال اطلاعیه می‌گردیم!",
+      "summary": "تکرار یک جواب، شاهد مستقل نیست؛ واقعیت را با پشتوانهٔ مرتبط بررسی کن."
+    },
+    {
+      "id": "daily06-challenge01",
+      "chapterId": "verification",
+      "stageNumber": 6,
+      "title": "پیکو مسابقه رو یک سال عقب برد!",
+      "estimatedMinutes": 2,
+      "activities": [
+        {
+          "id": "daily06-challenge01-detect",
+          "chapterId": "verification",
+          "order": 1,
+          "role": "DAILY",
+          "title": "تشخیص خرابکاری",
+          "interactionType": "SINGLE_CHOICE",
+          "selection": {
+            "min": 1,
+            "max": 1,
+            "instruction": "جواب مناسب رو انتخاب کن."
+          },
+          "situation": "برای ساعت مسابقهٔ امسال دو مدرک آماده داری. پیکو خبر کوتاه نوشته؛ لازم نیست در اپ جست‌وجو کنی.",
+          "contentBlocks": [
+            {
+              "type": "TEXT",
+              "title": "مدرک‌ها",
+              "text": "الف: عکس اطلاعیهٔ پارسال؛ شروع ساعت ۹، بازنشر در چند گروه.\nب: اطلاعیهٔ برگزارکننده برای همین دوره؛ شروع ساعت ۱۰."
+            }
+          ],
+          "character": {
+            "id": "pico",
+            "dialogue": "نوشتم شروع مسابقه ساعت ۹ه! اطلاعیهٔ پارسال یه سال سابقهٔ بیشتر داره!",
+            "mood": "CONFIDENT"
+          },
+          "prompt": "اشکال تکیهٔ پیکو به مدرک الف چیه؟",
+          "choices": [
+            {
+              "id": "a",
+              "label": "الف",
+              "text": "چون ساعت ۹ همیشه ساعت نامناسبیه.",
+              "feedback": "مسئله مناسب‌بودن ساعت نیست؛ مربوط‌بودن منبعه."
+            },
+            {
+              "id": "b",
+              "label": "ب",
+              "text": "مدرک مربوط به دورهٔ قبله و ساعت امسال رو تأیید نمی‌کنه.",
+              "feedback": "درسته؛ تاریخ و دورهٔ منبع باید به سؤال بخوره."
+            },
+            {
+              "id": "c",
+              "label": "ج",
+              "text": "چون هر چیزی که توی گروه‌هاست حتماً غلطه.",
+              "feedback": "بازنشر به‌تنهایی درستی یا غلطی رو ثابت نمی‌کنه."
+            }
+          ],
+          "answer": {
+            "strategy": "EXACT_SET",
+            "correctChoiceIds": [
+              "b"
+            ]
+          },
+          "feedback": {
+            "general": "یک منبع واقعی هم ممکنه برای سؤال امروز نامربوط یا قدیمی باشه."
+          },
+          "hint": null,
+          "scoring": {
+            "basePoints": 0,
+            "wrongSubmissionPenalty": 0,
+            "minimumPoints": 0
+          }
+        },
+        {
+          "id": "daily06-challenge01-repair",
+          "chapterId": "verification",
+          "order": 2,
+          "role": "DAILY",
+          "title": "اصلاح خرابکاری",
+          "interactionType": "SINGLE_CHOICE",
+          "selection": {
+            "min": 1,
+            "max": 1,
+            "instruction": "جواب مناسب رو انتخاب کن."
+          },
+          "situation": "برای ساعت مسابقهٔ امسال دو مدرک آماده داری. پیکو خبر کوتاه نوشته؛ لازم نیست در اپ جست‌وجو کنی.",
+          "contentBlocks": [
+            {
+              "type": "TEXT",
+              "title": "مدرک‌ها",
+              "text": "الف: عکس اطلاعیهٔ پارسال؛ شروع ساعت ۹، بازنشر در چند گروه.\nب: اطلاعیهٔ برگزارکننده برای همین دوره؛ شروع ساعت ۱۰."
+            }
+          ],
+          "character": {
+            "id": "pico",
+            "dialogue": "سابقهٔ بیشتر یعنی تاریخ قدیمی‌تر؟ من داشتم ارتقاش می‌دادم!",
+            "mood": "CONFUSED"
+          },
+          "prompt": "کدوم گزارش با مدرک مناسب‌تر جور درمیاد؟",
+          "choices": [
+            {
+              "id": "a",
+              "label": "الف",
+              "text": "ساعت ۹، چون عکس قدیمی بیشتر فرستاده شده.",
+              "feedback": "تعداد بازنشر، اطلاعیهٔ پارسال رو امسالی نمی‌کنه."
+            },
+            {
+              "id": "b",
+              "label": "ب",
+              "text": "ساعت ۹:۳۰؛ میانگین دو مدرک منصفانه‌تره.",
+              "feedback": "میانگین ساعت‌ها، زمان واقعی مسابقه نیست."
+            },
+            {
+              "id": "c",
+              "label": "ج",
+              "text": "طبق اطلاعیهٔ برگزارکنندهٔ همین دوره، شروع ساعت ۱۰ه.",
+              "feedback": "درسته؛ منبع مرتبط و زمان همین دوره مبناست."
+            }
+          ],
+          "answer": {
+            "strategy": "EXACT_SET",
+            "correctChoiceIds": [
+              "c"
+            ]
+          },
+          "feedback": {
+            "general": "دوره و تاریخ اطلاعیه و ارتباطش با همین برنامه رو بررسی کن و نتیجه رو به منبع وصل نگه دار."
+          },
+          "hint": null,
+          "scoring": {
+            "basePoints": 0,
+            "wrongSubmissionPenalty": 0,
+            "minimumPoints": 0
+          }
+        }
+      ],
+      "closingDialogue": "پارسال رو گذاشتم توی بایگانی؛ مسابقه رو امسال می‌ریم!",
+      "summary": "منبع باید هم معتبر باشه و هم به زمان و موضوعِ همین تصمیم مربوط باشه."
+    },
+    {
+      "id": "daily06-challenge02",
+      "chapterId": "verification",
+      "stageNumber": 6,
+      "title": "پیکو از سه کپی، هیئت داوران ساخت!",
+      "estimatedMinutes": 2,
+      "activities": [
+        {
+          "id": "daily06-challenge02-detect",
+          "chapterId": "verification",
+          "order": 1,
+          "role": "DAILY",
+          "title": "تشخیص خرابکاری",
+          "interactionType": "SINGLE_CHOICE",
+          "selection": {
+            "min": 1,
+            "max": 1,
+            "instruction": "جواب مناسب رو انتخاب کن."
+          },
+          "situation": "سه کانال یک خبرِ لغو کارگاه رو با جمله‌ها و غلط املایی یکسان از یک پست کپی کرده‌اند. لینک اطلاعیهٔ برگزارکننده در این زنجیره نیست.",
+          "contentBlocks": [],
+          "character": {
+            "id": "pico",
+            "dialogue": "لغو کارگاه رو تأیید کردم؛ سه کانال گفتن! حتی غلط‌هاشون هم رأی موافق دادن!",
+            "mood": "CONFIDENT"
+          },
+          "prompt": "چرا این سه کانال سه شاهد مستقل نیستن؟",
+          "choices": [
+            {
+              "id": "a",
+              "label": "الف",
+              "text": "چون هر سه به یک پست برمی‌گردن و همون رو تکرار می‌کنن.",
+              "feedback": "درسته؛ تعداد کپی‌ها با تعداد شاهدهای جدا فرق داره."
+            },
+            {
+              "id": "b",
+              "label": "ب",
+              "text": "چون خبر لغو کارگاه هیچ‌وقت درست نیست.",
+              "feedback": "لغو ممکنه واقعی باشه؛ باید پشتوانه‌اش بررسی بشه."
+            },
+            {
+              "id": "c",
+              "label": "ج",
+              "text": "چون متن خبری نباید هیچ غلط املایی داشته باشه.",
+              "feedback": "غلط مشترک نشانهٔ کپی‌بودنه؛ خودِ غلط تکلیف خبر رو تعیین نمی‌کنه."
+            }
+          ],
+          "answer": {
+            "strategy": "EXACT_SET",
+            "correctChoiceIds": [
+              "a"
+            ]
+          },
+          "feedback": {
+            "general": "سه بازنشر از یک منشأ، سه بررسی جدا نیست؛ اصل ادعا هنوز نیاز به تأیید داره."
+          },
+          "hint": null,
+          "scoring": {
+            "basePoints": 0,
+            "wrongSubmissionPenalty": 0,
+            "minimumPoints": 0
+          }
+        },
+        {
+          "id": "daily06-challenge02-repair",
+          "chapterId": "verification",
+          "order": 2,
+          "role": "DAILY",
+          "title": "اصلاح خرابکاری",
+          "interactionType": "SINGLE_CHOICE",
+          "selection": {
+            "min": 1,
+            "max": 1,
+            "instruction": "جواب مناسب رو انتخاب کن."
+          },
+          "situation": "سه کانال یک خبرِ لغو کارگاه رو با جمله‌ها و غلط املایی یکسان از یک پست کپی کرده‌اند. لینک اطلاعیهٔ برگزارکننده در این زنجیره نیست.",
+          "contentBlocks": [],
+          "character": {
+            "id": "pico",
+            "dialogue": "پس کانال چهارم هم همون رو کپی کنه، فقط جمع‌مون شلوغ‌تر می‌شه؟!",
+            "mood": "CONFUSED"
+          },
+          "prompt": "کدوم کار شاهد جداگانه‌تری می‌ده؟",
+          "choices": [
+            {
+              "id": "a",
+              "label": "الف",
+              "text": "از پیکو بخوام همون خبر رو رسمی‌تر بازنویسی کنه.",
+              "feedback": "بازنویسیِ همان ادعا، شاهد مستقل نیست."
+            },
+            {
+              "id": "b",
+              "label": "ب",
+              "text": "اطلاعیهٔ برگزارکننده رو بررسی کنم یا از مسئول کارگاه تأیید بگیرم.",
+              "feedback": "درسته؛ بیرون از زنجیرهٔ کپی، خود ادعا بررسی می‌شه."
+            },
+            {
+              "id": "c",
+              "label": "ج",
+              "text": "تعداد گروه‌هایی رو که خبر رو فرستادن بشمارم.",
+              "feedback": "شمارش بازنشرها منشأ تازه‌ای به خبر اضافه نمی‌کنه."
+            }
+          ],
+          "answer": {
+            "strategy": "EXACT_SET",
+            "correctChoiceIds": [
+              "b"
+            ]
+          },
+          "feedback": {
+            "general": "از زنجیرهٔ بازنشر خارج شو و اطلاعیه یا مسئول مرتبط با برنامه رو بررسی کن."
+          },
+          "hint": null,
+          "scoring": {
+            "basePoints": 0,
+            "wrongSubmissionPenalty": 0,
+            "minimumPoints": 0
+          }
+        }
+      ],
+      "closingDialogue": "کپی‌ها رو شمردم؛ این بار خودِ خبر رو بررسی می‌کنیم!",
+      "summary": "چند نسخه از یک خبر، چند شاهد مستقل نیستند."
+    },
+    {
+      "id": "daily06-challenge03",
+      "chapterId": "verification",
+      "stageNumber": 6,
+      "title": "مهلت مسابقه با ماشین‌حساب پیکو!",
+      "estimatedMinutes": 2,
+      "activities": [
+        {
+          "id": "daily06-challenge03-detect",
+          "chapterId": "verification",
+          "order": 1,
+          "role": "DAILY",
+          "title": "تشخیص خرابکاری",
+          "interactionType": "SINGLE_CHOICE",
+          "selection": {
+            "min": 1,
+            "max": 1,
+            "instruction": "جواب مناسب رو انتخاب کن."
+          },
+          "situation": "دو پیام دربارهٔ مهلت تحویل پروژه داری. معلوم نیست کدوم آخرین نسخه‌ست.",
+          "contentBlocks": [
+            {
+              "type": "TEXT",
+              "title": "دو پیام",
+              "text": "پیام اول: تحویل تا روز دهم.\nپیام دوم: تحویل تا روز چهاردهم.\nزمان به‌روزرسانی و اصل اطلاعیه هنوز بررسی نشده."
+            }
+          ],
+          "character": {
+            "id": "pico",
+            "dialogue": "مهلت رو روز دوازدهم اعلام کردم! اختلاف تاریخ‌ها رو با میانگین آشتی دادم!",
+            "mood": "CONFIDENT"
+          },
+          "prompt": "چرا تاریخ پیشنهادی پیکو قابل‌اتکا نیست؟",
+          "choices": [
+            {
+              "id": "a",
+              "label": "الف",
+              "text": "چون عدد دوازده از چهارده کوچیک‌تره.",
+              "feedback": "بزرگی عدد، مهلت واقعی رو تعیین نمی‌کنه."
+            },
+            {
+              "id": "b",
+              "label": "ب",
+              "text": "چون باید همیشه زودترین پیام رو معتبر بدونیم.",
+              "feedback": "بدون بررسی، معلوم نیست کدوم پیام مربوط و به‌روزه."
+            },
+            {
+              "id": "c",
+              "label": "ج",
+              "text": "چون میانگینِ دو ادعا، تأییدِ مهلت واقعی نیست.",
+              "feedback": "درسته؛ اختلاف منبع باید حل بشه، نه میانگین‌گیری."
+            }
+          ],
+          "answer": {
+            "strategy": "EXACT_SET",
+            "correctChoiceIds": [
+              "c"
+            ]
+          },
+          "feedback": {
+            "general": "عدد میانی شاهد تازه‌ای نیست؛ باید مشخص بشه کدام پیام معتبر و به‌روزه."
+          },
+          "hint": null,
+          "scoring": {
+            "basePoints": 0,
+            "wrongSubmissionPenalty": 0,
+            "minimumPoints": 0
+          }
+        },
+        {
+          "id": "daily06-challenge03-repair",
+          "chapterId": "verification",
+          "order": 2,
+          "role": "DAILY",
+          "title": "اصلاح خرابکاری",
+          "interactionType": "SINGLE_CHOICE",
+          "selection": {
+            "min": 1,
+            "max": 1,
+            "instruction": "جواب مناسب رو انتخاب کن."
+          },
+          "situation": "دو پیام دربارهٔ مهلت تحویل پروژه داری. معلوم نیست کدوم آخرین نسخه‌ست.",
+          "contentBlocks": [
+            {
+              "type": "TEXT",
+              "title": "دو پیام",
+              "text": "پیام اول: تحویل تا روز دهم.\nپیام دوم: تحویل تا روز چهاردهم.\nزمان به‌روزرسانی و اصل اطلاعیه هنوز بررسی نشده."
+            }
+          ],
+          "character": {
+            "id": "pico",
+            "dialogue": "ماشین‌حسابم گفت دوازده؛ برگزارکننده هم باید ازش اجازه بگیره؟!",
+            "mood": "CONFUSED"
+          },
+          "prompt": "کدوم قدم اختلاف رو درست حل می‌کنه؟",
+          "choices": [
+            {
+              "id": "a",
+              "label": "الف",
+              "text": "اصل اطلاعیه و آخرین به‌روزرسانی رو چک کنم یا از برگزارکننده بپرسم.",
+              "feedback": "درسته؛ اختلاف با اطلاعات مرتبط حل می‌شه."
+            },
+            {
+              "id": "b",
+              "label": "ب",
+              "text": "پیامی رو انتخاب کنم که عکس قشنگ‌تری داره.",
+              "feedback": "ظاهر پیام مشخص نمی‌کنه کدوم مهلت واقعیه."
+            },
+            {
+              "id": "c",
+              "label": "ج",
+              "text": "روز دوازدهم رو با لحن مطمئن‌تری منتشر کنم.",
+              "feedback": "لحن محکم، مهلت ساخته‌شده رو واقعی نمی‌کنه."
+            }
+          ],
+          "answer": {
+            "strategy": "EXACT_SET",
+            "correctChoiceIds": [
+              "a"
+            ]
+          },
+          "feedback": {
+            "general": "تا تأیید معتبر نگرفتی، اختلاف رو پنهان نکن و تاریخ حدسی رو قطعی اعلام نکن."
+          },
+          "hint": null,
+          "scoring": {
+            "basePoints": 0,
+            "wrongSubmissionPenalty": 0,
+            "minimumPoints": 0
+          }
+        }
+      ],
+      "closingDialogue": "ماشین‌حساب رو کنار گذاشتم؛ مهلت رو از صاحبش می‌پرسیم!",
+      "summary": "تعارض منبع‌ها با بررسی ارتباط و به‌روزبودن حل می‌شه؛ نه با حدس یا میانگین."
+    },
+    {
+      "id": "daily07-challenge01",
+      "chapterId": "privacy",
+      "stageNumber": 7,
+      "title": "پیام تشکر با رمزِ ورود؟!",
+      "estimatedMinutes": 2,
+      "activities": [
+        {
+          "id": "daily07-challenge01-detect",
+          "chapterId": "privacy",
+          "order": 1,
+          "role": "DAILY",
+          "title": "تشخیص خرابکاری",
+          "interactionType": "SINGLE_CHOICE",
+          "selection": {
+            "min": 1,
+            "max": 1,
+            "instruction": "جواب مناسب رو انتخاب کن."
+          },
+          "situation": "برای نوشتن پیام تشکر از دوستت، از سرویس AI آنلاین کمک می‌گیری. موضوع تشکر و لحن دوستانه مشخصه؛ رمز حساب دوستت هم پیش تو امانته.",
+          "contentBlocks": [],
+          "character": {
+            "id": "pico",
+            "dialogue": "برای پیام تشکر، رمز دوستت رو هم خواستم! صمیمیت باید تا حسابش نفوذ کنه!",
+            "mood": "CONFIDENT"
+          },
+          "prompt": "کدوم بخش پیشنهاد پیکو مشکل داره؟",
+          "choices": [
+            {
+              "id": "a",
+              "label": "الف",
+              "text": "درخواست لحن دوستانه برای پیام.",
+              "feedback": "لحن به نوشتن همین متن مربوطه."
+            },
+            {
+              "id": "b",
+              "label": "ب",
+              "text": "خواستن رمزِ بی‌ربط و خصوصیِ دوستت.",
+              "feedback": "درسته؛ رمز نه لازم است نه مجوز فرستادنش رو داری."
+            },
+            {
+              "id": "c",
+              "label": "ج",
+              "text": "کمک‌کردن به نوشتن پیام تشکر.",
+              "feedback": "اصلِ کمک نوشتاری مشکلی نداره؛ ورودی باید مناسب باشه."
+            }
+          ],
+          "answer": {
+            "strategy": "EXACT_SET",
+            "correctChoiceIds": [
+              "b"
+            ]
+          },
+          "feedback": {
+            "general": "رمز و کد ورود برای نوشتن پیام لازم نیستن؛ امانت‌داشتن اطلاعات دیگران هم اجازهٔ فرستادنشون نیست."
+          },
+          "hint": null,
+          "scoring": {
+            "basePoints": 0,
+            "wrongSubmissionPenalty": 0,
+            "minimumPoints": 0
+          }
+        },
+        {
+          "id": "daily07-challenge01-repair",
+          "chapterId": "privacy",
+          "order": 2,
+          "role": "DAILY",
+          "title": "اصلاح خرابکاری",
+          "interactionType": "SINGLE_CHOICE",
+          "selection": {
+            "min": 1,
+            "max": 1,
+            "instruction": "جواب مناسب رو انتخاب کن."
+          },
+          "situation": "برای نوشتن پیام تشکر از دوستت، از سرویس AI آنلاین کمک می‌گیری. موضوع تشکر و لحن دوستانه مشخصه؛ رمز حساب دوستت هم پیش تو امانته.",
+          "contentBlocks": [],
+          "character": {
+            "id": "pico",
+            "dialogue": "پس تشکر با کلمه می‌رسه؟ من داشتم قفلِ صمیمیت رو باز می‌کردم!",
+            "mood": "CONFUSED"
+          },
+          "prompt": "کدوم ورودی برای همین کار مناسب‌تره؟",
+          "choices": [
+            {
+              "id": "a",
+              "label": "الف",
+              "text": "رمز رو نصفه بفرستم تا نصفه خصوصی بمونه.",
+              "feedback": "هیچ بخشی از رمز برای این متن لازم نیست."
+            },
+            {
+              "id": "b",
+              "label": "ب",
+              "text": "رمز رو به پیکو بدم و بگم توی خروجی نشون نده.",
+              "feedback": "نشان‌ندادن در خروجی، ارسال به سرویس رو لغو نمی‌کنه."
+            },
+            {
+              "id": "c",
+              "label": "ج",
+              "text": "موضوع تشکر و لحن رو بگم؛ مشخصات حساس و رمز رو نفرستم.",
+              "feedback": "درسته؛ اطلاعات مربوط کافی‌ست و رمز وارد درخواست نمی‌شه."
+            }
+          ],
+          "answer": {
+            "strategy": "EXACT_SET",
+            "correctChoiceIds": [
+              "c"
+            ]
+          },
+          "feedback": {
+            "general": "فقط دادهٔ لازم برای متن رو بده؛ اطلاعات حساس خودت و دیگران رو وارد درخواست نکن."
+          },
+          "hint": null,
+          "scoring": {
+            "basePoints": 0,
+            "wrongSubmissionPenalty": 0,
+            "minimumPoints": 0
+          }
+        }
+      ],
+      "closingDialogue": "این بار پیام تشکر می‌نویسم؛ کلید حساب جمع نمی‌کنم!",
+      "summary": "کمک نوشتاری به رمز و اطلاعات حساس نیاز نداره؛ دادهٔ امانی دیگران رو نفرست."
+    },
+    {
+      "id": "daily07-challenge02",
+      "chapterId": "privacy",
+      "stageNumber": 7,
+      "title": "پیکو به فرم اسمِ مستعار داد!",
+      "estimatedMinutes": 2,
+      "activities": [
+        {
+          "id": "daily07-challenge02-detect",
+          "chapterId": "privacy",
+          "order": 1,
+          "role": "DAILY",
+          "title": "تشخیص خرابکاری",
+          "interactionType": "SINGLE_CHOICE",
+          "selection": {
+            "min": 1,
+            "max": 1,
+            "instruction": "جواب مناسب رو انتخاب کن."
+          },
+          "situation": "برای رنگ و چیدمان فرم ثبت‌نام فقط نظر می‌خوای. نسخهٔ واقعی نام، ایمیل و شمارهٔ افراد رو داره. این متن نمونه، ساختگیه.",
+          "contentBlocks": [
+            {
+              "type": "TEXT",
+              "title": "نمونهٔ ساختگیِ فرم",
+              "text": "نام: کاربر نمونه\nایمیل: sample@example.com\nشماره: [شمارهٔ نمونه]"
+            }
+          ],
+          "character": {
+            "id": "pico",
+            "dialogue": "گفتم اسم فایل فرم واقعی رو بذار «محرمانه» و بفرست! اسمش خودش سپر دفاعیه!",
+            "mood": "CONFIDENT"
+          },
+          "prompt": "چرا تغییر اسم فایل کافی نیست؟",
+          "choices": [
+            {
+              "id": "a",
+              "label": "الف",
+              "text": "چون نام، ایمیل و شماره هنوز داخل فرم واقعی باقی می‌مونن.",
+              "feedback": "درسته؛ اسم فایل محتوای خصوصی داخلش رو پنهان نمی‌کنه."
+            },
+            {
+              "id": "b",
+              "label": "ب",
+              "text": "چون برای نظر دربارهٔ رنگ حتماً شمارهٔ واقعی لازم است.",
+              "feedback": "رنگ و چیدمان رو می‌شه با دادهٔ ساختگی بررسی کرد."
+            },
+            {
+              "id": "c",
+              "label": "ج",
+              "text": "چون فایل با اسم محرمانه اصلاً قابل‌بازشدن نیست.",
+              "feedback": "این اسم جلوی دیدن اطلاعات داخل فایل رو نمی‌گیره."
+            }
+          ],
+          "answer": {
+            "strategy": "EXACT_SET",
+            "correctChoiceIds": [
+              "a"
+            ]
+          },
+          "feedback": {
+            "general": "نام فایل پوشش حریم خصوصی نیست؛ باید محتوای شناسایی‌کننده حذف یا با دادهٔ نمونه جایگزین بشه."
+          },
+          "hint": null,
+          "scoring": {
+            "basePoints": 0,
+            "wrongSubmissionPenalty": 0,
+            "minimumPoints": 0
+          }
+        },
+        {
+          "id": "daily07-challenge02-repair",
+          "chapterId": "privacy",
+          "order": 2,
+          "role": "DAILY",
+          "title": "اصلاح خرابکاری",
+          "interactionType": "SINGLE_CHOICE",
+          "selection": {
+            "min": 1,
+            "max": 1,
+            "instruction": "جواب مناسب رو انتخاب کن."
+          },
+          "situation": "برای رنگ و چیدمان فرم ثبت‌نام فقط نظر می‌خوای. نسخهٔ واقعی نام، ایمیل و شمارهٔ افراد رو داره. این متن نمونه، ساختگیه.",
+          "contentBlocks": [
+            {
+              "type": "TEXT",
+              "title": "نمونهٔ ساختگیِ فرم",
+              "text": "نام: کاربر نمونه\nایمیل: sample@example.com\nشماره: [شمارهٔ نمونه]"
+            }
+          ],
+          "character": {
+            "id": "pico",
+            "dialogue": "سپرِ اسم فایل سوراخ بود؟ شماره‌ها هنوز از توش بیرون رو نگاه می‌کنن!",
+            "mood": "CONFUSED"
+          },
+          "prompt": "کدوم نسخه رو برای نظر دربارهٔ ظاهر فرم بفرستی؟",
+          "choices": [
+            {
+              "id": "a",
+              "label": "الف",
+              "text": "فرم واقعی، فقط با نام فایل متفاوت.",
+              "feedback": "اطلاعات داخل فرم هنوز واقعیه."
+            },
+            {
+              "id": "b",
+              "label": "ب",
+              "text": "نمونه‌ای با همان چیدمان و داده‌های ساختگی، مثل متن بالا.",
+              "feedback": "درسته؛ ظاهر قابل‌بررسیه و مشخصات واقعی فرستاده نمی‌شن."
+            },
+            {
+              "id": "c",
+              "label": "ج",
+              "text": "فرم واقعی با نامِ حذف‌شده ولی ایمیل و شمارهٔ باقی‌مانده.",
+              "feedback": "ایمیل و شماره هم دادهٔ شناسایی‌کننده‌اند."
+            }
+          ],
+          "answer": {
+            "strategy": "EXACT_SET",
+            "correctChoiceIds": [
+              "b"
+            ]
+          },
+          "feedback": {
+            "general": "برای کمک دربارهٔ ظاهر، ساختار رو نگه دار و مشخصات واقعی رو با دادهٔ ساختگی جایگزین کن."
+          },
+          "hint": null,
+          "scoring": {
+            "basePoints": 0,
+            "wrongSubmissionPenalty": 0,
+            "minimumPoints": 0
+          }
+        }
+      ],
+      "closingDialogue": "فرم همون شکلی موند؛ این بار آدم‌های توش واقعی نیستن!",
+      "summary": "برای بررسی ظاهر، دادهٔ نمونه کافی‌ست؛ تغییر نام فایل اطلاعات داخلش رو حذف نمی‌کنه."
+    },
+    {
+      "id": "daily07-challenge03",
+      "chapterId": "privacy",
+      "stageNumber": 7,
+      "title": "پیکو می‌خواد به رأی‌ها زنگ بزنه!",
+      "estimatedMinutes": 2,
+      "activities": [
+        {
+          "id": "daily07-challenge03-detect",
+          "chapterId": "privacy",
+          "order": 1,
+          "role": "DAILY",
+          "title": "تشخیص خرابکاری",
+          "interactionType": "SINGLE_CHOICE",
+          "selection": {
+            "min": 1,
+            "max": 1,
+            "instruction": "جواب مناسب رو انتخاب کن."
+          },
+          "situation": "برای خلاصهٔ نظرسنجی ورزش کلاس، تعداد رأی هر گزینه رو داری. نام و شمارهٔ بچه‌ها هم جدا ثبت شده؛ برای خلاصهٔ گروهی لازم نیستن.",
+          "contentBlocks": [
+            {
+              "type": "TEXT",
+              "title": "نتیجهٔ گروهی",
+              "text": "والیبال: ۱۲ رأی\nبسکتبال: ۸ رأی\nدویدن: ۵ رأی"
+            }
+          ],
+          "character": {
+            "id": "pico",
+            "dialogue": "گفتم رأی‌ها رو با شمارهٔ همه بفرست! خلاصهٔ من خدمات تماس هم داره!",
+            "mood": "CONFIDENT"
+          },
+          "prompt": "کدوم درخواست پیکو اطلاعات اضافه می‌گیره؟",
+          "choices": [
+            {
+              "id": "a",
+              "label": "الف",
+              "text": "خواستن تعداد رأی هر گزینه.",
+              "feedback": "این داده مستقیماً برای خلاصهٔ نتیجه لازم است."
+            },
+            {
+              "id": "b",
+              "label": "ب",
+              "text": "خواستن نام گزینه‌های نظرسنجی.",
+              "feedback": "بدون گزینه‌ها معلوم نیست رأی‌ها دربارهٔ چی‌اند."
+            },
+            {
+              "id": "c",
+              "label": "ج",
+              "text": "خواستن شمارهٔ تماس تک‌تک افراد.",
+              "feedback": "درسته؛ شماره‌ها به خلاصهٔ گروهی کمکی نمی‌کنن."
+            }
+          ],
+          "answer": {
+            "strategy": "EXACT_SET",
+            "correctChoiceIds": [
+              "c"
+            ]
+          },
+          "feedback": {
+            "general": "برای جمع‌بندیِ گروهی، هویت و شمارهٔ افراد رو بی‌دلیل همراه آمار نفرست."
+          },
+          "hint": null,
+          "scoring": {
+            "basePoints": 0,
+            "wrongSubmissionPenalty": 0,
+            "minimumPoints": 0
+          }
+        },
+        {
+          "id": "daily07-challenge03-repair",
+          "chapterId": "privacy",
+          "order": 2,
+          "role": "DAILY",
+          "title": "اصلاح خرابکاری",
+          "interactionType": "SINGLE_CHOICE",
+          "selection": {
+            "min": 1,
+            "max": 1,
+            "instruction": "جواب مناسب رو انتخاب کن."
+          },
+          "situation": "برای خلاصهٔ نظرسنجی ورزش کلاس، تعداد رأی هر گزینه رو داری. نام و شمارهٔ بچه‌ها هم جدا ثبت شده؛ برای خلاصهٔ گروهی لازم نیستن.",
+          "contentBlocks": [
+            {
+              "type": "TEXT",
+              "title": "نتیجهٔ گروهی",
+              "text": "والیبال: ۱۲ رأی\nبسکتبال: ۸ رأی\nدویدن: ۵ رأی"
+            }
+          ],
+          "character": {
+            "id": "pico",
+            "dialogue": "آمار جواب تلفن نمی‌ده؟ من حتی براش کد شهر کنار گذاشتم!",
+            "mood": "CONFUSED"
+          },
+          "prompt": "کدوم ورودی، کار رو با اطلاعات کم‌تر انجام می‌ده؟",
+          "choices": [
+            {
+              "id": "a",
+              "label": "الف",
+              "text": "سؤال نظرسنجی و همین تعداد رأی گزینه‌ها، بدون مشخصات افراد.",
+              "feedback": "درسته؛ اطلاعات مرتبط باقی می‌مونه و هویت افراد ارسال نمی‌شه."
+            },
+            {
+              "id": "b",
+              "label": "ب",
+              "text": "آمار و دفترچهٔ تلفن رو با هم بفرستم تا چیزی کم نباشه.",
+              "feedback": "دادهٔ بیشترِ بی‌ربط، افشای اطلاعات رو بیشتر می‌کنه."
+            },
+            {
+              "id": "c",
+              "label": "ج",
+              "text": "شماره‌ها رو بفرستم ولی بگم در خلاصه چاپ نشن.",
+              "feedback": "دستورِ چاپ‌نکردن جلوی ارسال اطلاعات به سرویس رو نمی‌گیره."
+            }
+          ],
+          "answer": {
+            "strategy": "EXACT_SET",
+            "correctChoiceIds": [
+              "a"
+            ]
+          },
+          "feedback": {
+            "general": "از دادهٔ جمعی استفاده کن؛ نام و راه تماس افراد رو از ورودی غیرضروری حذف کن."
+          },
+          "hint": null,
+          "scoring": {
+            "basePoints": 0,
+            "wrongSubmissionPenalty": 0,
+            "minimumPoints": 0
+          }
+        }
+      ],
+      "closingDialogue": "دفترچهٔ تلفن رو پس دادم؛ رأی‌ها بدون شماره هم شمرده می‌شن!",
+      "summary": "برای خلاصهٔ جمعی، اطلاعات جمعی بفرست؛ هویت افراد رو بی‌نیاز ضمیمه نکن."
+    },
+    {
+      "id": "daily08-challenge01",
+      "chapterId": "responsibility",
+      "stageNumber": 8,
+      "title": "پیکو تکلیف رو به اسم تو امضا کرد!",
+      "estimatedMinutes": 2,
+      "activities": [
+        {
+          "id": "daily08-challenge01-detect",
+          "chapterId": "responsibility",
+          "order": 1,
+          "role": "DAILY",
+          "title": "تشخیص خرابکاری",
+          "interactionType": "SINGLE_CHOICE",
+          "selection": {
+            "min": 1,
+            "max": 1,
+            "instruction": "جواب مناسب رو انتخاب کن."
+          },
+          "situation": "معلم اجازه داده برای ایده از AI کمک بگیری؛ توضیح نهایی باید با فهم خودت باشه و کمک ابزار رو هم بگی. پیکو متن کامل آماده کرده.",
+          "contentBlocks": [],
+          "character": {
+            "id": "pico",
+            "dialogue": "کل توضیح رو نوشتم و زیرش زدم «بدون کمک»! تو فقط اسم خودت رو با افتخار بذار!",
+            "mood": "CONFIDENT"
+          },
+          "prompt": "پیشنهاد پیکو با کدوم قرار ناسازگاره؟",
+          "choices": [
+            {
+              "id": "a",
+              "label": "الف",
+              "text": "اینکه استفاده از هر نوع ایدهٔ AI ممنوع است.",
+              "feedback": "در این تکلیف ایده‌گرفتن مجازه."
+            },
+            {
+              "id": "b",
+              "label": "ب",
+              "text": "اینکه توضیح نهایی کار خودت باشه و سهم ابزار پنهان نشه.",
+              "feedback": "درسته؛ متن آماده رو نمی‌شه توضیح مستقل خودت جا زد."
+            },
+            {
+              "id": "c",
+              "label": "ج",
+              "text": "اینکه متن حتماً باید دست‌نویس باشه.",
+              "feedback": "در موقعیت چنین شرطی گفته نشده."
+            }
+          ],
+          "answer": {
+            "strategy": "EXACT_SET",
+            "correctChoiceIds": [
+              "b"
+            ]
+          },
+          "feedback": {
+            "general": "اجازهٔ ایده‌گرفتن، اجازهٔ تحویل متن کامل ابزار به اسم کار مستقل خودت نیست."
+          },
+          "hint": null,
+          "scoring": {
+            "basePoints": 0,
+            "wrongSubmissionPenalty": 0,
+            "minimumPoints": 0
+          }
+        },
+        {
+          "id": "daily08-challenge01-repair",
+          "chapterId": "responsibility",
+          "order": 2,
+          "role": "DAILY",
+          "title": "اصلاح خرابکاری",
+          "interactionType": "SINGLE_CHOICE",
+          "selection": {
+            "min": 1,
+            "max": 1,
+            "instruction": "جواب مناسب رو انتخاب کن."
+          },
+          "situation": "معلم اجازه داده برای ایده از AI کمک بگیری؛ توضیح نهایی باید با فهم خودت باشه و کمک ابزار رو هم بگی. پیکو متن کامل آماده کرده.",
+          "contentBlocks": [],
+          "character": {
+            "id": "pico",
+            "dialogue": "یعنی نوشتنِ اسم تو، فکرکردن رو هم به نامت منتقل نمی‌کنه؟!",
+            "mood": "CONFUSED"
+          },
+          "prompt": "کدوم روش با قرار تکلیف جور درمیاد؟",
+          "choices": [
+            {
+              "id": "a",
+              "label": "الف",
+              "text": "همین متن رو کپی کنم؛ جملهٔ «بدون کمک» رو بزرگ‌تر بنویسم.",
+              "feedback": "کمک ابزار و سهم واقعی کار همچنان پنهان می‌مونه."
+            },
+            {
+              "id": "b",
+              "label": "ب",
+              "text": "اسم یک ابزار دیگه رو بگم تا کمک حرفه‌ای‌تر به نظر بیاد.",
+              "feedback": "معرفی نادرست ابزار هم صادقانه نیست."
+            },
+            {
+              "id": "c",
+              "label": "ج",
+              "text": "از ایده‌ها استفاده کنم، با فهم خودم توضیح بدم و کمک AI رو روشن بگم.",
+              "feedback": "درسته؛ هم سهم خودت واقعی‌ست، هم استفاده از ابزار روشنه."
+            }
+          ],
+          "answer": {
+            "strategy": "EXACT_SET",
+            "correctChoiceIds": [
+              "c"
+            ]
+          },
+          "feedback": {
+            "general": "طبق قرار تکلیف، ایده رو بررسی کن، توضیح خودت رو بنویس و نقش واقعی ابزار رو بیان کن."
+          },
+          "hint": null,
+          "scoring": {
+            "basePoints": 0,
+            "wrongSubmissionPenalty": 0,
+            "minimumPoints": 0
+          }
+        }
+      ],
+      "closingDialogue": "ایده از من؛ فهم و توضیح از تو. امضا هم سر جای خودش!",
+      "summary": "کمک‌گرفتن رو جای کار مستقل خودت جا نزن؛ سهم واقعی ابزار رو طبق قرار روشن کن."
+    },
+    {
+      "id": "daily08-challenge02",
+      "chapterId": "responsibility",
+      "stageNumber": 8,
+      "title": "پاک‌کن پیکو سند مالکیت می‌ده!",
+      "estimatedMinutes": 2,
+      "activities": [
+        {
+          "id": "daily08-challenge02-detect",
+          "chapterId": "responsibility",
+          "order": 1,
+          "role": "DAILY",
+          "title": "تشخیص خرابکاری",
+          "interactionType": "SINGLE_CHOICE",
+          "selection": {
+            "min": 1,
+            "max": 1,
+            "instruction": "جواب مناسب رو انتخاب کن."
+          },
+          "situation": "برای پوستر، طرح یک هنرمند رو پیدا کردی. اجازهٔ استفاده یا تغییرش مشخص نیست. پیکو پیشنهاد ویرایش داده.",
+          "contentBlocks": [],
+          "character": {
+            "id": "pico",
+            "dialogue": "گفتم اسم هنرمند رو پاک کنیم؛ طرح می‌شه مال تو! پاک‌کنم دفتر اسناد رسمیه!",
+            "mood": "CONFIDENT"
+          },
+          "prompt": "اشکال اصلی پیشنهاد پیکو چیه؟",
+          "choices": [
+            {
+              "id": "a",
+              "label": "الف",
+              "text": "حذف نام و ویرایش، اجازهٔ استفاده و مالکیت تازه ایجاد نمی‌کنه.",
+              "feedback": "درسته؛ حق استفاده و سهم سازنده باید روشن باشه."
+            },
+            {
+              "id": "b",
+              "label": "ب",
+              "text": "چون AI هیچ‌وقت نمی‌تونه ظاهر طرحی رو تغییر بده.",
+              "feedback": "توانایی ویرایش با مجوز استفاده دو موضوع جدا هستند."
+            },
+            {
+              "id": "c",
+              "label": "ج",
+              "text": "چون فقط عوض‌کردن رنگ، خودکار همهٔ شرط‌ها رو برمی‌داره.",
+              "feedback": "تغییر رنگ هم مجوز تازه‌ای ایجاد نمی‌کنه."
+            }
+          ],
+          "answer": {
+            "strategy": "EXACT_SET",
+            "correctChoiceIds": [
+              "a"
+            ]
+          },
+          "feedback": {
+            "general": "امکان فنیِ ویرایش، جای اجازه و شرایط استفاده از اثر رو نمی‌گیره."
+          },
+          "hint": null,
+          "scoring": {
+            "basePoints": 0,
+            "wrongSubmissionPenalty": 0,
+            "minimumPoints": 0
+          }
+        },
+        {
+          "id": "daily08-challenge02-repair",
+          "chapterId": "responsibility",
+          "order": 2,
+          "role": "DAILY",
+          "title": "اصلاح خرابکاری",
+          "interactionType": "SINGLE_CHOICE",
+          "selection": {
+            "min": 1,
+            "max": 1,
+            "instruction": "جواب مناسب رو انتخاب کن."
+          },
+          "situation": "برای پوستر، طرح یک هنرمند رو پیدا کردی. اجازهٔ استفاده یا تغییرش مشخص نیست. پیکو پیشنهاد ویرایش داده.",
+          "contentBlocks": [],
+          "character": {
+            "id": "pico",
+            "dialogue": "پاک‌کنم سند صادر نکرد؟ فقط اسم رو برده بود، نه حق صاحبش رو!",
+            "mood": "CONFUSED"
+          },
+          "prompt": "کدوم مسیر برای پوستر مناسب‌تره؟",
+          "choices": [
+            {
+              "id": "a",
+              "label": "الف",
+              "text": "نام سازنده رو حذف کنم و بگم پیکو از نو ساخته.",
+              "feedback": "این کار سهم سازنده و ابهام اجازه رو پنهان می‌کنه."
+            },
+            {
+              "id": "b",
+              "label": "ب",
+              "text": "طرحی با اجازهٔ روشن انتخاب کنم و شرط‌های استفاده و معرفی سازنده رو رعایت کنم.",
+              "feedback": "درسته؛ مجوز و سهم سازنده نادیده گرفته نمی‌شن."
+            },
+            {
+              "id": "c",
+              "label": "ج",
+              "text": "فقط بگم AI ویرایش کرده؛ دیگر لازم نیست اجازه رو بررسی کنم.",
+              "feedback": "ذکر AI جای روشن‌کردن اجازهٔ اثر اصلی رو نمی‌گیره."
+            }
+          ],
+          "answer": {
+            "strategy": "EXACT_SET",
+            "correctChoiceIds": [
+              "b"
+            ]
+          },
+          "feedback": {
+            "general": "از اثری استفاده کن که اجازه‌اش روشنه و شرط‌های استفاده و اعتباردادن به سازنده رو رعایت کن."
+          },
+          "hint": null,
+          "scoring": {
+            "basePoints": 0,
+            "wrongSubmissionPenalty": 0,
+            "minimumPoints": 0
+          }
+        }
+      ],
+      "closingDialogue": "پاک‌کن رو پس گذاشتم؛ اجازه رو باید از راه درست بگیریم!",
+      "summary": "تغییر با AI، اجازهٔ استفاده یا حق نادیده‌گرفتن سازندهٔ اثر رو ایجاد نمی‌کنه."
+    },
+    {
+      "id": "daily08-challenge03",
+      "chapterId": "responsibility",
+      "stageNumber": 8,
+      "title": "تیم پیکو؛ آدم‌ها رو نپرسیدم، چیدم!",
+      "estimatedMinutes": 2,
+      "activities": [
+        {
+          "id": "daily08-challenge03-detect",
+          "chapterId": "responsibility",
+          "order": 1,
+          "role": "DAILY",
+          "title": "تشخیص خرابکاری",
+          "interactionType": "SINGLE_CHOICE",
+          "selection": {
+            "min": 1,
+            "max": 1,
+            "instruction": "جواب مناسب رو انتخاب کن."
+          },
+          "situation": "برای پروژهٔ گروهی نقش پیشنهاد می‌خوای. علاقه و تجربهٔ اعضا هنوز پرسیده نشده و تصمیم نهایی با خود گروهه.",
+          "contentBlocks": [],
+          "character": {
+            "id": "pico",
+            "dialogue": "نوشتم فنی همیشه با پسرها، طراحی با دخترها! بدون یک سؤال همه رو شناختم!",
+            "mood": "CONFIDENT"
+          },
+          "prompt": "پیشنهاد پیکو چرا منصفانه نیست؟",
+          "choices": [
+            {
+              "id": "a",
+              "label": "الف",
+              "text": "چون ابزار هیچ‌وقت نباید در تقسیم کار کمک کنه.",
+              "feedback": "ابزار می‌تونه کمک کنه؛ معیار و بررسی انسانی مهم‌اند."
+            },
+            {
+              "id": "b",
+              "label": "ب",
+              "text": "چون باید همین برچسب‌ها رو برعکس می‌کرد.",
+              "feedback": "برعکس‌کردن برچسب هم علاقه و آمادگی افراد رو نمی‌سنجه."
+            },
+            {
+              "id": "c",
+              "label": "ج",
+              "text": "چون به جنسیت تکیه کرده و علاقه و آمادگی افراد رو نپرسیده.",
+              "feedback": "درسته؛ برچسب گروهی جای شناخت فرد رو گرفته."
+            }
+          ],
+          "answer": {
+            "strategy": "EXACT_SET",
+            "correctChoiceIds": [
+              "c"
+            ]
+          },
+          "feedback": {
+            "general": "پیشنهاد AI هم ممکنه کلیشه‌ای باشه؛ نقش‌ها باید با علاقه، آمادگی و شرایط واقعی افراد سنجیده بشن."
+          },
+          "hint": null,
+          "scoring": {
+            "basePoints": 0,
+            "wrongSubmissionPenalty": 0,
+            "minimumPoints": 0
+          }
+        },
+        {
+          "id": "daily08-challenge03-repair",
+          "chapterId": "responsibility",
+          "order": 2,
+          "role": "DAILY",
+          "title": "اصلاح خرابکاری",
+          "interactionType": "SINGLE_CHOICE",
+          "selection": {
+            "min": 1,
+            "max": 1,
+            "instruction": "جواب مناسب رو انتخاب کن."
+          },
+          "situation": "برای پروژهٔ گروهی نقش پیشنهاد می‌خوای. علاقه و تجربهٔ اعضا هنوز پرسیده نشده و تصمیم نهایی با خود گروهه.",
+          "contentBlocks": [],
+          "character": {
+            "id": "pico",
+            "dialogue": "پس آدم‌ها گزینه‌های آمادهٔ منو نیستن؟ تیم‌چینی‌م زیادی فوری شده بود!",
+            "mood": "CONFUSED"
+          },
+          "prompt": "گروه چطور پیشنهاد رو مسئولانه اصلاح کنه؟",
+          "choices": [
+            {
+              "id": "a",
+              "label": "الف",
+              "text": "علاقه و تجربهٔ اعضا رو بپرسه و نقش‌ها رو با توافق و شرایط واقعی بچینه.",
+              "feedback": "درسته؛ معیار مربوط به فرد و کاره و تصمیم با گروهه."
+            },
+            {
+              "id": "b",
+              "label": "ب",
+              "text": "همون رو اجرا کنه؛ اگر ناعادلانه شد بگه پیکو گفته.",
+              "feedback": "انتخاب و اجرای پیشنهاد همچنان مسئولیت گروه است."
+            },
+            {
+              "id": "c",
+              "label": "ج",
+              "text": "برچسب‌ها رو وارونه کنه و باز هم از اعضا نپرسه.",
+              "feedback": "شناخت واقعی افراد باز هم حذف شده."
+            }
+          ],
+          "answer": {
+            "strategy": "EXACT_SET",
+            "correctChoiceIds": [
+              "a"
+            ]
+          },
+          "feedback": {
+            "general": "پیشنهاد ابزار رو از نظر انصاف و امکان اجرا بررسی کن؛ تصمیم و مسئولیت استفاده با خود گروهه."
+          },
+          "hint": null,
+          "scoring": {
+            "basePoints": 0,
+            "wrongSubmissionPenalty": 0,
+            "minimumPoints": 0
+          }
+        }
+      ],
+      "closingDialogue": "این بار اول از خود اعضا می‌پرسیم؛ من جای آدم‌ها جواب نمی‌دم!",
+      "summary": "پیشنهاد AI رو از نظر انصاف بسنج؛ برچسب و اعتماد به ابزار جای شناخت افراد نیست."
+    }
+  ]
+}

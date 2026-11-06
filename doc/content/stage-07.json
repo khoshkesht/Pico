@@ -1,0 +1,452 @@
+{
+  "schemaVersion": "1.0.0",
+  "contentVersion": 1,
+  "editorialRevision": 1,
+  "locale": "fa-IR",
+  "status": "approved",
+  "source": {
+    "type": "authored_for_project",
+    "recordedAt": "2026-11-06",
+    "editorialChanges": [
+      "فعالیت‌ها مستقل و ویژهٔ موضوع همین فصل‌اند؛ لحن و روش تعامل قبلی حفظ شده است.",
+      "یک تصویر تازهٔ اختصاصی برای فعالیت سوم همین مرحله ثبت شده؛ صدا و تعامل تازه لازم نیست."
+    ]
+  },
+  "stage": {
+    "id": "privacy",
+    "number": 7,
+    "title": "حریم خصوصی (Privacy)",
+    "subtitle": "کمک بگیر؛ اطلاعات اضافه نفرست.",
+    "lessonActivityIds": [
+      "stage07-activity01",
+      "stage07-activity02",
+      "stage07-activity03",
+      "stage07-activity04",
+      "stage07-activity05"
+    ],
+    "examActivityIds": [
+      "stage07-activity06"
+    ],
+    "dailyActivityIds": [
+      "stage07-activity01",
+      "stage07-activity03",
+      "stage07-activity05"
+    ],
+    "completionPolicy": "ALL_LESSONS_CORRECT_AND_EXAM_ALL_CORRECT",
+    "activityBackground": "SIGNAL_WAVES"
+  },
+  "editorialGuidance": {
+    "difficultyBasis": "کمک بگیر؛ اطلاعات اضافه نفرست.",
+    "characterId": "pico",
+    "characterAsset": "pico_fullbody",
+    "feedbackTiming": {
+      "LESSON": "AFTER_SUBMISSION",
+      "EXAM": "AFTER_RUN",
+      "DAILY": "AFTER_SUBMISSION"
+    },
+    "revealRequiredSelectionCount": false,
+    "showCorrectnessMarkers": false,
+    "audioPlaybackRequired": false,
+    "scoringPolicy": {
+      "basePoints": 50,
+      "wrongSubmissionPenalty": 10,
+      "minimumPoints": 0,
+      "scope": "PERSISTENT_PER_ACTIVITY",
+      "awardPolicy": "ON_CORRECT_COMPLETION_ONCE",
+      "examPenaltyTiming": "AFTER_RUN",
+      "repeatResetsPenalties": false
+    },
+    "characterStates": [
+      "CONFUSED",
+      "CONFIDENT",
+      "EMBARRASSED"
+    ],
+    "characterAssets": {
+      "CONFUSED": "pico_hero",
+      "CONFIDENT": "pico_confident",
+      "EMBARRASSED": "pico_embarrassed"
+    }
+  },
+  "assets": [
+    {
+      "id": "stage07-illustration",
+      "kind": "BUNDLED_IMAGE",
+      "renderer": "LOCAL_IMAGE",
+      "localPath": "images/privacy_form.png",
+      "altText": "روی تبلت، یک فرم با سه ردیف نام، ایمیل و تلفن دیده می‌شه. مقدارها TEST USER و sample@example.com و شماره‌ای از صفرها هستند؛ مشخصات فرد واقعی نیستند.",
+      "brief": "روی تبلت، یک فرم با سه ردیف نام، ایمیل و تلفن دیده می‌شه. مقدارها TEST USER و sample@example.com و شماره‌ای از صفرها هستند؛ مشخصات فرد واقعی نیستند."
+    }
+  ],
+  "activities": [
+    {
+      "id": "stage07-activity01",
+      "chapterId": "privacy",
+      "order": 1,
+      "role": "LESSON",
+      "title": "همه‌چی رو لازم نیست بگی!",
+      "interactionType": "SINGLE_CHOICE",
+      "selection": {
+        "min": 1,
+        "max": 1,
+        "instruction": "جواب مناسب رو انتخاب کن."
+      },
+      "situation": "از یه سرویس AI آنلاین برای نوشتن متن پوستر کارگاه کمک می‌خوای. اسم رویداد، زمان و مکان عمومیِ اعلام‌شده رو داری.",
+      "contentBlocks": [],
+      "character": {
+        "id": "pico",
+        "dialogue": "برای نوشتن پوستر رمز گوشی رو هم خواستم! متن صمیمی، آشنایی کامل می‌خواد!",
+        "mood": "CONFIDENT"
+      },
+      "prompt": "کدوم ورودی برای این کار مناسب‌تره؟",
+      "choices": [
+        {
+          "id": "a",
+          "label": "الف",
+          "text": "رمز و نشانی خونه‌م رو هم بدم تا بهتر منو بشناسه.",
+          "feedback": "این اطلاعات به نوشتن پوستر ربط ندارن و حساس‌اند."
+        },
+        {
+          "id": "b",
+          "label": "ب",
+          "text": "فقط اطلاعات لازمِ رویداد و سبک متن رو بدم.",
+          "feedback": "برای همین کار اطلاعات کافی و کم‌تری می‌فرستی."
+        },
+        {
+          "id": "c",
+          "label": "ج",
+          "text": "کل گفت‌وگوهای خصوصی گروه رو بفرستم.",
+          "feedback": "برای متن پوستر به گفت‌وگوهای خصوصی نیاز نداریم."
+        },
+        {
+          "id": "d",
+          "label": "د",
+          "text": "کدهای دانش‌آموزی همه رو کنار متن بچسبونم.",
+          "feedback": "کد افراد، اطلاعات لازمِ پوستر نیست."
+        }
+      ],
+      "answer": {
+        "strategy": "EXACT_SET",
+        "correctChoiceIds": [
+          "b"
+        ]
+      },
+      "feedback": {
+        "general": "فقط چیزی رو بده که همین کار واقعاً لازم داره."
+      },
+      "hint": null,
+      "scoring": {
+        "basePoints": 50,
+        "wrongSubmissionPenalty": 10,
+        "minimumPoints": 0
+      }
+    },
+    {
+      "id": "stage07-activity02",
+      "chapterId": "privacy",
+      "order": 2,
+      "role": "LESSON",
+      "title": "کدوم اطلاعات رو باید نگه داریم؟",
+      "interactionType": "MULTIPLE_CHOICE",
+      "selection": {
+        "min": 1,
+        "max": 4,
+        "instruction": "گزینه‌های مناسب رو انتخاب کن."
+      },
+      "situation": "می‌خوای برای یه متن عمومی از AI کمک بگیری؛ این داده‌ها رو هم روی گوشیت داری.",
+      "contentBlocks": [],
+      "character": {
+        "id": "pico",
+        "dialogue": "گفتم هرچی توی گوشیته ضمیمه کن! یه متن عمومی با اطلاعات خصوصی حسابی پُر می‌شه!",
+        "mood": "CONFUSED"
+      },
+      "prompt": "کدوم موارد رو نباید بی‌دلیل توی درخواست بذاری؟",
+      "choices": [
+        {
+          "id": "a",
+          "label": "الف",
+          "text": "رمز حساب و کد ورود یک‌بارمصرف.",
+          "feedback": "این‌ها برای ورود به حساب‌اند؛ نباید فرستاده بشن."
+        },
+        {
+          "id": "b",
+          "label": "ب",
+          "text": "نشانی دقیق خونهٔ دوستت.",
+          "feedback": "نشانی خصوصی دوستت به این متن عمومی ربط نداره."
+        },
+        {
+          "id": "c",
+          "label": "ج",
+          "text": "عنوان عمومی رویدادی که متنش رو می‌خوای.",
+          "feedback": "این عنوان به خودِ کار مربوطه."
+        },
+        {
+          "id": "d",
+          "label": "د",
+          "text": "پیام خصوصی کسی که اجازهٔ فرستادنش رو نداده.",
+          "feedback": "اطلاعات خصوصی دیگران هم مال تصمیمِ تنها ما نیست."
+        }
+      ],
+      "answer": {
+        "strategy": "EXACT_SET",
+        "correctChoiceIds": [
+          "a",
+          "b",
+          "d"
+        ]
+      },
+      "feedback": {
+        "general": "اطلاعات حساس و خصوصی رو بی‌نیاز وارد درخواست نکن."
+      },
+      "hint": null,
+      "scoring": {
+        "basePoints": 50,
+        "wrongSubmissionPenalty": 10,
+        "minimumPoints": 0
+      }
+    },
+    {
+      "id": "stage07-activity03",
+      "chapterId": "privacy",
+      "order": 3,
+      "role": "LESSON",
+      "title": "فرم واقعیه؛ کمک فقط برای رنگه!",
+      "interactionType": "SINGLE_CHOICE",
+      "selection": {
+        "min": 1,
+        "max": 1,
+        "instruction": "جواب مناسب رو انتخاب کن."
+      },
+      "situation": "این عکس یه فرم با داده‌های ساختگیه. فرم واقعیِ خودت نام، ایمیل و شمارهٔ واقعی داره؛ از AI فقط پیشنهاد رنگ و چیدمان می‌خوای.",
+      "contentBlocks": [
+        {
+          "type": "IMAGE",
+          "assetId": "stage07-illustration",
+          "title": "فرمِ نمونه با داده‌های ساختگی"
+        }
+      ],
+      "character": {
+        "id": "pico",
+        "dialogue": "برای رنگ فرم، شماره‌های واقعی رو خواستم! شاید بنفش خواست به کسی زنگ بزنه!",
+        "mood": "CONFIDENT"
+      },
+      "prompt": "کدوم نسخه رو بهتره به سرویس آنلاین نشون بدی؟",
+      "choices": [
+        {
+          "id": "a",
+          "label": "الف",
+          "text": "فرم پرشده با اطلاعات واقعی؛ شاید پیشنهادش دقیق‌تر شد.",
+          "feedback": "برای رنگ و چیدمان به اطلاعات واقعی نیاز نداره."
+        },
+        {
+          "id": "b",
+          "label": "ب",
+          "text": "نمونه‌ای با داده‌های ساختگی، مثل همین عکس.",
+          "feedback": "ظاهر فرم می‌مونه؛ اطلاعات واقعی لازم نیست فرستاده بشه."
+        },
+        {
+          "id": "c",
+          "label": "ج",
+          "text": "همون فرم واقعی؛ فقط اسم فایل رو عوض کنم.",
+          "feedback": "تغییر اسم فایل، اطلاعات داخل تصویر رو پنهان نمی‌کنه."
+        },
+        {
+          "id": "d",
+          "label": "د",
+          "text": "فقط نام رو حذف کنم و ایمیل و شمارهٔ واقعی رو نگه دارم.",
+          "feedback": "ایمیل و شمارهٔ واقعی هم هنوز توی تصویر هستن."
+        }
+      ],
+      "answer": {
+        "strategy": "EXACT_SET",
+        "correctChoiceIds": [
+          "b"
+        ]
+      },
+      "feedback": {
+        "general": "برای بررسی ظاهر، دادهٔ نمونه بده؛ نه مشخصات واقعی."
+      },
+      "hint": null,
+      "scoring": {
+        "basePoints": 50,
+        "wrongSubmissionPenalty": 10,
+        "minimumPoints": 0
+      }
+    },
+    {
+      "id": "stage07-activity04",
+      "chapterId": "privacy",
+      "order": 4,
+      "role": "LESSON",
+      "title": "همون کار، با اطلاعات کم‌تر",
+      "interactionType": "COMPARE_RESPONSES",
+      "selection": {
+        "min": 1,
+        "max": 1,
+        "instruction": "جواب مناسب رو انتخاب کن."
+      },
+      "situation": "فقط می‌خوای لحن یه پیام به هم‌کلاسی‌ت دوستانه‌تر بشه. نام واقعی، کد دانش‌آموزی و شمارهٔ تماس برای این ویرایش لازم نیستن.",
+      "contentBlocks": [],
+      "character": {
+        "id": "pico",
+        "dialogue": "گفتم اسم رو پاک کن، کد و شماره بمونه! بدون اسم که کسی کسی رو نمی‌شناسه!",
+        "mood": "EMBARRASSED"
+      },
+      "prompt": "کدوم ورودی اطلاعات کم‌تری لو می‌ده؟",
+      "choices": [
+        {
+          "id": "a",
+          "label": "الف",
+          "text": "نام رو با «دوستم» عوض کنم و کد و شمارهٔ غیرلازم رو حذف کنم.",
+          "feedback": "اطلاعات لازمِ متن می‌مونه؛ جزئیات شخصی حذف می‌شن."
+        },
+        {
+          "id": "b",
+          "label": "ب",
+          "text": "فقط اسم فایل رو عوض کنم و کل متنِ مشخصات رو بفرستم.",
+          "feedback": "اطلاعات داخل متن هنوز همون‌جاست."
+        }
+      ],
+      "answer": {
+        "strategy": "EXACT_SET",
+        "correctChoiceIds": [
+          "a"
+        ]
+      },
+      "feedback": {
+        "general": "چیزی که لازم نیست رو حذف کن؛ فقط اسم فایل رو عوض نکن."
+      },
+      "hint": null,
+      "scoring": {
+        "basePoints": 50,
+        "wrongSubmissionPenalty": 10,
+        "minimumPoints": 0
+      }
+    },
+    {
+      "id": "stage07-activity05",
+      "chapterId": "privacy",
+      "order": 5,
+      "role": "LESSON",
+      "title": "اگه اشتباهی فرستادی چی؟",
+      "interactionType": "SINGLE_CHOICE",
+      "selection": {
+        "min": 1,
+        "max": 1,
+        "instruction": "جواب مناسب رو انتخاب کن."
+      },
+      "situation": "اطلاعات شخصی دوستت رو بی‌اجازه توی یه سرویس فرستادی و تازه متوجه شدی.",
+      "contentBlocks": [],
+      "character": {
+        "id": "pico",
+        "dialogue": "گفتم چت رو ببند، اطلاعات همه‌جا پاک می‌شه! پنجره بسته‌ست؛ اطلاعات راه خروج نداره!",
+        "mood": "CONFUSED"
+      },
+      "prompt": "کدوم قدم مسئولانه‌تره؟",
+      "choices": [
+        {
+          "id": "a",
+          "label": "الف",
+          "text": "بگم چون پنجره بسته شده، حتماً همه‌جا پاک شده.",
+          "feedback": "بستن پنجره، تضمینِ پاک‌شدن همهٔ نسخه‌ها نیست."
+        },
+        {
+          "id": "b",
+          "label": "ب",
+          "text": "برای توضیح ماجرا، همون اطلاعات رو توی گروه هم بفرستم.",
+          "feedback": "این کار پخش اطلاعات رو بیشتر می‌کنه."
+        },
+        {
+          "id": "c",
+          "label": "ج",
+          "text": "دیگه پخشش نکنم، به دوستم خبر بدم و برای محدودکردن آسیب کمک بگیرم.",
+          "feedback": "اشتباه رو پنهان نمی‌کنی و جلوی پخش بیش‌تر رو می‌گیری."
+        },
+        {
+          "id": "d",
+          "label": "د",
+          "text": "چیزی نگم؛ شاید کسی نفهمید.",
+          "feedback": "سکوت، فرصتِ کم‌کردن آسیب رو از بین می‌بره."
+        }
+      ],
+      "answer": {
+        "strategy": "EXACT_SET",
+        "correctChoiceIds": [
+          "c"
+        ]
+      },
+      "feedback": {
+        "general": "پخش رو متوقف کن و برای قدم بعدی از فرد مورداعتماد کمک بگیر."
+      },
+      "hint": null,
+      "scoring": {
+        "basePoints": 50,
+        "wrongSubmissionPenalty": 10,
+        "minimumPoints": 0
+      }
+    },
+    {
+      "id": "stage07-activity06",
+      "chapterId": "privacy",
+      "order": 6,
+      "role": "EXAM",
+      "title": "چالش آخر: نتیجهٔ نظرسنجی، نه دفترچهٔ تلفن",
+      "interactionType": "MULTIPLE_CHOICE",
+      "selection": {
+        "min": 1,
+        "max": 4,
+        "instruction": "گزینه‌های مناسب رو انتخاب کن."
+      },
+      "situation": "برای خلاصه‌کردن نظرسنجی کتاب‌خوانی کلاس از AI کمک می‌خوای. تعداد رأی هر گزینه رو داری؛ نام و شمارهٔ بچه‌ها برای خلاصه لازم نیست.",
+      "contentBlocks": [],
+      "character": {
+        "id": "pico",
+        "dialogue": "برای خلاصهٔ رأی‌ها شمارهٔ همه رو خواستم! آمار من دفترچهٔ تلفن هم داره!",
+        "mood": "CONFIDENT"
+      },
+      "prompt": "کدوم ورودی‌ها کم‌تر اطلاعات خصوصی می‌فرستن؟",
+      "choices": [
+        {
+          "id": "a",
+          "label": "الف",
+          "text": "فقط تعداد رأی هر گزینه و سؤال نظرسنجی رو بدم.",
+          "feedback": "برای خلاصهٔ نتیجه، همین دادهٔ جمعی به کار میاد."
+        },
+        {
+          "id": "b",
+          "label": "ب",
+          "text": "شمارهٔ تماس هر نفر رو هم کنار رأیش بفرستم.",
+          "feedback": "شماره‌ها برای این خلاصه لازم نیستن."
+        },
+        {
+          "id": "c",
+          "label": "ج",
+          "text": "نظرهای لازم رو بی‌نام و بدون جزئیات شناسایی‌کننده بدم.",
+          "feedback": "اطلاعات مرتبط می‌مونه و هویت افراد کم‌تر آشکار می‌شه."
+        },
+        {
+          "id": "d",
+          "label": "د",
+          "text": "کل فهرست مشخصات افراد رو هم محض احتیاط ضمیمه کنم.",
+          "feedback": "احتیاط یعنی دادهٔ غیرلازم نفرستیم، نه بیش‌تر بفرستیم."
+        }
+      ],
+      "answer": {
+        "strategy": "EXACT_SET",
+        "correctChoiceIds": [
+          "a",
+          "c"
+        ]
+      },
+      "feedback": {
+        "general": "برای خلاصهٔ گروهی، هویت تک‌تک افراد لازم نیست."
+      },
+      "hint": null,
+      "scoring": {
+        "basePoints": 50,
+        "wrongSubmissionPenalty": 10,
+        "minimumPoints": 0
+      }
+    }
+  ],
+  "pendingDecisions": []
+}

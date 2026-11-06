@@ -1,0 +1,39 @@
+.gradle/
+.kotlin/
+**/build/
+local.properties
+*.jks
+*.keystore
+.idea/
+captures/
+.wrapper-bootstrap/
+
+# Android and native build outputs
+.externalNativeBuild/
+.cxx/
+out/
+*.apk
+*.aab
+*.ap_
+*.dex
+*.hprof
+
+# Local signing configuration and environment secrets
+keystore.properties
+signing.properties
+.env
+.env.*
+!.env.example
+
+# Editor, operating system, and temporary files
+*.iml
+.vscode/
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+*~

@@ -1,0 +1,20 @@
+# دارایی‌های تمام‌قد پیکو
+
+سه حالت در برنامه استفاده می‌شود: گیج با دست‌های باز (pico_hero.png، دارایی تمام‌قد موجود)، مطمئن با دست به کمر و انگشت بالا (pico_confident.png)، خجالت‌زده با دست پشت سر (pico_embarrassed.png). هر سه PNG با پس‌زمینهٔ شفاف و در app/src/main/res/drawable-nodpi قرار دارند. شیت اصلی doc/Pico.png دست‌نخورده است؛ پرتره‌های بریده‌شده دیگر استفاده نمی‌شوند.
+
+| حالت | فایل |
+| --- | --- |
+| گیج | [pico_hero.png](../app/src/main/res/drawable-nodpi/pico_hero.png) |
+| مطمئن | [pico_confident.png](../app/src/main/res/drawable-nodpi/pico_confident.png) |
+| خجالت‌زده | [pico_embarrassed.png](../app/src/main/res/drawable-nodpi/pico_embarrassed.png) |
+
+دو حالت تازه با ابزار داخلی image_gen ساخته شدند. مرجع‌ها: doc/Pico.png و تصویر تمام‌قد موجود pico_hero.png. همهٔ فایل‌ها داخل بستهٔ اپ‌اند و اتصال اینترنت لازم ندارند.
+
+## picoConfidentFull
+
+Use case: stylized-concept. Production illustration asset for a Persian teen learning mobile app. Input image 1 is the definitive Pico character identity and facial-expression reference sheet. Input image 2 is a full-body reference for rendering style, proportions, clothing, palette and transparent cutout composition. Make ONE full-body Pico only, complete head through both shoes, centered with comfortable 6% transparent padding on all sides. Premium soft clay-like 3D render matching reference exactly: large dark rounded monitor head, purple floppy side appendages, lilac glowing screen facial features, purple padded vest with orange zipper and tiny pocket orange tab, slender dark robotic limbs, purple mitten-like gloves, pale purple sneakers. Preserve identity, body proportions and clothing; not a human or a new robot. Transparent background, no backdrop, no floor plane, no floating explanatory symbols outside screen, no text, no sheet, no borders, no props, no cropped feet or hands. Moderate portrait resolution sufficient for a mobile UI asset. Keep equal framing across variants. State: COMICALLY OVERCONFIDENT / SMUG, matching the reference sheet's WRONG ANSWER (SMUG) face. Half-lidded tilted glowing eyes and mischievous sideways confident smile on screen. Proud slightly leaned-back stance, one hand planted firmly on hip, the other arm bent with index finger raised as if delivering a hilariously certain explanation. Head tipped up very slightly. Hands and confident body language must be clearly different from a shrug. Cute and self-important, not threatening.
+
+## picoEmbarrassedFull
+
+Use case: stylized-concept. Production illustration asset for a Persian teen learning mobile app. Input image 1 is the definitive Pico character identity and facial-expression reference sheet. Input image 2 is a full-body reference for rendering style, proportions, clothing, palette and transparent cutout composition. Make ONE full-body Pico only, complete head through both shoes, centered with comfortable 6% transparent padding on all sides. Premium soft clay-like 3D render matching reference exactly: large dark rounded monitor head, purple floppy side appendages, lilac glowing screen facial features, purple padded vest with orange zipper and tiny pocket orange tab, slender dark robotic limbs, purple mitten-like gloves, pale purple sneakers. Preserve identity, body proportions and clothing; not a human or a new robot. Transparent background, no backdrop, no floor plane, no floating explanatory symbols outside screen, no text, no sheet, no borders, no props, no cropped feet or hands. Moderate portrait resolution sufficient for a mobile UI asset. Keep equal framing across variants. State: EMBARRASSED / SHEEPISH, matching the reference sheet's EMBARRASSED (SHEEPISH) face. Squinty curved glowing eyes, bashful wavy glowing mouth, short pink-lilac cheek blush and tiny sweat-drop symbol INSIDE the screen. Head dipped slightly, shoulders a little hunched, one hand rubbing the back/side of head and the other hand held near waist with palm turned apologetically upward. Feet slightly pigeon-toed. Express a comic "oops, I was wrong" moment. Hands and posture distinct from both a shrug and proud pointing.
+

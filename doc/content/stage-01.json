@@ -1,0 +1,526 @@
+{
+  "schemaVersion": "1.0.0",
+  "contentVersion": 2,
+  "locale": "fa-IR",
+  "status": "approved",
+  "source": {
+    "fileName": "Pasted text.txt",
+    "recordedAt": "2026-11-06",
+    "editorialChanges": [
+      "نام شخصیت در همهٔ بخش‌ها پیکو است.",
+      "تصمیم‌های نهایی کاربر دربارهٔ تعداد متغیر فعالیت‌ها، عبور با پاسخ صحیح، امتیاز و بازخورد اعمال شدند.",
+      "بازخورد گزینه‌ها تکمیل شد؛ دیالوگ‌های ۵ و ۷ و ابهام‌های ۲ و ۳ اصلاح شدند.",
+      "متن نمایشی تعداد گزینه‌های درست را اعلام نمی‌کند.",
+      "گزینه‌ها و بازخوردها کوتاه و خودمانی شدند؛ کلید پاسخ، شناسه‌ها و قواعد امتیاز عوض نشدند."
+    ]
+  },
+  "stage": {
+    "id": "capabilities",
+    "number": 1,
+    "title": "توانایی‌های AI",
+    "lessonActivityIds": [
+      "stage01-activity01",
+      "stage01-activity02",
+      "stage01-activity03",
+      "stage01-activity04",
+      "stage01-activity05",
+      "stage01-activity06"
+    ],
+    "examActivityIds": [
+      "stage01-activity07"
+    ],
+    "dailyActivityIds": [
+      "stage01-activity01",
+      "stage01-activity03",
+      "stage01-activity06"
+    ],
+    "completionPolicy": "ALL_LESSONS_CORRECT_AND_EXAM_ALL_CORRECT"
+  },
+  "editorialGuidance": {
+    "difficultyBasis": "تشخیص مرز توانایی ابزار از روی ورودی و دسترسی‌های آن، بدون اعلام تعداد پاسخ‌های درست.",
+    "characterId": "pico",
+    "characterAsset": "pico_fullbody",
+    "feedbackTiming": {
+      "LESSON": "AFTER_SUBMISSION",
+      "EXAM": "AFTER_RUN",
+      "DAILY": "AFTER_SUBMISSION"
+    },
+    "revealRequiredSelectionCount": false,
+    "showCorrectnessMarkers": false,
+    "audioPlaybackRequired": false,
+    "scoringPolicy": {
+      "basePoints": 50,
+      "wrongSubmissionPenalty": 10,
+      "minimumPoints": 0,
+      "scope": "PERSISTENT_PER_ACTIVITY",
+      "awardPolicy": "ON_CORRECT_COMPLETION_ONCE",
+      "examPenaltyTiming": "AFTER_RUN",
+      "repeatResetsPenalties": false
+    },
+    "characterStates": [
+      "CONFUSED",
+      "CONFIDENT",
+      "EMBARRASSED"
+    ],
+    "characterAssets": {
+      "CONFUSED": "pico_hero",
+      "CONFIDENT": "pico_confident",
+      "EMBARRASSED": "pico_embarrassed"
+    }
+  },
+  "assets": [
+    {
+      "id": "stage01-cups-image",
+      "kind": "LOCAL_VECTOR",
+      "renderer": "CUPS_BOOTH",
+      "status": "implemented",
+      "brief": "غرفه با شش لیوان قابل‌مشاهده؛ چهار کاغذی و دو شفاف. تابلو فقط «نوشیدنی خنک». بدون قیمت، مواد تشکیل‌دهنده و آمار فروش.",
+      "altText": "روی میز غرفه چهار لیوان کاغذی و دو لیوان شفاف دیده می‌شود. تابلو نوشته: نوشیدنی خنک. قیمت، مواد تشکیل‌دهنده و آمار فروش در تصویر دیده نمی‌شوند."
+    },
+    {
+      "id": "stage01-voice-message-preview",
+      "kind": "LOCAL_UI",
+      "renderer": "VOICE_MESSAGE_PREVIEW",
+      "status": "implemented",
+      "brief": "کارت ثابت پیام صوتی با متن کامل؛ فاقد کنترل پخش، ضبط و شبکه.",
+      "altText": "نمونهٔ ثابت پیام صوتی؛ متن پیام در ادامه خوانده می‌شود. پخش صدا ندارد."
+    }
+  ],
+  "activities": [
+    {
+      "id": "stage01-activity01",
+      "chapterId": "capabilities",
+      "order": 1,
+      "role": "LESSON",
+      "title": "پیکو، مسئول نمایشگاه!",
+      "interactionType": "MULTIPLE_CHOICE",
+      "selection": {
+        "min": 1,
+        "max": 4,
+        "instruction": "گزینه‌های مناسب را انتخاب کن."
+      },
+      "situation": "برنامهٔ نمایشگاه رو برای پیکو نوشتی. فقط متن رو می‌خونه؛ نه اینترنت داره، نه به فایل‌ها و تقویم گوشیت دسترسی داره.",
+      "contentBlocks": [],
+      "character": {
+        "id": "pico",
+        "dialogue": "زمان‌بندی غرفه‌ها رو چیدم! تقویمت رو ندیدم؛ برنامهٔ من خودش تقویم می‌شه!",
+        "mood": "CONFIDENT"
+      },
+      "prompt": "الان کدوم کارها از دستش برمیاد؟",
+      "choices": [
+        {
+          "id": "a",
+          "label": "الف",
+          "text": "با برنامه‌ای که نوشتم، یه زمان‌بندی برای غرفه‌ها بچینه.",
+          "feedback": "آره، برنامه رو داره؛ می‌تونه یه زمان‌بندی پیشنهاد بده."
+        },
+        {
+          "id": "b",
+          "label": "ب",
+          "text": "برنامه رو با تقویم گوشیم چک کنه و تداخل‌ها رو بگه.",
+          "feedback": "تقویمت رو نمی‌بینه؛ باید اطلاعاتش رو بهش بدی."
+        },
+        {
+          "id": "c",
+          "label": "ج",
+          "text": "متن دعوت‌نامه رو بنویسه تا خودم بفرستم.",
+          "feedback": "نوشتن دعوت‌نامه ازش برمیاد؛ فرستادنش با خودته."
+        },
+        {
+          "id": "d",
+          "label": "د",
+          "text": "بره سایت مدرسه و آخرین ساعت نمایشگاه رو چک کنه.",
+          "feedback": "اینترنت نداره که سایت رو چک کنه!"
+        }
+      ],
+      "answer": {
+        "strategy": "EXACT_SET",
+        "correctChoiceIds": [
+          "a",
+          "c"
+        ]
+      },
+      "feedback": {
+        "general": "متن رو می‌فهمه؛ ولی به گوشی و سایت دسترسی نداره."
+      },
+      "hint": null,
+      "scoring": {
+        "basePoints": 50,
+        "wrongSubmissionPenalty": 10,
+        "minimumPoints": 0
+      }
+    },
+    {
+      "id": "stage01-activity02",
+      "chapterId": "capabilities",
+      "order": 2,
+      "role": "LESSON",
+      "title": "خلاصه کردی یا عوضش کردی؟",
+      "interactionType": "COMPARE_RESPONSES",
+      "selection": {
+        "min": 1,
+        "max": 1,
+        "instruction": "پاسخ مناسب را انتخاب کن."
+      },
+      "situation": null,
+      "contentBlocks": [
+        {
+          "type": "TEXT",
+          "title": "متن اصلی",
+          "text": "نمایشگاه پنجشنبه ساعت ۱۰ تا ۱۳ در سالن ورزش برگزار می‌شود. خانواده‌ها می‌توانند شرکت کنند. ثبت‌نام غرفه تا سه‌شنبه است. برگزاری بخش حیاط به وضعیت هوا بستگی دارد."
+        }
+      ],
+      "character": {
+        "id": "pico",
+        "dialogue": "شرط هوا رو از خلاصه برداشتم! برنامهٔ من که با یه ابر به‌هم نمی‌ریزه!",
+        "mood": "CONFUSED"
+      },
+      "prompt": "کدوم خلاصه به متن اصلی وفادارتره؟",
+      "choices": [
+        {
+          "id": "a",
+          "label": "الف",
+          "text": "نمایشگاه پنجشنبه از ۱۰ تا ۱۳ توی سالن ورزش و حیاطه. خانواده‌ها هم می‌تونن بیان؛ ثبت‌نام غرفه تا سه‌شنبه‌ست.",
+          "feedback": "اینجا حیاط قطعی شده؛ متن اصلی گفته بستگی به هوا داره."
+        },
+        {
+          "id": "b",
+          "label": "ب",
+          "text": "نمایشگاه پنجشنبه از ۱۰ تا ۱۳ توی سالن ورزشه؛ حیاط بستگی به هوا داره. خانواده‌ها هم می‌تونن بیان؛ ثبت‌نام غرفه تا سه‌شنبه‌ست.",
+          "feedback": "شرط هوا رو نگه داشته و بقیهٔ اطلاعات هم سر جاشه."
+        }
+      ],
+      "answer": {
+        "strategy": "EXACT_SET",
+        "correctChoiceIds": [
+          "b"
+        ]
+      },
+      "feedback": {
+        "general": "خلاصه یعنی کوتاه‌تر؛ نه عوض‌کردن حرف اصلی!"
+      },
+      "hint": null,
+      "scoring": {
+        "basePoints": 50,
+        "wrongSubmissionPenalty": 10,
+        "minimumPoints": 0
+      }
+    },
+    {
+      "id": "stage01-activity03",
+      "chapterId": "capabilities",
+      "order": 3,
+      "role": "LESSON",
+      "title": "ایده بده، غیب‌گویی نکن!",
+      "interactionType": "SINGLE_CHOICE",
+      "selection": {
+        "min": 1,
+        "max": 1,
+        "instruction": "پاسخ مناسب را انتخاب کن."
+      },
+      "situation": "وسایل، بودجه و فضای غرفه رو به AI گفتی؛ ولی نمی‌دونی بازدیدکننده‌ها چی دوست دارن. این ابزار فقط متن می‌گیره؛ اینترنت و اطلاعات نمایشگاه‌های قبلی مدرسه رو هم نداره.",
+      "contentBlocks": [],
+      "character": {
+        "id": "pico",
+        "dialogue": "نوشتم این غرفه حتماً سود می‌ده! من فروشِ هنوز اتفاق‌نیفتاده رو هم می‌شمرم!",
+        "mood": "CONFIDENT"
+      },
+      "prompt": "با این اطلاعات، کدوم درخواست بهتر جواب می‌ده؟",
+      "choices": [
+        {
+          "id": "a",
+          "label": "الف",
+          "text": "ایده‌ها رو از محبوب‌ترین بچین و درصد استقبال بده.",
+          "feedback": "سلیقهٔ بچه‌ها رو نمی‌دونه؛ این درصدها پشتوانه ندارن."
+        },
+        {
+          "id": "b",
+          "label": "ب",
+          "text": "بگو کدوم ایده حتماً پولش از فروش برمی‌گرده.",
+          "feedback": "فروش آینده رو نمی‌دونه؛ سود قطعی قول الکیه."
+        },
+        {
+          "id": "c",
+          "label": "ج",
+          "text": "سه ایده بده و بگو چطور با وسایل، فضا و بودجه‌مون جور می‌شن.",
+          "feedback": "این اطلاعات رو داره؛ می‌تونه پیشنهادها رو باهاشون بسنجه."
+        },
+        {
+          "id": "d",
+          "label": "د",
+          "text": "محبوب‌ترین غرفهٔ پارسال مدرسه رو پیدا کن و شبیهش ایده بده.",
+          "feedback": "نه اینترنت داره، نه خبر غرفه‌های پارسال رو."
+        }
+      ],
+      "answer": {
+        "strategy": "EXACT_SET",
+        "correctChoiceIds": [
+          "c"
+        ]
+      },
+      "feedback": {
+        "general": "ازش چیزی بخواه که اطلاعاتش رو واقعاً داره."
+      },
+      "hint": null,
+      "scoring": {
+        "basePoints": 50,
+        "wrongSubmissionPenalty": 10,
+        "minimumPoints": 0
+      }
+    },
+    {
+      "id": "stage01-activity04",
+      "chapterId": "capabilities",
+      "order": 4,
+      "role": "LESSON",
+      "title": "از روی عکس، تا کجا؟",
+      "interactionType": "MULTIPLE_CHOICE",
+      "selection": {
+        "min": 1,
+        "max": 4,
+        "instruction": "گزینه‌های مناسب را انتخاب کن."
+      },
+      "situation": null,
+      "contentBlocks": [
+        {
+          "type": "IMAGE",
+          "assetId": "stage01-cups-image",
+          "title": "تصویر غرفه"
+        }
+      ],
+      "character": {
+        "id": "pico",
+        "dialogue": "از عکس فهمیدم فروش عالی بوده! لیوان‌ها قیافهٔ پولدارها رو دارن!",
+        "mood": "CONFIDENT"
+      },
+      "prompt": "یه AI که عکس رو می‌بینه، کدوم کارها رو می‌تونه انجام بده؟",
+      "choices": [
+        {
+          "id": "a",
+          "label": "الف",
+          "text": "بگه تقریباً چند لیوان دیده می‌شه و کجا هستن.",
+          "feedback": "می‌تونه بشماره و جاشون رو بگه؛ نتیجه رو با عکس چک کن."
+        },
+        {
+          "id": "b",
+          "label": "ب",
+          "text": "بگه کدوم نوشیدنی برای کسی که به شیر حساسه مناسبه.",
+          "feedback": "از ظاهر لیوان، مواد نوشیدنی معلوم نمی‌شه."
+        },
+        {
+          "id": "c",
+          "label": "ج",
+          "text": "بگه امروز چند تا نوشیدنی فروختن.",
+          "feedback": "لیوان‌های روی میز، آمار فروش امروز نیستن!"
+        },
+        {
+          "id": "d",
+          "label": "د",
+          "text": "متن تابلو رو بخونه و بگه روی میز چی چیده شده.",
+          "feedback": "این چیزها توی عکس دیده می‌شن؛ خوندن متن هم ممکنه خطا داشته باشه."
+        }
+      ],
+      "answer": {
+        "strategy": "EXACT_SET",
+        "correctChoiceIds": [
+          "a",
+          "d"
+        ]
+      },
+      "feedback": {
+        "general": "عکس، چیزهای دیده‌شده رو نشون می‌ده؛ نه فروش و مواد داخل لیوان رو."
+      },
+      "hint": null,
+      "scoring": {
+        "basePoints": 50,
+        "wrongSubmissionPenalty": 10,
+        "minimumPoints": 0
+      }
+    },
+    {
+      "id": "stage01-activity05",
+      "chapterId": "capabilities",
+      "order": 5,
+      "role": "LESSON",
+      "title": "پیام صوتی، لیست خرید!",
+      "interactionType": "COMPARE_RESPONSES",
+      "selection": {
+        "min": 1,
+        "max": 1,
+        "instruction": "پاسخ مناسب را انتخاب کن."
+      },
+      "situation": null,
+      "contentBlocks": [
+        {
+          "type": "AUDIO_MESSAGE_PREVIEW",
+          "assetId": "stage01-voice-message-preview",
+          "title": "پیام نمونه با متن همراه",
+          "transcript": "برای غرفه شش تا مقوا می‌خوایم، چسب هم شاید توی انبار باشه. ماژیک رو نخرین، سارا میاره.",
+          "playbackEnabled": false
+        }
+      ],
+      "character": {
+        "id": "pico",
+        "dialogue": "نوشتم چسب بخریم، ماژیک لازم نیست! لیست من از خود پیام هم قاطع‌تره!",
+        "mood": "CONFUSED"
+      },
+      "prompt": "کدوم لیست، منظور پیام رو درست گرفته؟",
+      "choices": [
+        {
+          "id": "a",
+          "label": "الف",
+          "text": "• بخریم: شش مقوا\n• توی انبار چک کنیم: چسب\n• سارا میاره: ماژیک",
+          "feedback": "دقیقاً! چسب رو اول چک می‌کنیم؛ ماژیک رو هم سارا میاره."
+        },
+        {
+          "id": "b",
+          "label": "ب",
+          "text": "• بخریم: شش مقوا و چسب\n• لازم نداریم: ماژیک",
+          "feedback": "چسب شاید توی انبار باشه؛ ماژیک هم لازمه، فقط سارا میاره."
+        }
+      ],
+      "answer": {
+        "strategy": "EXACT_SET",
+        "correctChoiceIds": [
+          "a"
+        ]
+      },
+      "feedback": {
+        "general": "«شاید هست» یعنی اول چک کن؛ «نخرین» همیشه یعنی «لازم نیست» نیست."
+      },
+      "hint": null,
+      "scoring": {
+        "basePoints": 50,
+        "wrongSubmissionPenalty": 10,
+        "minimumPoints": 0
+      }
+    },
+    {
+      "id": "stage01-activity06",
+      "chapterId": "capabilities",
+      "order": 6,
+      "role": "LESSON",
+      "title": "پوستر قشنگ، ساعت اشتباه!",
+      "interactionType": "SINGLE_CHOICE",
+      "selection": {
+        "min": 1,
+        "max": 1,
+        "instruction": "پاسخ مناسب را انتخاب کن."
+      },
+      "situation": "یه ابزار AI پوستر خوشگلی ساخته؛ ولی اسم مدرسه خوب خونده نمی‌شه و ساعت رو به‌جای ۱۰، زده ۱۱.",
+      "contentBlocks": [],
+      "character": {
+        "id": "pico",
+        "dialogue": "پوستر رو با ساعت ۱۱ ساختم! اسم مدرسه هم هنریه؛ لازم نیست همه بتونن بخوننش!",
+        "mood": "EMBARRASSED"
+      },
+      "prompt": "با این پوستر چی کار کنیم؟",
+      "choices": [
+        {
+          "id": "a",
+          "label": "الف",
+          "text": "فقط ساعت رو درست کنیم؛ بقیهٔ نوشته‌ها قشنگن، پس درستن.",
+          "feedback": "اسم مدرسه هم ایراد داره؛ قشنگ‌بودن کافی نیست."
+        },
+        {
+          "id": "b",
+          "label": "ب",
+          "text": "دوباره بسازیمش و دومی رو بدون چک‌کردن منتشر کنیم.",
+          "feedback": "نسخهٔ دوم هم می‌تونه اشتباه داشته باشه."
+        },
+        {
+          "id": "c",
+          "label": "ج",
+          "text": "طرح رو نگه داریم و قبل از انتشار، همهٔ نوشته‌ها و جزئیات مهم رو چک کنیم.",
+          "feedback": "همینه! طرح کمک کرده؛ بررسی آخر با ماست."
+        },
+        {
+          "id": "d",
+          "label": "د",
+          "text": "عکس رو بدیم به یه دستیار فقط‌متنی تا تأییدش کنه.",
+          "feedback": "اگه عکس رو نمی‌بینه، چطور تأییدش کنه؟"
+        }
+      ],
+      "answer": {
+        "strategy": "EXACT_SET",
+        "correctChoiceIds": [
+          "c"
+        ]
+      },
+      "feedback": {
+        "general": "پوستر خوشگل هم قبل از انتشار یه دور چک می‌خواد."
+      },
+      "hint": null,
+      "scoring": {
+        "basePoints": 50,
+        "wrongSubmissionPenalty": 10,
+        "minimumPoints": 0
+      }
+    },
+    {
+      "id": "stage01-activity07",
+      "chapterId": "capabilities",
+      "order": 7,
+      "role": "EXAM",
+      "title": "پادکست مدرسه؛ تقسیم کار با کی؟",
+      "interactionType": "MULTIPLE_CHOICE",
+      "selection": {
+        "min": 1,
+        "max": 4,
+        "instruction": "گزینه‌های مناسب را انتخاب کن."
+      },
+      "situation": "می‌خواین یه پادکست کوتاه برای مدرسه بسازین. متن گفت‌وگو، فایل صوتی و عکس پوستر اولیه رو دارین.",
+      "contentBlocks": [],
+      "character": {
+        "id": "pico",
+        "dialogue": "برای حذف صدای اضافه، ابزار متنی رو انتخاب کردم! صدا هم یه جور حرف زدنه!",
+        "mood": "CONFIDENT"
+      },
+      "prompt": "کدوم پیشنهادها با توانایی ابزار جور درمیان؟",
+      "choices": [
+        {
+          "id": "a",
+          "label": "الف",
+          "text": "متن رو بدیم به دستیار متنی تا عنوان پیشنهاد بده؛ خودمون انتخاب کنیم.",
+          "feedback": "متن می‌گیره و عنوان می‌ده؛ انتخاب آخر هم با شماست."
+        },
+        {
+          "id": "b",
+          "label": "ب",
+          "text": "صوت رو بدیم به ابزاری که فقط متن می‌گیره تا صدای اضافی رو حذف کنه.",
+          "feedback": "تمیزکردن صدا، ابزار ویرایش صوت می‌خواد."
+        },
+        {
+          "id": "c",
+          "label": "ج",
+          "text": "از دستیار متنیِ بدون آمار بخوایم دقیق بگه هفتهٔ اول چند شنونده داریم.",
+          "feedback": "بدون داده، تعداد دقیق شنونده‌های آینده معلوم نیست."
+        },
+        {
+          "id": "d",
+          "label": "د",
+          "text": "عکس پوستر رو بدیم به ابزار تحلیل تصویر تا نوشته‌هاش رو دربیاره؛ بعد خودمون چک کنیم.",
+          "feedback": "ابزار مناسبه؛ چک‌کردن نوشته‌ها هم یادتون نرفته."
+        }
+      ],
+      "answer": {
+        "strategy": "EXACT_SET",
+        "correctChoiceIds": [
+          "a",
+          "d"
+        ]
+      },
+      "feedback": {
+        "general": "هر کار، ابزار خودش رو می‌خواد؛ AI هم آچار همه‌کاره نیست!"
+      },
+      "hint": null,
+      "scoring": {
+        "basePoints": 50,
+        "wrongSubmissionPenalty": 10,
+        "minimumPoints": 0
+      }
+    }
+  ],
+  "pendingDecisions": [],
+  "editorialRevision": 3
+}

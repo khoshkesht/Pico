@@ -1,0 +1,22 @@
+{
+  "generator": "image_gen (built-in)",
+  "generatedAt": "2026-11-06",
+  "assets": [
+    {
+      "path": "app/src/main/assets/images/verification_library.png",
+      "chapter": "verification",
+      "prompt": "Use case: scientific-educational. ONE landscape 4:3 soft clay-like 3D illustration, lavender/navy room with teal and orange accents matching a teen space-themed educational app. Depict the open doorway of a small school library in daylight: bookshelves, reading table, a few chairs, no people, no private objects. Door unmistakably open. No clock, calendar, timetable, notice, date, numbers, writing, logo or opening-hours sign anywhere. This is visual evidence for a verification task: an open door in a photograph does not establish tomorrow's opening hours, so students need the original date and current library information. Do NOT show any answer or verification diagram. Friendly believable school environment, clean mobile-readable composition, moderate resolution, no border."
+    },
+    {
+      "path": "app/src/main/assets/images/privacy_form.png",
+      "chapter": "privacy",
+      "prompt": "Use case: scientific-educational. ONE landscape 4:3 soft clay-like 3D illustration for a teen AI privacy lesson, lavender desk and navy background with teal/orange accents. A tablet standing on the desk shows a fictional form, with a clear abstract user avatar and exactly three large labeled rows: NAME, EMAIL, PHONE. Use harmless dummy content only: TEST USER, sample@example.com, 0000000000. These are educational placeholders, never a real person's details. Make labels and rows visually clear at phone size. Beside the tablet, simple colored paper swatches and a couple of marker pens, no people or other screens. The learner only needs layout/color advice and must decide whether an entire filled form should be uploaded. No app branding, no extra text, no address, no QR codes, no password, no tiny illegible UI, no answer markers, no border. Clean high-quality render consistent with the app's soft 3D art."
+    },
+    {
+      "path": "app/src/main/assets/images/responsibility_team.png",
+      "chapter": "responsibility",
+      "prompt": "Use case: scientific-educational. ONE landscape 4:3 illustration as neutral visual evidence for teen AI-literacy lessons on verification, privacy and responsible sharing. Soft premium clay-like 3D style, friendly and clear on a mobile screen, muted lavender room, teal and orange accents matching a space-themed educational app. Show three fictional teenage classmates, fully clothed in casual hoodies, gathered around one table, collaboratively painting a large paper poster with simple colorful planets and stars. Their faces are clearly visible; no real people or resemblance to celebrities. Table also holds marker pens and a paint cup. Plain classroom wall and one window in the background. No writing anywhere, no name tags, no school logos, no phone numbers, no calendar or clock, no medals, no trophy, no certificates, no event banners. Image must not establish who they are, date, location or any award. No Pico robot, no extra characters, no watermark, no border, no collage. The painting and faces must both be prominent: another lesson will ask which parts are actually needed for a poster-design request, while a sharing lesson discusses consent and edited-image transparency. Natural neutral collaborative moment, not a staged award ceremony. Use clear readable composition and avoid clutter.",
+      "usage": "Used only for group credit, authorship and AI assistance transparency in stage 8. Other proposed uses in the original generation prompt were not implemented."
+    }
+  ]
+}

@@ -1,0 +1,504 @@
+{
+  "schemaVersion": "1.0.0",
+  "contentVersion": 1,
+  "editorialRevision": 1,
+  "locale": "fa-IR",
+  "status": "approved",
+  "source": {
+    "type": "authored_for_project",
+    "recordedAt": "2026-11-06",
+    "editorialChanges": [
+      "شش فعالیت و یک آزمون با لحن کوتاه و همان تعامل‌های مراحل قبلی تألیف شد.",
+      "یک تصویر تازه با مرحلهٔ دیگر مشترک است؛ صدا و قابلیت تازه‌ای در انجین لازم نیست."
+    ]
+  },
+  "stage": {
+    "id": "iteration",
+    "number": 4,
+    "title": "بهترش کن، قدم‌به‌قدم (Iteration)",
+    "subtitle": "ایراد رو پیدا کن، دقیق تغییر بده و دوباره بسنج.",
+    "lessonActivityIds": [
+      "stage04-activity01",
+      "stage04-activity02",
+      "stage04-activity03",
+      "stage04-activity04",
+      "stage04-activity05",
+      "stage04-activity06"
+    ],
+    "examActivityIds": [
+      "stage04-activity07"
+    ],
+    "dailyActivityIds": [
+      "stage04-activity01",
+      "stage04-activity04",
+      "stage04-activity06"
+    ],
+    "completionPolicy": "ALL_LESSONS_CORRECT_AND_EXAM_ALL_CORRECT",
+    "activityBackground": "ORBITAL_LINKS"
+  },
+  "editorialGuidance": {
+    "difficultyBasis": "تشخیص اصلاح مشخص، حفظ بخش‌های درست و سنجش نسخهٔ بعد با معیار اولیه.",
+    "characterId": "pico",
+    "characterAsset": "pico_fullbody",
+    "feedbackTiming": {
+      "LESSON": "AFTER_SUBMISSION",
+      "EXAM": "AFTER_RUN",
+      "DAILY": "AFTER_SUBMISSION"
+    },
+    "revealRequiredSelectionCount": false,
+    "showCorrectnessMarkers": false,
+    "audioPlaybackRequired": false,
+    "scoringPolicy": {
+      "basePoints": 50,
+      "wrongSubmissionPenalty": 10,
+      "minimumPoints": 0,
+      "scope": "PERSISTENT_PER_ACTIVITY",
+      "awardPolicy": "ON_CORRECT_COMPLETION_ONCE",
+      "examPenaltyTiming": "AFTER_RUN",
+      "repeatResetsPenalties": false
+    },
+    "characterStates": [
+      "CONFUSED",
+      "CONFIDENT",
+      "EMBARRASSED"
+    ],
+    "characterAssets": {
+      "CONFUSED": "pico_hero",
+      "CONFIDENT": "pico_confident",
+      "EMBARRASSED": "pico_embarrassed"
+    }
+  },
+  "assets": [
+    {
+      "id": "stage04-courtyard",
+      "kind": "BUNDLED_IMAGE",
+      "renderer": "LOCAL_IMAGE",
+      "localPath": "images/courtyard_bike.png",
+      "brief": "دوچرخهٔ فیروزه‌ای کنار نیمکت چوبی با کلاه نارنجی؛ بدون اسم، قیمت، زمان یا سابقهٔ مسابقه.",
+      "altText": "توی حیاط، یک دوچرخهٔ فیروزه‌ای کنار نیمکت چوبی پشتی‌دار ایستاده و یک کلاه نارنجی روی نشیمن نیمکته. پشت سرشان دیوار بنفش روشن، پنجره و درخت دیده می‌شه. اسم، قیمت، تاریخ و نوشته‌ای در تصویر نیست."
+    }
+  ],
+  "activities": [
+    {
+      "id": "stage04-activity01",
+      "chapterId": "iteration",
+      "order": 1,
+      "role": "LESSON",
+      "title": "«بهترش کن» کجاش رو بهتر کنه؟",
+      "interactionType": "COMPARE_RESPONSES",
+      "selection": {
+        "min": 1,
+        "max": 1,
+        "instruction": "جواب مناسب رو انتخاب کن."
+      },
+      "situation": "دعوت‌نامه‌ای که AI نوشته اطلاعاتش درسته، ولی زیادی طولانیه. متن کوتاه‌تر می‌خوای؛ زمان و مکان هم باید همون بمونن.",
+      "contentBlocks": [],
+      "character": {
+        "id": "pico",
+        "dialogue": "گفتی بهترش کن؛ سه تا صفت اضافه کردم! دعوت‌نامه هرچی پُرتر، بهتر!",
+        "mood": "CONFUSED"
+      },
+      "prompt": "کدوم بازخورد دقیق‌تر کمک می‌کنه؟",
+      "choices": [
+        {
+          "id": "a",
+          "label": "الف",
+          "text": "این نسخه خوب نیست؛ یه نسخهٔ خیلی بهتر و جذاب‌تر بده.",
+          "feedback": "نمی‌گه مشکل کجاست یا چی باید عوض بشه."
+        },
+        {
+          "id": "b",
+          "label": "ب",
+          "text": "اطلاعات درسته؛ متن رو کوتاه‌تر کن و زمان و مکان رو نگه دار.",
+          "feedback": "هم تغییر لازم رو گفته، هم چیزهایی که باید بمونن."
+        }
+      ],
+      "answer": {
+        "strategy": "EXACT_SET",
+        "correctChoiceIds": [
+          "b"
+        ]
+      },
+      "feedback": {
+        "general": "بگو چی عوض بشه و چی سر جاش بمونه."
+      },
+      "hint": null,
+      "scoring": {
+        "basePoints": 50,
+        "wrongSubmissionPenalty": 10,
+        "minimumPoints": 0
+      }
+    },
+    {
+      "id": "stage04-activity02",
+      "chapterId": "iteration",
+      "order": 2,
+      "role": "LESSON",
+      "title": "ردّ تغییر رو گم نکن!",
+      "interactionType": "SINGLE_CHOICE",
+      "selection": {
+        "min": 1,
+        "max": 1,
+        "instruction": "جواب مناسب رو انتخاب کن."
+      },
+      "situation": "می‌خوای بفهمی عوض‌کردن لحن، دعوت‌نامه رو بهتر می‌کنه یا نه. موضوع و طول فعلی مشکلی ندارن.",
+      "contentBlocks": [],
+      "character": {
+        "id": "pico",
+        "dialogue": "لحن و طول و موضوع رو یک‌جا عوض کردم! با یه تغییر که قدرت من معلوم نمی‌شه!",
+        "mood": "CONFIDENT"
+      },
+      "prompt": "برای امتحان‌کردن همین تغییر، کدوم درخواست بهتره؟",
+      "choices": [
+        {
+          "id": "a",
+          "label": "الف",
+          "text": "موضوع، طول، لحن و قالب رو با هم عوض کن.",
+          "feedback": "بعدش سخت می‌فهمی کدوم تغییر اثر گذاشته."
+        },
+        {
+          "id": "b",
+          "label": "ب",
+          "text": "فقط زمان جلسه رو عوض کن تا متن تازه بشه.",
+          "feedback": "مشکل لحنه؛ زمان جلسه نباید عوض بشه."
+        },
+        {
+          "id": "c",
+          "label": "ج",
+          "text": "فقط لحن رو صمیمی‌تر کن؛ موضوع و طول همین بمونه.",
+          "feedback": "اثر تغییر لحن رو راحت‌تر می‌تونی بسنجی."
+        },
+        {
+          "id": "d",
+          "label": "د",
+          "text": "هیچی رو مشخص نکن؛ فقط یه بار دیگه بسازش.",
+          "feedback": "باز هم معلوم نیست چه تغییری رو داری امتحان می‌کنی."
+        }
+      ],
+      "answer": {
+        "strategy": "EXACT_SET",
+        "correctChoiceIds": [
+          "c"
+        ]
+      },
+      "feedback": {
+        "general": "وقتی یه تغییر رو می‌سنجی، بقیهٔ چیزهای خوب رو نگه دار."
+      },
+      "hint": null,
+      "scoring": {
+        "basePoints": 50,
+        "wrongSubmissionPenalty": 10,
+        "minimumPoints": 0
+      }
+    },
+    {
+      "id": "stage04-activity03",
+      "chapterId": "iteration",
+      "order": 3,
+      "role": "LESSON",
+      "title": "خوب‌ها رو هم با بدها دور نریز!",
+      "interactionType": "MULTIPLE_CHOICE",
+      "selection": {
+        "min": 1,
+        "max": 4,
+        "instruction": "گزینه‌های مناسب رو انتخاب کن."
+      },
+      "situation": "زمان و مکان دعوت‌نامه درسته و ترتیبش هم خوبه؛ فقط لحنش زیادی رسمی شده.",
+      "contentBlocks": [],
+      "character": {
+        "id": "pico",
+        "dialogue": "برای اصلاح لحن، تغییر ساعت رو پیشنهاد دادم! ساعت جدید، رفاقت جدید!",
+        "mood": "EMBARRASSED"
+      },
+      "prompt": "کدوم کارها به اصلاح درست این نسخه کمک می‌کنن؟",
+      "choices": [
+        {
+          "id": "a",
+          "label": "الف",
+          "text": "بگیم زمان و مکان درستش رو دست نزنه.",
+          "feedback": "اطلاعات درست باید حفظ بشن."
+        },
+        {
+          "id": "b",
+          "label": "ب",
+          "text": "بگیم فقط لحن رو دوستانه‌تر کنه.",
+          "feedback": "همون مشکلی رو هدف می‌گیره که پیدا کردیم."
+        },
+        {
+          "id": "c",
+          "label": "ج",
+          "text": "برای جذاب‌شدن متن، یه زمان تازه از خودش بذاره.",
+          "feedback": "اصلاح لحن مجوز ساختن اطلاعات تازه نیست."
+        },
+        {
+          "id": "d",
+          "label": "د",
+          "text": "نسخهٔ تازه رو دوباره با خواستهٔ اصلی چک کنیم.",
+          "feedback": "ممکنه اصلاح یه بخش، جای دیگه رو به‌هم زده باشه."
+        }
+      ],
+      "answer": {
+        "strategy": "EXACT_SET",
+        "correctChoiceIds": [
+          "a",
+          "b",
+          "d"
+        ]
+      },
+      "feedback": {
+        "general": "اصلاح خوب یعنی مشکل رو درست کنیم؛ نه اینکه چیزهای درست رو خراب کنیم."
+      },
+      "hint": null,
+      "scoring": {
+        "basePoints": 50,
+        "wrongSubmissionPenalty": 10,
+        "minimumPoints": 0
+      }
+    },
+    {
+      "id": "stage04-activity04",
+      "chapterId": "iteration",
+      "order": 4,
+      "role": "LESSON",
+      "title": "عکس رو ببین، بعد دقیق اصلاح کن",
+      "interactionType": "SINGLE_CHOICE",
+      "selection": {
+        "min": 1,
+        "max": 1,
+        "instruction": "جواب مناسب رو انتخاب کن."
+      },
+      "situation": "برای این عکس کپشن خواستی. خروجی فعلی شده: «دوچرخهٔ قرمز کنار میز، با یه کلاه آبی.»",
+      "contentBlocks": [
+        {
+          "type": "IMAGE",
+          "assetId": "stage04-courtyard",
+          "title": "حیاط مدرسه"
+        }
+      ],
+      "character": {
+        "id": "pico",
+        "dialogue": "کپشن نوشتم: «دوچرخهٔ قرمز، میز، کلاه آبی»! عکس باید با من هماهنگ بشه!",
+        "mood": "CONFIDENT"
+      },
+      "prompt": "کدوم بازخورد، خطاهای دیده‌شده رو دقیق اصلاح می‌کنه؟",
+      "choices": [
+        {
+          "id": "a",
+          "label": "الف",
+          "text": "فقط کلاه رو نارنجی کن؛ بقیه همون بمونه.",
+          "feedback": "هنوز رنگ دوچرخه و اسم نیمکت اشتباه می‌مونن."
+        },
+        {
+          "id": "b",
+          "label": "ب",
+          "text": "دوچرخه رو فیروزه‌ای، کلاه رو نارنجی و میز رو نیمکت بنویس؛ کپشن کوتاه بمونه.",
+          "feedback": "خطاهای عکس رو مشخص کرده و کوتاهی کپشن رو نگه داشته."
+        },
+        {
+          "id": "c",
+          "label": "ج",
+          "text": "کپشن رو شاعرانه‌تر کن؛ به رنگ‌ها کاری نداشته باش.",
+          "feedback": "شاعرانه‌شدن، خطاهای تصویر رو درست نمی‌کنه."
+        },
+        {
+          "id": "d",
+          "label": "د",
+          "text": "یه کپشن تازه بده و یه آدرس جذاب هم بهش اضافه کن.",
+          "feedback": "آدرس نداریم؛ این اصلاح، اطلاعات ساختگی اضافه می‌کنه."
+        }
+      ],
+      "answer": {
+        "strategy": "EXACT_SET",
+        "correctChoiceIds": [
+          "b"
+        ]
+      },
+      "feedback": {
+        "general": "بازخورد رو به چیزی وصل کن که واقعاً در خروجی اشتباهه."
+      },
+      "hint": null,
+      "scoring": {
+        "basePoints": 50,
+        "wrongSubmissionPenalty": 10,
+        "minimumPoints": 0
+      }
+    },
+    {
+      "id": "stage04-activity05",
+      "chapterId": "iteration",
+      "order": 5,
+      "role": "LESSON",
+      "title": "نسخهٔ جدیدتر، لزوماً بهتر نیست",
+      "interactionType": "COMPARE_RESPONSES",
+      "selection": {
+        "min": 1,
+        "max": 1,
+        "instruction": "جواب مناسب رو انتخاب کن."
+      },
+      "situation": "قرار اصلی سه‌شنبه ساعت ۱۶ توی سالن هنره. خواسته بودی دعوت‌نامه صمیمی‌تر بشه؛ اطلاعات قرار نباید عوض بشن.",
+      "contentBlocks": [],
+      "character": {
+        "id": "pico",
+        "dialogue": "توی نسخهٔ صمیمی‌تر، ساعت ۱۶ رو هم ۱۷ کردم! همه‌چی باید نو بشه!",
+        "mood": "CONFUSED"
+      },
+      "prompt": "کدوم نسخه، اصلاح رو بهتر انجام داده؟",
+      "choices": [
+        {
+          "id": "a",
+          "label": "الف",
+          "text": "سه‌شنبه ساعت ۱۷ توی سالن هنر می‌بینیمت؛ بیا یه دورهمی باحال داشته باشیم!",
+          "feedback": "صمیمی شده، ولی ساعت درست رو عوض کرده."
+        },
+        {
+          "id": "b",
+          "label": "ب",
+          "text": "سه‌شنبه ساعت ۱۶ توی سالن هنر می‌بینیمت؛ بیا کنار هم یه چیز تازه یاد بگیریم!",
+          "feedback": "لحن عوض شده و اطلاعات قرار هم حفظ شده."
+        }
+      ],
+      "answer": {
+        "strategy": "EXACT_SET",
+        "correctChoiceIds": [
+          "b"
+        ]
+      },
+      "feedback": {
+        "general": "هر نسخه رو با خواسته‌ت بسنج؛ نه با شمارهٔ نسخه‌ش."
+      },
+      "hint": null,
+      "scoring": {
+        "basePoints": 50,
+        "wrongSubmissionPenalty": 10,
+        "minimumPoints": 0
+      }
+    },
+    {
+      "id": "stage04-activity06",
+      "chapterId": "iteration",
+      "order": 6,
+      "role": "LESSON",
+      "title": "کی دیگه کافیه؟",
+      "interactionType": "MULTIPLE_CHOICE",
+      "selection": {
+        "min": 1,
+        "max": 4,
+        "instruction": "گزینه‌های مناسب رو انتخاب کن."
+      },
+      "situation": "چند دور متن رو اصلاح کردی. می‌خوای بدونی همین نسخه رو نگه داری یا دوباره تغییرش بدی.",
+      "contentBlocks": [],
+      "character": {
+        "id": "pico",
+        "dialogue": "این نسخه رو بی‌نقص اعلام کردم! آخرین نسخه‌ست دیگه؛ شماره‌ش خودش مدرکه!",
+        "mood": "CONFIDENT"
+      },
+      "prompt": "کدوم دلیل‌ها برای نگه‌داشتن نسخهٔ فعلی قابل‌اتکاترند؟",
+      "choices": [
+        {
+          "id": "a",
+          "label": "الف",
+          "text": "لحن و طولش با چیزی که خواسته بودم جور شده.",
+          "feedback": "معیار اصلی، همون نیاز توئه."
+        },
+        {
+          "id": "b",
+          "label": "ب",
+          "text": "اطلاعات مهمش رو با ورودی اصلی چک کردم و درست مونده.",
+          "feedback": "اصلاح باید اطلاعات درست رو هم حفظ کرده باشه."
+        },
+        {
+          "id": "c",
+          "label": "ج",
+          "text": "فقط چون AI گفته این نسخه بی‌نقصه.",
+          "feedback": "تعریف خود ابزار جای بررسی نتیجه رو نمی‌گیره."
+        },
+        {
+          "id": "d",
+          "label": "د",
+          "text": "فقط چون آخرین نسخه‌ست؛ دیگه چکش نکنیم.",
+          "feedback": "آخرین‌بودن، مدرک بهتر یا درست‌بودن نیست."
+        }
+      ],
+      "answer": {
+        "strategy": "EXACT_SET",
+        "correctChoiceIds": [
+          "a",
+          "b"
+        ]
+      },
+      "feedback": {
+        "general": "وقتی نیازت برآورده شده و چکش کردی، لازم نیست بی‌هدف تغییرش بدی."
+      },
+      "hint": null,
+      "scoring": {
+        "basePoints": 50,
+        "wrongSubmissionPenalty": 10,
+        "minimumPoints": 0
+      }
+    },
+    {
+      "id": "stage04-activity07",
+      "chapterId": "iteration",
+      "order": 7,
+      "role": "EXAM",
+      "title": "چالش آخر: اصلاحِ هدف‌دار",
+      "interactionType": "MULTIPLE_CHOICE",
+      "selection": {
+        "min": 1,
+        "max": 4,
+        "instruction": "گزینه‌های مناسب رو انتخاب کن."
+      },
+      "situation": "برای معرفی یه بازی گروهی، متن صمیمی زیر ۴۰ کلمه خواستی. خروجی ۸۰ کلمه‌ست، ولی اسم و هدف بازی رو درست گفته.",
+      "contentBlocks": [],
+      "character": {
+        "id": "pico",
+        "dialogue": "معرفی بازی رو ۸۰ کلمه نوشتم! زیر ۴۰ تا خواستی؛ من دو برابر خدمت کردم!",
+        "mood": "CONFIDENT"
+      },
+      "prompt": "کدوم کارها این خروجی رو بهتر به خواسته‌ت نزدیک می‌کنن؟",
+      "choices": [
+        {
+          "id": "a",
+          "label": "الف",
+          "text": "بگیم اسم و هدف بازی رو نگه داره و متن رو صمیمی و زیر ۴۰ کلمه کنه.",
+          "feedback": "تغییر لازم و اطلاعاتی که باید بمونن روشن‌اند."
+        },
+        {
+          "id": "b",
+          "label": "ب",
+          "text": "بگیم برای تازه‌شدن متن، اسم و هدف بازی رو هم از خودش عوض کنه.",
+          "feedback": "این‌ها درست بودن؛ نباید بی‌دلیل عوض بشن."
+        },
+        {
+          "id": "c",
+          "label": "ج",
+          "text": "متن تازه رو دوباره از نظر طول، لحن و اطلاعات بازی چک کنیم.",
+          "feedback": "باید ببینیم اصلاح واقعاً کار کرده یا نه."
+        },
+        {
+          "id": "d",
+          "label": "د",
+          "text": "فقط بنویسیم «بهترش کن» و دیگه نتیجه رو نبینیم.",
+          "feedback": "نه بازخورد روشنی دادیم، نه نتیجه رو سنجیدیم."
+        }
+      ],
+      "answer": {
+        "strategy": "EXACT_SET",
+        "correctChoiceIds": [
+          "a",
+          "c"
+        ]
+      },
+      "feedback": {
+        "general": "تغییر مشخص بده، خوب‌ها رو نگه دار و نسخهٔ بعد رو دوباره بسنج."
+      },
+      "hint": null,
+      "scoring": {
+        "basePoints": 50,
+        "wrongSubmissionPenalty": 10,
+        "minimumPoints": 0
+      }
+    }
+  ],
+  "pendingDecisions": []
+}

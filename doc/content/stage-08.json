@@ -1,0 +1,505 @@
+{
+  "schemaVersion": "1.0.0",
+  "contentVersion": 1,
+  "editorialRevision": 1,
+  "locale": "fa-IR",
+  "status": "approved",
+  "source": {
+    "type": "authored_for_project",
+    "recordedAt": "2026-11-06",
+    "editorialChanges": [
+      "فعالیت‌ها مستقل و ویژهٔ موضوع همین فصل‌اند؛ لحن و روش تعامل قبلی حفظ شده است.",
+      "یک تصویر تازهٔ اختصاصی برای فعالیت سوم همین مرحله ثبت شده؛ صدا و تعامل تازه لازم نیست."
+    ]
+  },
+  "stage": {
+    "id": "responsibility",
+    "number": 8,
+    "title": "استفادهٔ مسئولانه",
+    "subtitle": "نقش ابزار، سهم آدم‌ها و تصمیم خودت.",
+    "lessonActivityIds": [
+      "stage08-activity01",
+      "stage08-activity02",
+      "stage08-activity03",
+      "stage08-activity04",
+      "stage08-activity05",
+      "stage08-activity06"
+    ],
+    "examActivityIds": [
+      "stage08-activity07"
+    ],
+    "dailyActivityIds": [
+      "stage08-activity01",
+      "stage08-activity03",
+      "stage08-activity06"
+    ],
+    "completionPolicy": "ALL_LESSONS_CORRECT_AND_EXAM_ALL_CORRECT",
+    "activityBackground": "SIGNAL_WAVES"
+  },
+  "editorialGuidance": {
+    "difficultyBasis": "نقش ابزار، سهم آدم‌ها و تصمیم خودت.",
+    "characterId": "pico",
+    "characterAsset": "pico_fullbody",
+    "feedbackTiming": {
+      "LESSON": "AFTER_SUBMISSION",
+      "EXAM": "AFTER_RUN",
+      "DAILY": "AFTER_SUBMISSION"
+    },
+    "revealRequiredSelectionCount": false,
+    "showCorrectnessMarkers": false,
+    "audioPlaybackRequired": false,
+    "scoringPolicy": {
+      "basePoints": 50,
+      "wrongSubmissionPenalty": 10,
+      "minimumPoints": 0,
+      "scope": "PERSISTENT_PER_ACTIVITY",
+      "awardPolicy": "ON_CORRECT_COMPLETION_ONCE",
+      "examPenaltyTiming": "AFTER_RUN",
+      "repeatResetsPenalties": false
+    },
+    "characterStates": [
+      "CONFUSED",
+      "CONFIDENT",
+      "EMBARRASSED"
+    ],
+    "characterAssets": {
+      "CONFUSED": "pico_hero",
+      "CONFIDENT": "pico_confident",
+      "EMBARRASSED": "pico_embarrassed"
+    }
+  },
+  "assets": [
+    {
+      "id": "stage08-illustration",
+      "kind": "BUNDLED_IMAGE",
+      "renderer": "LOCAL_IMAGE",
+      "localPath": "images/responsibility_team.png",
+      "altText": "سه شخصیت نوجوانِ ساختگی دور میز با هم نقاشیِ سیاره‌ها و ستاره‌ها رو می‌سازن. دست‌ها، قلم‌موها و اثر مشترک معلوم‌اند؛ اسم و مشخصات فردی توی تصویر نیست.",
+      "brief": "سه شخصیت نوجوانِ ساختگی دور میز با هم نقاشیِ سیاره‌ها و ستاره‌ها رو می‌سازن. دست‌ها، قلم‌موها و اثر مشترک معلوم‌اند؛ اسم و مشخصات فردی توی تصویر نیست."
+    }
+  ],
+  "activities": [
+    {
+      "id": "stage08-activity01",
+      "chapterId": "responsibility",
+      "order": 1,
+      "role": "LESSON",
+      "title": "کمک‌گرفتن با جا زدن فرق داره",
+      "interactionType": "COMPARE_RESPONSES",
+      "selection": {
+        "min": 1,
+        "max": 1,
+        "instruction": "جواب مناسب رو انتخاب کن."
+      },
+      "situation": "معلم گفته برای ایده‌گرفتن می‌تونین از AI کمک بگیرین، ولی توضیح نهایی باید کار خودتون باشه.",
+      "contentBlocks": [],
+      "character": {
+        "id": "pico",
+        "dialogue": "ایده و توضیح نهایی رو همه‌ش نوشتم! تو اسم فایل رو بذار؛ تقسیم کار عالی شد!",
+        "mood": "CONFUSED"
+      },
+      "prompt": "کدوم روش با این قرار جور درمیاد؟",
+      "choices": [
+        {
+          "id": "a",
+          "label": "الف",
+          "text": "کل پاسخ AI رو به اسم توضیح خودم تحویل بدم.",
+          "feedback": "قرارِ کار، توضیح خودت بوده؛ این کار پنهانش می‌کنه."
+        },
+        {
+          "id": "b",
+          "label": "ب",
+          "text": "ایده بگیرم، بعد با فهم خودم توضیح بنویسم و طبق قرار کمک AI رو بگم.",
+          "feedback": "کمک ابزار رو جای کار و فهم خودت جا نزدی."
+        }
+      ],
+      "answer": {
+        "strategy": "EXACT_SET",
+        "correctChoiceIds": [
+          "b"
+        ]
+      },
+      "feedback": {
+        "general": "مرز کمک ابزار و سهم خودت رو روشن نگه دار."
+      },
+      "hint": null,
+      "scoring": {
+        "basePoints": 50,
+        "wrongSubmissionPenalty": 10,
+        "minimumPoints": 0
+      }
+    },
+    {
+      "id": "stage08-activity02",
+      "chapterId": "responsibility",
+      "order": 2,
+      "role": "LESSON",
+      "title": "سهم AI رو پنهان نکن",
+      "interactionType": "SINGLE_CHOICE",
+      "selection": {
+        "min": 1,
+        "max": 1,
+        "instruction": "جواب مناسب رو انتخاب کن."
+      },
+      "situation": "برای نمایشگاه مدرسه گفته‌اند باید توضیح بدین کجای پروژه از AI کمک گرفته‌این.",
+      "contentBlocks": [],
+      "character": {
+        "id": "pico",
+        "dialogue": "برای معرفی پروژه‌ت نوشتم «بدون کمک ساختمش»! من کمک نیستم؛ معجزه‌م!",
+        "mood": "CONFIDENT"
+      },
+      "prompt": "کدوم معرفی صادقانه‌تره؟",
+      "choices": [
+        {
+          "id": "a",
+          "label": "الف",
+          "text": "بگم همهٔ بخش‌ها رو بدون کمک ساختم.",
+          "feedback": "با روش واقعی انجام کار جور نیست."
+        },
+        {
+          "id": "b",
+          "label": "ب",
+          "text": "فقط وقتی کسی شک کرد، یه اشارهٔ مبهم کنم.",
+          "feedback": "قرار بوده سهم ابزار از اول روشن باشه."
+        },
+        {
+          "id": "c",
+          "label": "ج",
+          "text": "بگم کجا از AI کمک گرفتم و چه بخش‌هایی رو خودم انجام دادم.",
+          "feedback": "سهم ابزار و کار خودت مشخص می‌شن."
+        },
+        {
+          "id": "d",
+          "label": "د",
+          "text": "اسم یه ابزار دیگه رو بنویسم تا حرفه‌ای‌تر بشه.",
+          "feedback": "اسم ساختگی، معرفی صادقانه نیست."
+        }
+      ],
+      "answer": {
+        "strategy": "EXACT_SET",
+        "correctChoiceIds": [
+          "c"
+        ]
+      },
+      "feedback": {
+        "general": "طبق قرار پروژه، نقش ابزار و سهم خودت رو واضح بگو."
+      },
+      "hint": null,
+      "scoring": {
+        "basePoints": 50,
+        "wrongSubmissionPenalty": 10,
+        "minimumPoints": 0
+      }
+    },
+    {
+      "id": "stage08-activity03",
+      "chapterId": "responsibility",
+      "order": 3,
+      "role": "LESSON",
+      "title": "این نقاشی کارِ یه نفر نیست",
+      "interactionType": "MULTIPLE_CHOICE",
+      "selection": {
+        "min": 1,
+        "max": 4,
+        "instruction": "گزینه‌های مناسب رو انتخاب کن."
+      },
+      "situation": "گروه توی این تصویر نقاشی رو با هم ساخته. بعد با AI نسخهٔ دیجیتالِ همون اثر رو آماده کرده‌این و دربارهٔ معرفی همکاری‌ها توافق دارین.",
+      "contentBlocks": [
+        {
+          "type": "IMAGE",
+          "assetId": "stage08-illustration",
+          "title": "نقاشی گروهی"
+        }
+      ],
+      "character": {
+        "id": "pico",
+        "dialogue": "نسخهٔ دیجیتال رو ساختم؛ کل نقاشی رو مال خودم اعلام کردم! آخرین دست، دست منه!",
+        "mood": "CONFIDENT"
+      },
+      "prompt": "برای معرفی نسخهٔ نهایی، کدوم کارها منصفانه‌ترن؟",
+      "choices": [
+        {
+          "id": "a",
+          "label": "الف",
+          "text": "بگیم نقاشی پایه کار گروه بوده.",
+          "feedback": "سهم واقعی همکارها دیده می‌شه."
+        },
+        {
+          "id": "b",
+          "label": "ب",
+          "text": "چون AI تغییرش داده، کار بقیه رو به اسم خودم بزنم.",
+          "feedback": "ویرایش ابزار، زحمت بقیه رو مال تو نمی‌کنه."
+        },
+        {
+          "id": "c",
+          "label": "ج",
+          "text": "بگیم برای نسخهٔ دیجیتال از AI کمک گرفتیم.",
+          "feedback": "روش آماده‌شدن نسخهٔ نهایی روشن می‌مونه."
+        },
+        {
+          "id": "d",
+          "label": "د",
+          "text": "سهم هر نفر رو طبق توافق و کاری که واقعاً کرده معرفی کنیم.",
+          "feedback": "اعتبار کار بر پایهٔ سهم واقعی تقسیم می‌شه."
+        }
+      ],
+      "answer": {
+        "strategy": "EXACT_SET",
+        "correctChoiceIds": [
+          "a",
+          "c",
+          "d"
+        ]
+      },
+      "feedback": {
+        "general": "ذخیره‌کردن فایل، مالکِ زحمت همه‌بودن نیست!"
+      },
+      "hint": null,
+      "scoring": {
+        "basePoints": 50,
+        "wrongSubmissionPenalty": 10,
+        "minimumPoints": 0
+      }
+    },
+    {
+      "id": "stage08-activity04",
+      "chapterId": "responsibility",
+      "order": 4,
+      "role": "LESSON",
+      "title": "تقسیم کار با کلیشه؟ نه!",
+      "interactionType": "SINGLE_CHOICE",
+      "selection": {
+        "min": 1,
+        "max": 1,
+        "instruction": "جواب مناسب رو انتخاب کن."
+      },
+      "situation": "ابزار پیشنهاد داده کار فنی همیشه با پسرها باشه و کار هنری همیشه با دخترها؛ علاقه و تجربهٔ اعضا رو هم نپرسیده.",
+      "contentBlocks": [],
+      "character": {
+        "id": "pico",
+        "dialogue": "کار فنی رو دادم به پسرها، هنری رو به دخترها! بدون پرسیدن، همه رو شناختم!",
+        "mood": "EMBARRASSED"
+      },
+      "prompt": "کدوم برخورد منصفانه‌تره؟",
+      "choices": [
+        {
+          "id": "a",
+          "label": "الف",
+          "text": "همین تقسیم رو بپذیریم؛ AI گفته پس بی‌طرفه.",
+          "feedback": "خروجی ابزار هم می‌تونه کلیشه‌ای و ناعادلانه باشه."
+        },
+        {
+          "id": "b",
+          "label": "ب",
+          "text": "بر اساس علاقه و آمادگی افراد نقش بدیم، نه جنسیتشون.",
+          "feedback": "معیار به خودِ افراد و کار مربوط می‌شه."
+        },
+        {
+          "id": "c",
+          "label": "ج",
+          "text": "فقط برچسب‌ها رو برعکس کنیم و باز از افراد نپرسیم.",
+          "feedback": "برعکس‌کردن کلیشه هم معیارِ فردی نمی‌سازه."
+        },
+        {
+          "id": "d",
+          "label": "د",
+          "text": "به اعضا نگیم چرا نقش‌ها این‌طوری تقسیم شدن.",
+          "feedback": "پنهان‌کردن دلیل، تقسیم رو عادلانه نمی‌کنه."
+        }
+      ],
+      "answer": {
+        "strategy": "EXACT_SET",
+        "correctChoiceIds": [
+          "b"
+        ]
+      },
+      "feedback": {
+        "general": "پیشنهاد AI رو هم از نظر انصاف بسنج؛ برچسب جای شناخت آدم‌ها نیست."
+      },
+      "hint": null,
+      "scoring": {
+        "basePoints": 50,
+        "wrongSubmissionPenalty": 10,
+        "minimumPoints": 0
+      }
+    },
+    {
+      "id": "stage08-activity05",
+      "chapterId": "responsibility",
+      "order": 5,
+      "role": "LESSON",
+      "title": "ویرایش با AI، اجازه نمی‌سازه",
+      "interactionType": "COMPARE_RESPONSES",
+      "selection": {
+        "min": 1,
+        "max": 1,
+        "instruction": "جواب مناسب رو انتخاب کن."
+      },
+      "situation": "برای پوستر، طرح یه نفر دیگه رو پیدا کردی. هنوز معلوم نیست اجازهٔ استفاده و تغییرش رو داری یا نه.",
+      "contentBlocks": [],
+      "character": {
+        "id": "pico",
+        "dialogue": "گفتم اسم سازنده رو پاک کنیم، طرح می‌شه مال خودمون! مالکیت با یه پاک‌کن حله!",
+        "mood": "CONFUSED"
+      },
+      "prompt": "کدوم راه مسئولانه‌تره؟",
+      "choices": [
+        {
+          "id": "a",
+          "label": "الف",
+          "text": "سراغ طرحی برم که اجازهٔ استفاده‌ش روشنه و شرط‌های اعلام‌شده‌ش رو رعایت کنم.",
+          "feedback": "اجازه و اعتبار سازنده رو نادیده نگرفتی."
+        },
+        {
+          "id": "b",
+          "label": "ب",
+          "text": "نشونهٔ سازنده رو حذف کنم و بگم چون AI تغییرش داده، کار خودمه.",
+          "feedback": "ویرایش، دلیل نادیده‌گرفتن اجازه و سهم سازنده نیست."
+        }
+      ],
+      "answer": {
+        "strategy": "EXACT_SET",
+        "correctChoiceIds": [
+          "a"
+        ]
+      },
+      "feedback": {
+        "general": "قبل از استفاده، اجازه و سهم صاحب اثر رو روشن کن."
+      },
+      "hint": null,
+      "scoring": {
+        "basePoints": 50,
+        "wrongSubmissionPenalty": 10,
+        "minimumPoints": 0
+      }
+    },
+    {
+      "id": "stage08-activity06",
+      "chapterId": "responsibility",
+      "order": 6,
+      "role": "LESSON",
+      "title": "ابزار پیشنهاد می‌ده؛ تو تصمیم می‌گیری",
+      "interactionType": "MULTIPLE_CHOICE",
+      "selection": {
+        "min": 1,
+        "max": 4,
+        "instruction": "گزینه‌های مناسب رو انتخاب کن."
+      },
+      "situation": "AI برنامهٔ یه پروژهٔ گروهی رو داده. تو قراره انتخاب کنی کدوم بخش‌ها واقعاً اجرا و ارائه بشن.",
+      "contentBlocks": [],
+      "character": {
+        "id": "pico",
+        "dialogue": "برنامه رو دادم و گفتم بی‌بررسی اجرا کنین! خراب شد بگین پیکو گفت!",
+        "mood": "CONFIDENT"
+      },
+      "prompt": "کدوم کارها بخشی از مسئولیت خود ماست؟",
+      "choices": [
+        {
+          "id": "a",
+          "label": "الف",
+          "text": "ببینیم پیشنهادها با شرایط واقعی گروه جورند یا نه.",
+          "feedback": "تصمیم اجرا باید به موقعیت واقعی بخوره."
+        },
+        {
+          "id": "b",
+          "label": "ب",
+          "text": "بررسی کنیم تقسیم کار و نتیجه با دیگران منصفانه‌ست یا نه.",
+          "feedback": "اثر تصمیم روی آدم‌ها هم مهمه."
+        },
+        {
+          "id": "c",
+          "label": "ج",
+          "text": "هرچی شد بگیم ابزار گفته و هیچ تصمیمی مال ما نبوده.",
+          "feedback": "انتخابِ استفاده و اجرا رو ما انجام می‌دیم."
+        },
+        {
+          "id": "d",
+          "label": "د",
+          "text": "قرارهای پروژه و سهم خودمون و ابزار رو روشن نگه داریم.",
+          "feedback": "هم تعهدها مشخصه، هم نقش هرکدوم."
+        }
+      ],
+      "answer": {
+        "strategy": "EXACT_SET",
+        "correctChoiceIds": [
+          "a",
+          "b",
+          "d"
+        ]
+      },
+      "feedback": {
+        "general": "ابزار کمک می‌کنه؛ مسئولیت انتخاب و استفاده با ماست."
+      },
+      "hint": null,
+      "scoring": {
+        "basePoints": 50,
+        "wrongSubmissionPenalty": 10,
+        "minimumPoints": 0
+      }
+    },
+    {
+      "id": "stage08-activity07",
+      "chapterId": "responsibility",
+      "order": 7,
+      "role": "EXAM",
+      "title": "چالش آخر: کمکی که بشه پاش وایساد",
+      "interactionType": "MULTIPLE_CHOICE",
+      "selection": {
+        "min": 1,
+        "max": 4,
+        "instruction": "گزینه‌های مناسب رو انتخاب کن."
+      },
+      "situation": "برای پروژهٔ آخر، استفاده از AI مجازه؛ باید روش کار و سهم اعضا رو توضیح بدین. یه خروجی خوشگل دارین، اما هنوز بررسیش نکرده‌این.",
+      "contentBlocks": [],
+      "character": {
+        "id": "pico",
+        "dialogue": "خروجی رو خوشگل کردم و گفتم بی‌بررسی تحویل بدین! سهم اعضا که تزئینیه!",
+        "mood": "CONFIDENT"
+      },
+      "prompt": "کدوم کارها قبل از تحویل مسئولانه‌ترن؟",
+      "choices": [
+        {
+          "id": "a",
+          "label": "الف",
+          "text": "خروجی رو با نیاز پروژه بسنجیم و تصمیم نهایی رو خودمون بگیریم.",
+          "feedback": "ظاهر خوب جای قضاوت و مسئولیت ما رو نمی‌گیره."
+        },
+        {
+          "id": "b",
+          "label": "ب",
+          "text": "فقط ظاهرش رو بهتر کنیم و بقیهٔ قرارها رو کنار بذاریم.",
+          "feedback": "قرارهای کار با خوشگل‌شدن حذف نمی‌شن."
+        },
+        {
+          "id": "c",
+          "label": "ج",
+          "text": "همهٔ کار رو به اسم خودم بزنم؛ چون من از ابزار خواستم.",
+          "feedback": "درخواست‌دادن، سهم بقیه رو پاک نمی‌کنه."
+        },
+        {
+          "id": "d",
+          "label": "د",
+          "text": "سهم اعضا و کمک AI رو همون‌طور که واقعاً بوده توضیح بدیم.",
+          "feedback": "معرفی صادقانه با قرار پروژه جور درمیاد."
+        }
+      ],
+      "answer": {
+        "strategy": "EXACT_SET",
+        "correctChoiceIds": [
+          "a",
+          "d"
+        ]
+      },
+      "feedback": {
+        "general": "کار خوب هم به نتیجه فکر می‌کنه، هم به روش و سهم آدم‌ها."
+      },
+      "hint": null,
+      "scoring": {
+        "basePoints": 50,
+        "wrongSubmissionPenalty": 10,
+        "minimumPoints": 0
+      }
+    }
+  ],
+  "pendingDecisions": []
+}
